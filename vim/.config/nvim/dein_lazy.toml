@@ -1,0 +1,5 @@
+[[plugins]]
+repo = 'tiagofumo/vim-nerdtree-syntax-highlight' 
+hook_add = '''
+source ~/.config/nvim/plugins/vim-nerdtree-syntax-highlight.vim
+'''
