@@ -29,13 +29,6 @@ repo = 'osyo-manga/vim-anzu'
 repo = 'mg979/vim-visual-multi'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-rev  = '5.2'
-hook_add = '''
-    let g:deoplete#enable_at_startup = 1
-'''
-
-[[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
 hook_add = '''

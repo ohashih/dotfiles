@@ -45,7 +45,8 @@ alias gbf="git branch | grep feature | xargs git branch -d"
 
 # path utility
 alias bin="~/bin"
-alias md="cd ~/md"
+alias md="~/md"
 alias aibs="~/git/a-ibs"
 alias vineo="~/.config/nvim"
-alias home="cd $HOME/Desktop"
+alias home="~/Desktop"
+alias kurage="~/git/kurage"
