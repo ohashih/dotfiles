@@ -20,9 +20,6 @@ source ~/.config/nvim/plugins/vim-prettier.vim
 '''
 
 [[plugins]]
-repo = 'vim-syntastic/syntastic'
-
-[[plugins]]
 repo = 'osyo-manga/vim-anzu'
 
 [[plugins]]
