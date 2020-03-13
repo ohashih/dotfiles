@@ -1,4 +1,10 @@
 [[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = '''
+source ~/.config/nvim/plugins/ale.vim
+'''
+
+[[plugins]]
 repo = 'preservim/nerdtree'
 hook_add = '''
 source ~/.config/nvim/plugins/nerdtree.vim
