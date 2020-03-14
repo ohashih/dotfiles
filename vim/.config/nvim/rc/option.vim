@@ -37,9 +37,6 @@ set hidden
 " ターミナル接続を高速化
 set ttyfast
 
-" 改行時自動インデント
-set smartindent
-
 " インクリメントサーチを有効にする
 set incsearch
 
