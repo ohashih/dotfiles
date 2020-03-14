@@ -26,6 +26,11 @@
         "elmAnalyseTrigger": "change"
       }
     },
+    "efm": {
+      "command": "efm-langserver",
+      "args": ["-c", "~/.config/efm-langserver/config.yaml"],
+      "filetypes": ["vim", "eruby", "markdown", "md"]
+    },
     "bash": {
       "command": "bash-language-server",
       "args": ["start"],

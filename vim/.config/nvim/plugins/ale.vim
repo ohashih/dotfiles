@@ -23,7 +23,7 @@ let g:ale_keep_list_window_open = 0
 " 有効にするlinter
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'html': ['htmlhint'],
+\   'html': ['stylelint','htmlhint'],
 \   'css': ['stylelint']
 \}
 

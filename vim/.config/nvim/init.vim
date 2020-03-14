@@ -41,17 +41,21 @@ if dein#check_install()
   call dein#install()
 endif
 
+
 set clipboard=unnamed
 set ignorecase
 set smartcase
 set wrapscan
 set incsearch
 set inccommand=split
+set autoindent
+set smartindent
+set cindent
+set expandtab
+set smarttab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=0
-set expandtab
-set smarttab
 set shiftround
 set hls
 nnoremap <silent> <S-j> :split<CR>
@@ -267,3 +271,7 @@ map <silent> [Tag]x :tabclose<CR>
 map <silent> [Tag]n :tabnext<CR>
 " tp 前のタブ
 map <silent> [Tag]p :tabprevious<CR>
+
+"TAB,EOFなどを可視化する
+set list
+set listchars=tab:>-,extends:<,trail:-
