@@ -1,4 +1,9 @@
 [[plugins]]
+repo = 'bfredl/nvim-miniyank'
+hook_add = '''
+source ~/.config/nvim/plugins/miniyank.vim
+'''
+[[plugins]]
 repo = 'dense-analysis/ale'
 hook_add = '''
 source ~/.config/nvim/plugins/ale.vim
