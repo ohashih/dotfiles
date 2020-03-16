@@ -16,3 +16,4 @@ SSH_KEY_PATH="~/.ssh/id_rsa"
 # icu4c
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export export PATH="/usr/local/opt/llvm/bin:$PATH"

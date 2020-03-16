@@ -1,5 +1,6 @@
 " 【Control + f】 defx.nvimを起動
-nnoremap <silent><C-f> :<C-u>Defx<CR>
+nnoremap <silent> <Space>f :<C-u>Defx -listed -resume -buffer-name=tab`tabpagenr()`<CR>
+"nnoremap <silent><C-f> :<C-u>Defx<CR>
 
 call defx#custom#option('_', {
     \ 'columns': 'indent:git:icons:filename',
