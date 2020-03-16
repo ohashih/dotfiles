@@ -34,3 +34,11 @@ map <C-k> [ale]
 " エラー行にジャンプ
 nmap <silent>[ale]<C-P> <Plug>(ale_previous)
 nmap <silent> [ale]<C-N> <Plug>(ale_next)
+
+" fixer
+let g:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'javascript': ['eslint'],
+\  'scss': ['stylelint']
+\}
+let g:ale_fix_on_save = 1
