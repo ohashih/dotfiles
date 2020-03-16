@@ -19,3 +19,9 @@ if &term =~ "xterm"
 
     inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
+
+" undoFileの永続化
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
