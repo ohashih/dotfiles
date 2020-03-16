@@ -23,7 +23,7 @@ alias ls="ls -G"
 alias ll="ls -l"
 
 # standard command settings
-alias vi='nvim'
+alias vim='nvim'
 alias cat='bat'
 
 # js-beautify setting
