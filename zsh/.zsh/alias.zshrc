@@ -24,6 +24,7 @@ alias ll="ls -l"
 
 # standard command settings
 alias vim='nvim'
+alias vi='nvim'
 alias cat='bat'
 
 # js-beautify setting
@@ -52,4 +53,4 @@ alias home="~/Desktop"
 alias kurage="~/git/kurage"
 
 # measure plugin weight
-alias timeNvim="echo \"scale=3; $(nvim --startuptime /tmp/stime_mine.log -c 'quit' > /dev/null && tail -n 1 /tmp/stime_mine.log | cut -d ' ' -f1) / $(vi -u DEFAULTS --startuptime /tmp/stime_def.log -c 'quit' > /dev/null && tail -n 1 /tmp/stime_def.log | cut -d ' ' -f1)\" | bc | xargs echo {}x slower your Vim than the default."
+# alias timeNvim="echo \"scale=3; $(nvim --startuptime /tmp/stime_mine.log -c 'quit' > /dev/null && tail -n 1 /tmp/stime_mine.log | cut -d ' ' -f1) / $(vi -u DEFAULTS --startuptime /tmp/stime_def.log -c 'quit' > /dev/null && tail -n 1 /tmp/stime_def.log | cut -d ' ' -f1)\" | bc | xargs echo {}x slower your Vim than the default."

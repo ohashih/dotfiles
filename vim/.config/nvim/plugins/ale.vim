@@ -39,6 +39,12 @@ nmap <silent> [ale]<C-N> <Plug>(ale_next)
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'javascript': ['eslint'],
-\  'scss': ['stylelint']
+\  'scss': ['stylelint'],
+\  'html': [
+      \   {buffer, lines -> {'command': 'html-beautify  -c ~/.htmlBeautifyConfig', 'read_temporary_file': 1}}
+      \   ],
+\  'markdown': [
+      \   {buffer, lines -> {'command': 'textlint -c ~/.config/textlintrc -o /dev/null --fix --no-color --quiet %t', 'read_temporary_file': 1}}
+      \   ],
 \}
 let g:ale_fix_on_save = 1
