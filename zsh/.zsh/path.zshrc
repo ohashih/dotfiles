@@ -13,6 +13,9 @@ SSH_KEY_PATH="~/.ssh/id_rsa"
 # asdf
 . /usr/local/Cellar/asdf/0.7.7/asdf.sh
 
+# yarn 
+export PATH="$PATH:/Users/kurage/.config/yarn/global/node_modules/.bin"
+
 # icu4c
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
