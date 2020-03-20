@@ -7,6 +7,11 @@ coc-css@>=1.2.2:
   resolved "https://registry.yarnpkg.com/coc-css/-/coc-css-1.2.2.tgz#9b62ac96a9db8c687396ab4648c0c67dc3897a2f"
   integrity sha512-JvZnKZZJZemS70o972OEjfnMGGO2sLpJA3iX1OT3CXmaymPb8CmufboyCVnzGMDMbFL/qHgfjbdw9kOg5ZtzzQ==
 
+coc-eslint@>=1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/coc-eslint/-/coc-eslint-1.2.6.tgz#c452993af9a6de89ea83fcaa29ea5bb891ebb8a7"
+  integrity sha512-2vOL35E7kIig1evMUj/bIij9AjtEdTI35sshaf1VeLSqTnFc9Owbd4glHVeY4q76t0EsTyLkuqm7Q1QsGR/7iw==
+
 coc-html@>=1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/coc-html/-/coc-html-1.2.3.tgz#7484a4aa6c13e02a891b3d4c685b8da9c3ae99bc"

@@ -145,3 +145,6 @@ augroup HTMLANDXML
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
 augroup END
 autocmd Filetype html inoremap <buffer> </ </<C-x><C-o><ESC>F<i
+
+" coc-highlight
+autocmd CursorHold * silent call CocActionAsync('highlight')

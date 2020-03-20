@@ -85,7 +85,7 @@ source ~/.config/nvim/plugins/denite.vim
 '''
 
 [[plugins]]
-repo = 'kristijanhusak/defx-icons' 
+repo = 'kristijanhusak/defx-icons'
 hook_add = '''
 source ~/.config/nvim/plugins/defx-icons.vim
 '''

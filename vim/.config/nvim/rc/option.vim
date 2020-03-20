@@ -101,3 +101,6 @@ set nostartofline
 "TAB,EOFなどを可視化する
 set list
 set listchars=tab:>-,extends:<,trail:-
+
+" color設定
+set termguicolors
