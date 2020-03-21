@@ -17,6 +17,18 @@ source ~/.config/nvim/plugins/ale.vim
 '''
 
 [[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-gitgutter.vim
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'tpope/vim-rhubarb'
+
+[[plugins]]
 repo = 'andys8/vim-elm-syntax'
 
 [[plugins]]
