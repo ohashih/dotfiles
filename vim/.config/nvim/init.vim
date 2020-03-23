@@ -24,6 +24,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
   call dein#add('w0ng/vim-hybrid')
+  call dein#add('ayu-theme/ayu-vim')
   call dein#add('cocopon/iceberg.vim')
   call dein#load_toml('~/.config/nvim/dein.toml', {'lazy':0})
   call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy':1})

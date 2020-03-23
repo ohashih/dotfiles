@@ -11,6 +11,9 @@ source ~/.config/nvim/plugins/undotree.vim
 '''
 
 [[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
 repo = 'dense-analysis/ale'
 hook_add = '''
 source ~/.config/nvim/plugins/ale.vim
