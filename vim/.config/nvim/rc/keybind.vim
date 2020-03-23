@@ -24,10 +24,8 @@ inoremap <silent> jj <ESC>:<C-u>w<CR>
 
 " Control + S で保存する
 nnoremap <C-s> :w<CR>
-nnoremap <C-c> :wq<CR>
 nnoremap <C-q> :q!<CR>
 inoremap <C-s> <ESC>:w<CR>a
-inoremap <C-c> :<ESC>:wq<CR>
 inoremap <C-q> :q!<CR>
 
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>"

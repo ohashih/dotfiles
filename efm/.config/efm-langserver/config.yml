@@ -12,5 +12,6 @@ languages:
   markdown:
     lint-command: 'markdownlint -s'
     lint-stdin: true
+    filetypes: ["markdown"]
     lint-formats:
       - '%f: %l: %m'

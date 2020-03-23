@@ -36,9 +36,9 @@ for n in range(1, 9)
 endfor
 
 " tc 新しいタブを一番右に作る
-map <silent> [Tag]c :tablast <bar> tabnew<CR>
+map <silent> [Tag] :tablast <bar> tabnew<CR>
 " tx タブを閉じる
-map <silent> [Tag]x :<c-u>bw<cr>
+map <silent> <C-c> :<c-u>bw<cr>
 " tn 次のタブ
 map <silent> <tab> :tabnext<CR>
 " tp 前のタブ
