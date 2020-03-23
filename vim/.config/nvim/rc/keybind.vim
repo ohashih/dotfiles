@@ -22,6 +22,12 @@ nnoremap <C-u> 20k
 vnoremap <C-u> 20k
 inoremap <silent> jj <ESC>:<C-u>w<CR>
 
+" Control + S で保存する
+nnoremap <C-s> :w<CR>
+nnoremap <C-c> :wq<CR>
+inoremap <C-s> <ESC>:w<CR>a
+nnoremap <C-c> :<ESC>:wq<CR>
+
 nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>"
 
 " 入力モード中に素早くJJと入力した場合はESCとみなす
@@ -36,15 +42,22 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+" コマンドモードで高速移動
+nnoremap <M-Right> <S-a>
+nnoremap <M-Left> <S-i>
+
 "インサートモードでも移動
 inoremap <c-d> <delete>
 inoremap <c-j> <down>
 inoremap <c-k> <up>
 inoremap <c-h> <left>
 inoremap <c-l> <right>
+inoremap <M-Right> <ESC><S-a>
+
+inoremap <M-Left> <ESC><S-i>
 
 " Shift + 矢印でウィンドウサイズを変更 TODO
-nnoremap <w-Left>  <C-w><<CR>
-nnoremap <w-Right> <C-w><CR>
-nnoremap <w-Up>    <C-w>-<CR>
-nnoremap <w-Down>  <C-w>+<CR>
+nnoremap <g-Left>  <C-w><<CR>
+nnoremap <g-Right> <C-w><CR>
+nnoremap <g-Up>    <C-w>-<CR>
+nnoremap <g-Down>  <C-w>+<CR>
