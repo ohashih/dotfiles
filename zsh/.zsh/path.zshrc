@@ -1,3 +1,6 @@
+# asdf
+. /usr/local/Cellar/asdf/0.7.8/asdf.sh
+
 # Default
 export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
@@ -10,10 +13,7 @@ export PATH="$PATH:/usr/local/opt/libxml2/bin"
 
 SSH_KEY_PATH="~/.ssh/id_rsa"
 
-# asdf
-. /usr/local/Cellar/asdf/0.7.7/asdf.sh
-
-# yarn 
+# yarn
 export PATH="$PATH:/Users/kurage/.config/yarn/global/node_modules/.bin"
 
 # icu4c
