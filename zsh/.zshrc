@@ -27,7 +27,7 @@ source_file ~/.zsh/env.zsrhrc
 # Setting alias
 source_file ~/.zsh/alias.zshrc
 
-# Setting bindkey 
+# Setting bindkey
 source_file ~/.zsh/bindkey.zshrc
 
 # Setting zsh options
@@ -40,3 +40,8 @@ if ! zplug check --verbose; then
         echo; zplug install
     fi
 fi
+
+source /usr/local/bin/aws_zsh_completer.sh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform

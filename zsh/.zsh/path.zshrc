@@ -1,5 +1,7 @@
 # asdf
-. /usr/local/Cellar/asdf/0.7.8/asdf.sh
+. $(brew --prefix asdf)/asdf.sh
+export PATH="$HOME/.asdf/bin:$PATH"
+eval "$(asdf exec direnv hook bash)"
 
 # Default
 export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -19,4 +21,7 @@ export PATH="$PATH:/Users/kurage/.config/yarn/global/node_modules/.bin"
 # icu4c
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# JAVA
+export JAVA_HOME=`/usr/libexec/java_home -v 15`

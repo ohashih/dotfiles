@@ -43,3 +43,9 @@ map <silent> <C-c> :<c-u>bw<cr>
 map <silent> <tab> :tabnext<CR>
 " tp 前のタブ
 map <silent> <s-tab> :tabprevious<CR>
+
+" tp の左移動
+map <silent> <s-q> :-tabmove<CR>
+
+" tp の右移動
+map <silent> <s-w> :+tabmove<CR>

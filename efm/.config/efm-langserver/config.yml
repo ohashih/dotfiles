@@ -1,3 +1,5 @@
+---
+
 languages:
   eruby:
     lint-command: 'erb -x -T - | ruby -c'

@@ -1,1 +1,1249 @@
-{}
+{
+  "coc-python|global": {
+    "INTERPRETERS_CACHE_v3_CondaEnvFileService": [],
+    "INTERPRETERS_CACHE_v3_CondaEnvService": [],
+    "INTERPRETERS_CACHE_v3_VirtualEnvService": [],
+    "/usr/bin/python2.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "71618c64dbe9cfa6cc7e3089a540ee3095b0cd074f829467789a4996863cbf28209d12849734fc520eaea5a3c770960f7b4c2322de2a37b8700f93804926035b"
+      },
+      "expiry": 1602660126890
+    },
+    "/usr/bin/python2.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "b7877dcf1361b51f2187a2620bc28810799ad9f90b853ef3293ff96e290a936ce23eb55c863e752aa5d16633b6562ed289177724298eb0fdfb83927146765d79"
+      },
+      "expiry": 1602660126891
+    },
+    "/usr/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "0dfcf578dc8e8c0b88d2148ad9d9972302792cf522f284f34aa4d048f948c059aba201537f07b3c50de60a5f0dea30ec550defba0368a3eacb69bcff84cde663"
+      },
+      "expiry": 1602660126889
+    },
+    "/usr/local/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "5b31d68dda1565ad3158213b92c8d89617c404b5c08bc2fe0c39d7ca3e65f936d52db08b71b87a7ea92dfc00918d5b374ba88f58f42b5aab13173852bfd39c63"
+      },
+      "expiry": 1602660126883
+    },
+    "/usr/local/bin/python3.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7",
+        "fileHash": "881f7f8e45696d7f4498b06ef1ea7636be933bc16db97dd5b543d961149b97bdf944d942a62671791c475b39a5072ac7189e9300a9bdbf1b6b869b77cbbc664b"
+      },
+      "expiry": 1601713439811
+    },
+    "/Users/kurage/.asdf/shims/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/shims/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "3e6b35c62cf20e14398d3e2b5ccf54e9c16e4afde583f4d5d4658815c6d1619b2904af78c69df4a2827c2d03939e6ce12928f9fb82cebaa1ed5c68904bdf1b87"
+      },
+      "expiry": 1602660127539
+    },
+    "/Users/kurage/.asdf/shims/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/shims/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "b439a62b55f77f250cccfbd73bd238789a5f90f399eb4e1f89a041204acc2eea73641606f8948e6604941822cc68b90dd3844b0a2cc31047085ec13f585f7c5d"
+      },
+      "expiry": 1602660127355
+    },
+    "/Users/kurage/.asdf/installs/python/3.8.3/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "873cb982e305ceff8ff8732b239497e8d42b6f96c9b6ce7e5ac9d33f7716359bdf494fc7dc18bf9971f1771d209fda6c0bdf7a2b2b1fdd2bcf594df59cc5cba6"
+      },
+      "expiry": 1602660127559
+    },
+    "/Users/kurage/.asdf/installs/python/3.8.3/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "3b64fdba14f058b77bf4e58ccd1e622c973595543bfddea02394bd92d2fc92ddf9930888e511632fb1284ba79869ca5f8c1796eb9a9af1d96019d8c1e6447e8d"
+      },
+      "expiry": 1602660127034
+    },
+    "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "d23533ad3fa9712b57e0ea3b66200f4518d271dfbab68c8bf00e82594b44153d319863455ed5c863eae6c4e2d311950bc8e67d73a61f5604c1599393bd4182e3"
+      },
+      "expiry": 1602660127561
+    },
+    "INTERPRETERS_CACHE_v3_CurrentPathService": [
+      {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "873cb982e305ceff8ff8732b239497e8d42b6f96c9b6ce7e5ac9d33f7716359bdf494fc7dc18bf9971f1771d209fda6c0bdf7a2b2b1fdd2bcf594df59cc5cba6",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "d23533ad3fa9712b57e0ea3b66200f4518d271dfbab68c8bf00e82594b44153d319863455ed5c863eae6c4e2d311950bc8e67d73a61f5604c1599393bd4182e3",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "3b64fdba14f058b77bf4e58ccd1e622c973595543bfddea02394bd92d2fc92ddf9930888e511632fb1284ba79869ca5f8c1796eb9a9af1d96019d8c1e6447e8d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "3b64fdba14f058b77bf4e58ccd1e622c973595543bfddea02394bd92d2fc92ddf9930888e511632fb1284ba79869ca5f8c1796eb9a9af1d96019d8c1e6447e8d",
+        "type": "Unknown"
+      }
+    ],
+    "InterpreterAutoSeletionRule-currentPath": {
+      "architecture": 3,
+      "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+      "fileHash": "3b64fdba14f058b77bf4e58ccd1e622c973595543bfddea02394bd92d2fc92ddf9930888e511632fb1284ba79869ca5f8c1796eb9a9af1d96019d8c1e6447e8d",
+      "type": "Unknown"
+    },
+    "preferredGlobalPyInterpreter": {
+      "architecture": 3,
+      "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+      "fileHash": "3b64fdba14f058b77bf4e58ccd1e622c973595543bfddea02394bd92d2fc92ddf9930888e511632fb1284ba79869ca5f8c1796eb9a9af1d96019d8c1e6447e8d",
+      "type": "Unknown"
+    },
+    "ProposeLSBanner": false,
+    "/Users/kurage/.asdf/installs/python/3.8.3/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "3b64fdba14f058b77bf4e58ccd1e622c973595543bfddea02394bd92d2fc92ddf9930888e511632fb1284ba79869ca5f8c1796eb9a9af1d96019d8c1e6447e8d"
+      },
+      "expiry": 1602660126972
+    },
+    "/Users/kurage/.asdf/installs/python/3.8.3/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.3 64-bit",
+        "hash": "3b64fdba14f058b77bf4e58ccd1e622c973595543bfddea02394bd92d2fc92ddf9930888e511632fb1284ba79869ca5f8c1796eb9a9af1d96019d8c1e6447e8d-f3eefb17dd18a7e1977526c796cc750c"
+      },
+      "expiry": 1602660127016
+    },
+    "/Users/kurage/.asdf/shims/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/shims/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "0d7f0f51994529ed3e8c1a066b8ffa37310bcdd2af2b93a5eccf660bc6d7e3b479af3f063ab15ad13539e913ef7e82f6b122745dc293326f67caf16356fb31f2"
+      },
+      "expiry": 1602660126991
+    },
+    "/usr/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "07bcafb6e0f9526e90e0d5b2e5c8e1619d4b9c979917c38c318f00719980d18b2a3ae546c2eac8a55aa4cd326ee7f37d357cb8e64bf032d84bcd3294fbe827b3"
+      },
+      "expiry": 1602660127726
+    },
+    "INTERPRETERS_CACHE_v3_KnownPathsService": [
+      {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/shims/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "3e6b35c62cf20e14398d3e2b5ccf54e9c16e4afde583f4d5d4658815c6d1619b2904af78c69df4a2827c2d03939e6ce12928f9fb82cebaa1ed5c68904bdf1b87",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/shims/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "b439a62b55f77f250cccfbd73bd238789a5f90f399eb4e1f89a041204acc2eea73641606f8948e6604941822cc68b90dd3844b0a2cc31047085ec13f585f7c5d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/shims/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+        "fileHash": "0d7f0f51994529ed3e8c1a066b8ffa37310bcdd2af2b93a5eccf660bc6d7e3b479af3f063ab15ad13539e913ef7e82f6b122745dc293326f67caf16356fb31f2",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "5b31d68dda1565ad3158213b92c8d89617c404b5c08bc2fe0c39d7ca3e65f936d52db08b71b87a7ea92dfc00918d5b374ba88f58f42b5aab13173852bfd39c63",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "bddbdb0f9e817fe067d10c38c43112138e713224485d5690e38d04fd5a76f9724338917760d28339c43d3f2ec744ca054fd23dd2629fe5827dfd7aed28c9bfe5",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "0dfcf578dc8e8c0b88d2148ad9d9972302792cf522f284f34aa4d048f948c059aba201537f07b3c50de60a5f0dea30ec550defba0368a3eacb69bcff84cde663",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "b7877dcf1361b51f2187a2620bc28810799ad9f90b853ef3293ff96e290a936ce23eb55c863e752aa5d16633b6562ed289177724298eb0fdfb83927146765d79",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "71618c64dbe9cfa6cc7e3089a540ee3095b0cd074f829467789a4996863cbf28209d12849734fc520eaea5a3c770960f7b4c2322de2a37b8700f93804926035b",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "07bcafb6e0f9526e90e0d5b2e5c8e1619d4b9c979917c38c318f00719980d18b2a3ae546c2eac8a55aa4cd326ee7f37d357cb8e64bf032d84bcd3294fbe827b3",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "5b31d68dda1565ad3158213b92c8d89617c404b5c08bc2fe0c39d7ca3e65f936d52db08b71b87a7ea92dfc00918d5b374ba88f58f42b5aab13173852bfd39c63",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "bddbdb0f9e817fe067d10c38c43112138e713224485d5690e38d04fd5a76f9724338917760d28339c43d3f2ec744ca054fd23dd2629fe5827dfd7aed28c9bfe5",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "0dfcf578dc8e8c0b88d2148ad9d9972302792cf522f284f34aa4d048f948c059aba201537f07b3c50de60a5f0dea30ec550defba0368a3eacb69bcff84cde663",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "b7877dcf1361b51f2187a2620bc28810799ad9f90b853ef3293ff96e290a936ce23eb55c863e752aa5d16633b6562ed289177724298eb0fdfb83927146765d79",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.16-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.16-final"
+        },
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "71618c64dbe9cfa6cc7e3089a540ee3095b0cd074f829467789a4996863cbf28209d12849734fc520eaea5a3c770960f7b4c2322de2a37b8700f93804926035b",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "07bcafb6e0f9526e90e0d5b2e5c8e1619d4b9c979917c38c318f00719980d18b2a3ae546c2eac8a55aa4cd326ee7f37d357cb8e64bf032d84bcd3294fbe827b3",
+        "type": "Unknown"
+      }
+    ],
+    "PipEnvInformation": [],
+    "/Users/kurage/.asdf/shims/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.3 64-bit",
+        "hash": "3e6b35c62cf20e14398d3e2b5ccf54e9c16e4afde583f4d5d4658815c6d1619b2904af78c69df4a2827c2d03939e6ce12928f9fb82cebaa1ed5c68904bdf1b87-e6a8daa02022e41cce26dbae9f06bf96"
+      },
+      "expiry": 1602660129150
+    },
+    "/usr/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 2.7.16 64-bit",
+        "hash": "0dfcf578dc8e8c0b88d2148ad9d9972302792cf522f284f34aa4d048f948c059aba201537f07b3c50de60a5f0dea30ec550defba0368a3eacb69bcff84cde663-5ab6551160327432d71f987c03f28716"
+      },
+      "expiry": 1602660129152
+    },
+    "/Users/kurage/.asdf/installs/python/3.8.3/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.3 64-bit",
+        "hash": "873cb982e305ceff8ff8732b239497e8d42b6f96c9b6ce7e5ac9d33f7716359bdf494fc7dc18bf9971f1771d209fda6c0bdf7a2b2b1fdd2bcf594df59cc5cba6-3006314b20ca0b87ae5e2ab3f906dd87"
+      },
+      "expiry": 1602660129154
+    },
+    "/usr/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit",
+        "hash": "07bcafb6e0f9526e90e0d5b2e5c8e1619d4b9c979917c38c318f00719980d18b2a3ae546c2eac8a55aa4cd326ee7f37d357cb8e64bf032d84bcd3294fbe827b3-0d6fd1ec09787f700f03f1cb6564108c"
+      },
+      "expiry": 1602660129153
+    },
+    "/usr/local/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.5 64-bit",
+        "hash": "5b31d68dda1565ad3158213b92c8d89617c404b5c08bc2fe0c39d7ca3e65f936d52db08b71b87a7ea92dfc00918d5b374ba88f58f42b5aab13173852bfd39c63-c7647e953449808b110f7a0c1ab92bd6"
+      },
+      "expiry": 1602660129151
+    },
+    "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 2.7.16 64-bit",
+        "hash": "d23533ad3fa9712b57e0ea3b66200f4518d271dfbab68c8bf00e82594b44153d319863455ed5c863eae6c4e2d311950bc8e67d73a61f5604c1599393bd4182e3-155127eaa1dfb3670df6616a9af53f13"
+      },
+      "expiry": 1602660129156
+    },
+    "InterpreterAutoSeletionRule-system": {
+      "architecture": 3,
+      "path": "/usr/local/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.5-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 5,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.5-final"
+      },
+      "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+      "fileHash": "5b31d68dda1565ad3158213b92c8d89617c404b5c08bc2fe0c39d7ca3e65f936d52db08b71b87a7ea92dfc00918d5b374ba88f58f42b5aab13173852bfd39c63",
+      "type": "Unknown",
+      "displayName": "Python 3.8.5 64-bit"
+    },
+    "/Users/kurage/.asdf/shims/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "3e6b35c62cf20e14398d3e2b5ccf54e9c16e4afde583f4d5d4658815c6d1619b2904af78c69df4a2827c2d03939e6ce12928f9fb82cebaa1ed5c68904bdf1b87",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/kurage/.asdf/shims/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.3-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 3,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.3-final"
+          },
+          "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+          "fileHash": "3e6b35c62cf20e14398d3e2b5ccf54e9c16e4afde583f4d5d4658815c6d1619b2904af78c69df4a2827c2d03939e6ce12928f9fb82cebaa1ed5c68904bdf1b87",
+          "type": "Unknown",
+          "displayName": "Python 3.8.3 64-bit"
+        }
+      },
+      "expiry": 1602660129158
+    },
+    "/usr/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "0dfcf578dc8e8c0b88d2148ad9d9972302792cf522f284f34aa4d048f948c059aba201537f07b3c50de60a5f0dea30ec550defba0368a3eacb69bcff84cde663",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "2.7.16-final",
+            "major": 2,
+            "minor": 7,
+            "patch": 16,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "2.7.16-final"
+          },
+          "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+          "fileHash": "0dfcf578dc8e8c0b88d2148ad9d9972302792cf522f284f34aa4d048f948c059aba201537f07b3c50de60a5f0dea30ec550defba0368a3eacb69bcff84cde663",
+          "type": "Unknown",
+          "displayName": "Python 2.7.16 64-bit"
+        }
+      },
+      "expiry": 1602660129163
+    },
+    "/Users/kurage/.asdf/installs/python/3.8.3/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "873cb982e305ceff8ff8732b239497e8d42b6f96c9b6ce7e5ac9d33f7716359bdf494fc7dc18bf9971f1771d209fda6c0bdf7a2b2b1fdd2bcf594df59cc5cba6",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.3-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 3,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.3-final"
+          },
+          "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+          "fileHash": "873cb982e305ceff8ff8732b239497e8d42b6f96c9b6ce7e5ac9d33f7716359bdf494fc7dc18bf9971f1771d209fda6c0bdf7a2b2b1fdd2bcf594df59cc5cba6",
+          "type": "Unknown",
+          "displayName": "Python 3.8.3 64-bit"
+        }
+      },
+      "expiry": 1602660129168
+    },
+    "/usr/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "07bcafb6e0f9526e90e0d5b2e5c8e1619d4b9c979917c38c318f00719980d18b2a3ae546c2eac8a55aa4cd326ee7f37d357cb8e64bf032d84bcd3294fbe827b3",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8",
+          "fileHash": "07bcafb6e0f9526e90e0d5b2e5c8e1619d4b9c979917c38c318f00719980d18b2a3ae546c2eac8a55aa4cd326ee7f37d357cb8e64bf032d84bcd3294fbe827b3",
+          "type": "Unknown",
+          "displayName": "Python 3.8.2 64-bit"
+        }
+      },
+      "expiry": 1602660129166
+    },
+    "/usr/local/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "5b31d68dda1565ad3158213b92c8d89617c404b5c08bc2fe0c39d7ca3e65f936d52db08b71b87a7ea92dfc00918d5b374ba88f58f42b5aab13173852bfd39c63",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/local/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.5-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 5,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.5-final"
+          },
+          "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+          "fileHash": "5b31d68dda1565ad3158213b92c8d89617c404b5c08bc2fe0c39d7ca3e65f936d52db08b71b87a7ea92dfc00918d5b374ba88f58f42b5aab13173852bfd39c63",
+          "type": "Unknown",
+          "displayName": "Python 3.8.5 64-bit"
+        }
+      },
+      "expiry": 1602660129161
+    },
+    "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "d23533ad3fa9712b57e0ea3b66200f4518d271dfbab68c8bf00e82594b44153d319863455ed5c863eae6c4e2d311950bc8e67d73a61f5604c1599393bd4182e3",
+        "info": {
+          "architecture": 3,
+          "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "2.7.16-final",
+            "major": 2,
+            "minor": 7,
+            "patch": 16,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "2.7.16-final"
+          },
+          "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+          "fileHash": "d23533ad3fa9712b57e0ea3b66200f4518d271dfbab68c8bf00e82594b44153d319863455ed5c863eae6c4e2d311950bc8e67d73a61f5604c1599393bd4182e3",
+          "type": "Unknown",
+          "displayName": "Python 2.7.16 64-bit"
+        }
+      },
+      "expiry": 1602660129170
+    },
+    "InterpreterAutoSeletionRule-cachedInterpreters": {
+      "architecture": 3,
+      "path": "/usr/local/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.5-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 5,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.5-final"
+      },
+      "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+      "fileHash": "5b31d68dda1565ad3158213b92c8d89617c404b5c08bc2fe0c39d7ca3e65f936d52db08b71b87a7ea92dfc00918d5b374ba88f58f42b5aab13173852bfd39c63",
+      "type": "Unknown",
+      "displayName": "Python 3.8.5 64-bit"
+    },
+    "/Users/kurage/.asdf/installs/python/3.8.2/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/installs/python/3.8.2/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.2",
+        "fileHash": "767773f17c97589d1f73879d7b688c554db173a61f98a099e8cddb4e8bb8e88d548b1171f3ce8d441ebcb4ce0bd1c3b389008ca6cd1152833f78a57ef77bd5a6"
+      },
+      "expiry": 1601713440011
+    },
+    "/Users/kurage/.asdf/installs/python/3.8.2/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/kurage/.asdf/installs/python/3.8.2/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.2",
+        "fileHash": "c0cf07d023023f97d6df03e65f391d8cd63fca23628bcc5c1ea7dc1d92707be01d591520f3c1f7cd3681ee66a140b45a6cbac172bc4d116f8feca3c5ec3b9d49"
+      },
+      "expiry": 1601713439984
+    },
+    "/Users/kurage/.asdf/installs/python/3.8.2/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.2 64-bit",
+        "hash": "c0cf07d023023f97d6df03e65f391d8cd63fca23628bcc5c1ea7dc1d92707be01d591520f3c1f7cd3681ee66a140b45a6cbac172bc4d116f8feca3c5ec3b9d49-fec9dda0908f2ca5f90a00328d71137d"
+      },
+      "expiry": 1601713441698
+    },
+    "/Users/kurage/.asdf/installs/python/3.8.2/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "c0cf07d023023f97d6df03e65f391d8cd63fca23628bcc5c1ea7dc1d92707be01d591520f3c1f7cd3681ee66a140b45a6cbac172bc4d116f8feca3c5ec3b9d49",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/kurage/.asdf/installs/python/3.8.2/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.2-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.2-final"
+          },
+          "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.2",
+          "fileHash": "c0cf07d023023f97d6df03e65f391d8cd63fca23628bcc5c1ea7dc1d92707be01d591520f3c1f7cd3681ee66a140b45a6cbac172bc4d116f8feca3c5ec3b9d49",
+          "type": "Unknown",
+          "displayName": "Python 3.8.2 64-bit"
+        }
+      },
+      "expiry": 1601713441711
+    },
+    "/usr/local/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "bddbdb0f9e817fe067d10c38c43112138e713224485d5690e38d04fd5a76f9724338917760d28339c43d3f2ec744ca054fd23dd2629fe5827dfd7aed28c9bfe5"
+      },
+      "expiry": 1602660126883
+    }
+  },
+  "coc-python|/Users/kurage/Desktop/scraping": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:ae41b9e005285056e786580e8542861f": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:ae41b9e005285056e786580e8542861f": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/kurage/Desktop/scraping": {
+      "architecture": 3,
+      "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+      "fileHash": "3b64fdba14f058b77bf4e58ccd1e622c973595543bfddea02394bd92d2fc92ddf9930888e511632fb1284ba79869ca5f8c1796eb9a9af1d96019d8c1e6447e8d",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/kurage/Desktop": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:5a0cb694404c9b9385b606a05f976351": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:5a0cb694404c9b9385b606a05f976351": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/kurage/Desktop": {
+      "architecture": 3,
+      "path": "/Users/kurage/.asdf/installs/python/3.8.3/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/Users/kurage/.asdf/installs/python/3.8.3",
+      "fileHash": "3b64fdba14f058b77bf4e58ccd1e622c973595543bfddea02394bd92d2fc92ddf9930888e511632fb1284ba79869ca5f8c1796eb9a9af1d96019d8c1e6447e8d",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  }
+}

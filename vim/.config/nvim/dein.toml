@@ -45,7 +45,9 @@ source ~/.config/nvim/plugins/nerdtree.vim
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
+marge = 0
 rev = 'release'
+on_i = 1
 hook_add = '''
 source ~/.config/nvim/plugins/coc.vim
 '''
@@ -141,3 +143,15 @@ source ~/.config/nvim/plugins/emmet.vim
 
 [[plugins]]
 repo = 'othree/yajs.vim'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-terraform.vim
+'''
+
+[[plugins]]
+repo = 'nikvdp/ejs-syntax'
+hook_add = '''
+source ~/.config/nvim/plugins/ejs-syntax.vim
+'''
