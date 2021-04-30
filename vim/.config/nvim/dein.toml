@@ -45,9 +45,7 @@ source ~/.config/nvim/plugins/nerdtree.vim
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-marge = 0
 rev = 'release'
-on_i = 1
 hook_add = '''
 source ~/.config/nvim/plugins/coc.vim
 '''
@@ -96,31 +94,6 @@ repo = 'rafi/awesome-vim-colorschemes'
 repo = 'shougo/deol.nvim'
 hook_add = '''
 source ~/.config/nvim/plugins/deol.vim
-'''
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = '''
-source ~/.config/nvim/plugins/denite.vim
-'''
-
-[[plugins]]
-repo = 'kristijanhusak/defx-icons'
-hook_add = '''
-source ~/.config/nvim/plugins/defx-icons.vim
-'''
-
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
-hook_add = '''
-source ~/.config/nvim/plugins/defx-git.vim
-'''
-
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-depends = ['defx-icons','defx-git']
-hook_add = '''
-source ~/.config/nvim/plugins/defx.vim
 '''
 
 [[plugins]]

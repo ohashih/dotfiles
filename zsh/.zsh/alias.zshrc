@@ -51,6 +51,7 @@ alias aibs="~/git/a-ibs"
 alias vineo="~/.config/nvim"
 alias home="~/Desktop"
 alias kurage="~/git/kurage"
+alias aucnet="~/git/aucnet"
 alias pwdc="pwd | pbcopy"
 
 # utility

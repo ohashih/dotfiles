@@ -1,6 +1,6 @@
-let g:airline_theme='gruvbox'
+"let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
-"let g:airline_section_b = '%{getcwd()}' " in section B of the status line display the CWD
+let g:airline_section_b = '%{getcwd()}' " in section B of the status line display the CWD
 
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#hunks#enabled = 0
