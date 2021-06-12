@@ -43,7 +43,6 @@ alias gc-b="git checkout -b"
 alias gp="git push"
 alias gsp="git push --set-upstream origin"
 alias gbf="git branch | grep feature | xargs git branch -d"
-
 # path utility
 alias bin="~/bin"
 alias md="~/md"

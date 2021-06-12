@@ -31,7 +31,7 @@ source_file ~/.zsh/alias.zshrc
 source_file ~/.zsh/bindkey.zshrc
 
 # Setting zsh options
-source_file ~/.zsh/option.zshrc
+source_file ~/.zsh/option.zsrhrc
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -45,3 +45,5 @@ source /usr/local/bin/aws_zsh_completer.sh
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
