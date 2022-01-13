@@ -63,3 +63,27 @@ if executable('elm-language-server')
     \ })
   autocmd BufWritePre *.elm LspDocumentFormat
 endif
+
+if executable("typescript-language-server")
+  let s:npm_root = trim(system("npm root -g"))
+
+  let s:has_typescript_deno_plugin = isdirectory(s:npm_root . "/typescript-deno-plugin")
+  let s:plugins = s:has_typescript_deno_plugin
+    \ ? [{ "name": "typescript-deno-plugin", "location": s:npm_root }]
+    \ : []
+  augroup LspTypeScript
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+    \   "name": "typescript-language-server",
+    \   "cmd": {server_info -> ["typescript-language-server", "--stdio"]},
+    \   "root_uri": {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
+    \   "whitelist": ["typescript", "typescript.tsx"],
+    \   "initialization_options": { "plugins": s:plugins },
+    \ })
+  augroup END
+endif
+
+"autocmd BufNewFile,BufRead *.tsx let b:tsx_ext_found = 1
+"autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
+autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact

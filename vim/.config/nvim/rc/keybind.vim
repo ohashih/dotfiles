@@ -61,3 +61,7 @@ nnoremap <g-Left>  <C-w><<CR>
 nnoremap <g-Right> <C-w><CR>
 nnoremap <g-Up>    <C-w>-<CR>
 nnoremap <g-Down>  <C-w>+<CR>
+
+" buffer
+nnoremap <silent> <C-j> :bprev<CR>
+nnoremap <silent> <C-k> :bnext<CR>

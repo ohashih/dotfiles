@@ -128,3 +128,40 @@ repo = 'nikvdp/ejs-syntax'
 hook_add = '''
 source ~/.config/nvim/plugins/ejs-syntax.vim
 '''
+
+[[plugins]]
+repo = 'skanehira/preview-markdown.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/preview-markdown.vim
+'''
+
+[[plugins]]
+repo = 'dhruvasagar/vim-table-mode'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-table-mode.vim
+'''
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-jsx-typescript.vim
+'''
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+
+[[plugins]]
+repo = 'APZelos/blamer.nvim'
+rev =  "v1.2.0"
+hook_add = '''
+source ~/.config/nvim/plugins/blamer.vim
+'''
+
+[[plugins]]
+repo = 'MattesGroeger/vim-bookmarks'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-bookmarks.vim
+'''
