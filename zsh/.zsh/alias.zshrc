@@ -57,6 +57,15 @@ alias pwdc="pwd | pbcopy"
 alias remote="ssh -L 3389:192.168.146.197:3389  stg-business1"
 alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
 
+# exa
+
+alias ls="exa"
+alias ll="exa -ahl --git"
+alias tree="exa -T --git-ignore"
+
+# docker
+alias docker-purge='docker stop $(docker ps -q) && docker rm $(docker ps -aq)'
+
 # AWS
 # measure plugin weight
 # alias timeNvim="echo \"scale=3; $(nvim --startuptime /tmp/stime_mine.log -c 'quit' > /dev/null && tail -n 1 /tmp/stime_mine.log | cut -d ' ' -f1) / $(vi -u DEFAULTS --startuptime /tmp/stime_def.log -c 'quit' > /dev/null && tail -n 1 /tmp/stime_def.log | cut -d ' ' -f1)\" | bc | xargs echo {}x slower your Vim than the default."

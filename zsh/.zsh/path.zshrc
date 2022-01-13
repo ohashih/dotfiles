@@ -1,10 +1,6 @@
-# asdf
-. $(brew --prefix asdf)/asdf.sh
-export PATH="$HOME/.asdf/bin:$PATH"
-eval "$(asdf exec direnv hook bash)"
-
 # Default
 export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 
 # The next line enables shell command completion for gcloud.
 export PATH="$PATH:/usr/local/opt/libxml2/bin"
@@ -25,3 +21,16 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # JAVA
 export JAVA_HOME=`/usr/libexec/java_home -v 15`
+
+# libexec
+eval "$(/usr/libexec/path_helper)"
+
+# asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
+. $(brew --prefix asdf)/asdf.sh
+export PATH="$HOME/.asdf/bin:$PATH"
+eval "$(asdf exec direnv hook bash)"
+eval "$(gh completion -s zsh)"
+
+# Rust
+source $HOME/.cargo/env
