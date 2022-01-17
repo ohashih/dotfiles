@@ -165,3 +165,6 @@ repo = 'MattesGroeger/vim-bookmarks'
 hook_add = '''
 source ~/.config/nvim/plugins/vim-bookmarks.vim
 '''
+
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
