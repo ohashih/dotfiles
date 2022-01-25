@@ -9,18 +9,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" 折り返し行移動
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-
 " 20行ずつ移動
 nnoremap <C-d> 20j
 vnoremap <C-d> 20j
 nnoremap <C-u> 20k
 vnoremap <C-u> 20k
-inoremap <silent> jj <ESC>:<C-u>w<CR>
 
 " Control + S で保存する
 nnoremap <C-s> :w<CR>
