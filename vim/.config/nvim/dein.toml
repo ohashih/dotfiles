@@ -168,3 +168,35 @@ source ~/.config/nvim/plugins/vim-bookmarks.vim
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-easymotion.vim
+'''
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'machakann/vim-highlightedyank'
+hook_add = '''
+  let g:highlightedyank_highlight_duration = 150
+'''
+
+[[plugins]]
+repo = 'skanehira/translate.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/translate.vim
+'''
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'kassio/neoterm'
+hook_add = '''
+  let g:neoterm_autoinsert = 1
+  let g:neoterm_autoscroll = 1
+  nnoremap <leader>tl :<c-u>exec v:count.'Tclear'<cr>
+'''

@@ -89,6 +89,7 @@ endif
 "autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
+autocmd FileType apache setlocal commentstring=#\ %s
 
 nmap <Leader>f [fzf-p]
 xmap <Leader>f [fzf-p]

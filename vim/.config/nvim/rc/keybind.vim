@@ -56,5 +56,5 @@ nnoremap <g-Up>    <C-w>-<CR>
 nnoremap <g-Down>  <C-w>+<CR>
 
 " buffer
-nnoremap <silent> <C-j> :bprev<CR>
-nnoremap <silent> <C-k> :bnext<CR>
+nnoremap <silent> <C-w> :bprev<CR>
+nnoremap <silent> <C-e> :bnext<CR>
