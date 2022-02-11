@@ -35,6 +35,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'history' \
+  'history-substring-search' \
   'prompt' \
   'syntax-highlighting' \
   'autosuggestions'

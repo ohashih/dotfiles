@@ -9,7 +9,7 @@
   "coc.preferences.diagnostic.displayByAle": true,
   "list.autoResize": true,
   "suggest.preferCompleteThanJumpPlaceholder": true,
-  "tsserver.enable": true,
+  "tsserver.enable": false,
   "eslint.enable": true,
   "eslint.filetypes": [
     "javascript",
