@@ -1,3 +1,8 @@
+flowchart|flowchart|buffer
+mermaid|mermaid|buffer
+composition|composition|around
+seri|service|around
+index|index|around
 00005|00005|around
 todo|todo|around
 develop|develop|around
@@ -25,7 +30,5 @@ Tu|Thursday|around
 sequenceDiagram|sequenceDiagram|around
 mermaid|mermaid|around
 parti|participation|buffer
-flowchart|flowchart|buffer
-mermaid|mermaid|buffer
 end|enable_dollar_delimiter|buffer
 reAr|reArchitecture|around

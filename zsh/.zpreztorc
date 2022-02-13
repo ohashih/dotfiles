@@ -223,7 +223,7 @@ zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 #
 
 #zstyle ':prezto:module:autosuggestions' color 'yes'
-zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:autosuggestions:color' found 'fg=244'
 
 
 # Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
