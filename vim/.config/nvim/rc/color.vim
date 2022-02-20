@@ -1,6 +1,6 @@
 set background=dark
-"colorscheme hybrid
 colorscheme hybrid
+"colorscheme iceberg
 let ayucolor="dark"
 highlight DiffAdd    gui=none guifg=none    guibg=#003366
 highlight DiffDelete gui=bold guifg=#660000 guibg=#660000

@@ -49,12 +49,6 @@ inoremap <M-Right> <ESC><S-a>
 
 inoremap <M-Left> <ESC><S-i>
 
-" Shift + 矢印でウィンドウサイズを変更 TODO
-nnoremap <g-Left>  <C-w><<CR>
-nnoremap <g-Right> <C-w><CR>
-nnoremap <g-Up>    <C-w>-<CR>
-nnoremap <g-Down>  <C-w>+<CR>
-
 " buffer
 nnoremap <silent> <C-w> :bprev<CR>
 nnoremap <silent> <C-e> :bnext<CR>
