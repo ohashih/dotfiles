@@ -23,7 +23,7 @@ repo = 'andys8/vim-elm-syntax'
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 hook_add = '''
-source ~/.config/nvim/plugins/coc.vim
+source ~/.config/nvim/plugins/coc2.vim
 '''
 
 [[plugins]]
