@@ -10,11 +10,11 @@ hook_add = '''
 source ~/.config/nvim/plugins/ale.vim
 '''
 
-#[[plugins]]
-#repo = 'airblade/vim-gitgutter'
-#hook_add = '''
-#source ~/.config/nvim/plugins/vim-gitgutter.vim
-#'''
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-gitgutter.vim
+'''
 
 [[plugins]]
 repo = 'andys8/vim-elm-syntax'
@@ -76,12 +76,12 @@ repo = 'lambdalisue/gina.vim'
 
 #[[plugins]]
 #repo = 'tpope/vim-commentary'
-#
-#[[plugins]]
-#repo = 'machakann/vim-highlightedyank'
-#hook_add = '''
-#  let g:highlightedyank_highlight_duration = 150
-#'''
+
+[[plugins]]
+repo = 'machakann/vim-highlightedyank'
+hook_add = '''
+  let g:highlightedyank_highlight_duration = 150
+'''
 
 [[plugins]]
 repo = 'cespare/vim-toml'
@@ -127,3 +127,10 @@ repo = 'yuki-yano/fern-preview.vim'
 hook_add = '''
   source ~/.config/nvim/plugins/fern-preview.vim
 '''
+
+#[[plugins]]
+#repo = 'APZelos/blamer.nvim'
+#rev =  "v1.2.0"
+#hook_add = '''
+#source ~/.config/nvim/plugins/blamer.vim
+#'''

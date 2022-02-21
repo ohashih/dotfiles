@@ -148,3 +148,25 @@ autocmd Filetype html inoremap <buffer> </ </<C-x><C-o><ESC>F<i
 
 " coc-highlight
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Extensions
+let g:coc_global_extensions = [
+  \'@yaegassy/coc-volar',
+  \'coc-css',
+  \'coc-docker',
+  \'coc-eslint',
+  \'coc-git',
+  \'coc-html',
+  \'coc-json',
+  \'coc-lua',
+  \'coc-markdownlint',
+  \'coc-phpls',
+  \'coc-prettier',
+  \'coc-sql',
+  \'coc-sumneko-lua',
+  \'coc-toml',
+  \'coc-tsserver',
+  \'coc-vimlsp',
+  \'coc-jedi',
+  \'coc-diagnostic',
+\]

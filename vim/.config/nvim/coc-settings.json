@@ -10,6 +10,9 @@
   "list.autoResize": true,
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "tsserver.enable": false,
+  "tsserver.trace.server": "verbose",
+  "tsserver.enableJavascript": true,
+  "tsserver.disableAutomaticTypeAcquisition": false,
   "eslint.enable": true,
   "eslint.filetypes": [
     "javascript",
@@ -22,6 +25,8 @@
     "go",
     "elm",
     "typescript",
+    "typescriptreact",
+    "javascript",
     "json",
     "jsonc",
     "html",
@@ -35,9 +40,7 @@
   "languageserver": {
     "clangd": {
       "command": "clangd",
-      "args": [
-        "--background-index"
-      ],
+      "args": ["--background-index"],
       "rootPatterns": [
         "compile_flags.txt",
         "compile_commands.json",
@@ -45,24 +48,13 @@
         ".git/",
         ".hg/"
       ],
-      "filetypes": [
-        "c",
-        "cpp",
-        "objc",
-        "objcpp"
-      ]
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
     },
     "elmLS": {
       "command": "elm-language-server",
-      "args": [
-        "--stdio"
-      ],
-      "filetypes": [
-        "elm"
-      ],
-      "rootPatterns": [
-        "elm.json"
-      ],
+      "args": ["--stdio"],
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
       "initializationOptions": {
         "elmPath": "elm",
         "runtime": "node",
@@ -73,15 +65,9 @@
     },
     "bash": {
       "command": "bash-language-server",
-      "args": [
-        "start"
-      ],
-      "filetypes": [
-        "sh"
-      ],
-      "ignoredRootPaths": [
-        "~"
-      ]
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     }
   },
   "python.jediEnabled": false

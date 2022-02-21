@@ -48,7 +48,7 @@ fbr() {
   git checkout $(echo "$branch")
 }
 zle     -N   fbr
-bindkey "^n" fbr
+bindkey "^v" fbr
 
 # fzf-cdr
 alias cdd='fzf-cdr'
