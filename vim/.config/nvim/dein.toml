@@ -10,11 +10,11 @@ hook_add = '''
 source ~/.config/nvim/plugins/ale.vim
 '''
 
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-hook_add = '''
-source ~/.config/nvim/plugins/vim-gitgutter.vim
-'''
+#[[plugins]]
+#repo = 'airblade/vim-gitgutter'
+#hook_add = '''
+#source ~/.config/nvim/plugins/vim-gitgutter.vim
+#'''
 
 [[plugins]]
 repo = 'andys8/vim-elm-syntax'

@@ -2,6 +2,12 @@
   "codeLens.enable": true,
   "coc.preferences.extensionUpdateCheck": "daily",
   "deno.importMap": "./import_map.json",
+  "coc-config-float": {
+    "border": false,
+    "title": true,
+    "winblend": "winblend",
+    "shadow": true
+  },
   "coc.preferences.formatOnType": true,
   "coc.preferences.willSaveHandlerTimeout": 1000,
   "coc.preferences.formatOnSaveFiletypes": [
@@ -18,9 +24,6 @@
   "coc.source.around.firstMatch": false,
   "coc.source.file.ignoreHidden": false,
   "clangd.arguments": ["--query-driver=/usr/bin/clang++", "--background-index"],
-  "diagnostic.floatConfig": {
-    "border": true
-  },
   "diagnostic.format": "%message [%source]",
   "diagnostic.virtualText": true,
   "diagnostic.checkCurrentLine": true,
@@ -37,9 +40,6 @@
     "usePlaceholders": true,
     "staticcheck": true
   },
-  "hover.floatConfig": {
-    "border": true
-  },
   "list.normalMappings": {
     "<C-c>": "do:exit"
   },
@@ -50,7 +50,6 @@
     "default": true,
     "line-length": false
   },
-  "python.formatting.provider": "black",
   "python.formatting.blackdHTTPHeaders": {
     "X-Fast-Or-Safe": "fast"
   },
@@ -60,12 +59,6 @@
   "semanticTokens.filetypes": ["*"],
   "signature.target": "echo",
   "suggest.detailField": "abbr",
-  "suggest.floatConfig": {
-    "border": true
-  },
-  "signature.floatConfig": {
-    "border": true
-  },
   "suggest.timeout": 5000,
   "suggest.triggerCompletionWait": 30,
   "suggest.defaultSortMethod": "none",
