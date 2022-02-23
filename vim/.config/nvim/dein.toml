@@ -23,7 +23,7 @@ repo = 'andys8/vim-elm-syntax'
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 hook_add = '''
-source ~/.config/nvim/plugins/coc2.vim
+source ~/.config/nvim/plugins/coc.vim
 '''
 
 [[plugins]]
@@ -70,6 +70,10 @@ repo = 'MattesGroeger/vim-bookmarks'
 hook_add = '''
 source ~/.config/nvim/plugins/vim-bookmarks.vim
 '''
+
+[[plugins]]
+repo = 'prettier/vim-prettier'
+build = 'npm install'
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
