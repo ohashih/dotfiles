@@ -1,1 +1,6 @@
+ad|addEventListener|tsserver-javascript
+df|detailField|around
+dfd|detailField|around
+plugin|plugins|around
+s|s|css
 coc|coc|around

@@ -21,8 +21,6 @@ if dein#load_state('~/.cache/dein')
   endif
   call dein#add('cocopon/iceberg.vim')
   call dein#add('w0ng/vim-hybrid')
-  call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
-  call dein#add('yuki-yano/fzf-preview.vim', { 'rev': 'release/remote' })
   call dein#load_toml('~/.config/nvim/dein.toml', {'lazy':0})
   call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy':1})
 

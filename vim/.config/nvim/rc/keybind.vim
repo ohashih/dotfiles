@@ -1,4 +1,4 @@
-let mapleader = "\<Space>"
+let mapleader = ","
 
 nnoremap <silent> <S-j> :split<CR>
 nnoremap <silent> <S-l> :vsplit<CR>

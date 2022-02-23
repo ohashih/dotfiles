@@ -10,11 +10,11 @@ hook_add = '''
 source ~/.config/nvim/plugins/ale.vim
 '''
 
-#[[plugins]]
-#repo = 'airblade/vim-gitgutter'
-#hook_add = '''
-#source ~/.config/nvim/plugins/vim-gitgutter.vim
-#'''
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-gitgutter.vim
+'''
 
 [[plugins]]
 repo = 'andys8/vim-elm-syntax'
@@ -31,12 +31,12 @@ repo = 'osyo-manga/vim-anzu'
 
 #[[plugins]]
 #repo = 'mg979/vim-visual-multi'
-#
-#[[plugins]]
-#repo = 'myusuf3/numbers.vim'
-#hook_add = '''
-#source ~/.config/nvim/plugins/numbers.vim
-#'''
+
+[[plugins]]
+repo = 'myusuf3/numbers.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/numbers.vim
+'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -50,9 +50,9 @@ hook_add = '''
 source ~/.config/nvim/plugins/vim-airline-themes.vim
 '''
 
-#[[plugins]]
-#repo = 'rafi/awesome-vim-colorschemes'
-#
+[[plugins]]
+repo = 'rafi/awesome-vim-colorschemes'
+
 #[[plugins]]
 #repo = 'othree/yajs.vim'
 
@@ -134,3 +134,40 @@ hook_add = '''
 #hook_add = '''
 #source ~/.config/nvim/plugins/blamer.vim
 #'''
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-css3-syntax.vim
+'''
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-jsx-typescript.vim
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = 0
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/fzf.vim
+'''
+
+[[plugins]]
+repo = 'yuki-yano/fzf-preview.vim'
+rev = 'release/remote'
+merged = 0
+hook_add = '''
+  source ~/.config/nvim/plugins/fzf-preview.vim
+'''
+
+[[plugins]]
+repo = 'thinca/vim-qfreplace'
