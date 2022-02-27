@@ -12,8 +12,9 @@
     "go",
     "python",
     "rust",
-    "markdown",
     "javascript",
+    "javascriptreact",
+    "typescriptreact",
     "typescript",
     "json",
     "jsonc"

@@ -71,15 +71,15 @@ hook_add = '''
 source ~/.config/nvim/plugins/vim-bookmarks.vim
 '''
 
-[[plugins]]
-repo = 'prettier/vim-prettier'
-build = 'npm install'
+#[[plugins]]
+#repo = 'prettier/vim-prettier'
+#build = 'npm install'
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
 
-#[[plugins]]
-#repo = 'tpope/vim-commentary'
+[[plugins]]
+repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
@@ -132,12 +132,13 @@ hook_add = '''
   source ~/.config/nvim/plugins/fern-preview.vim
 '''
 
-#[[plugins]]
-#repo = 'APZelos/blamer.nvim'
-#rev =  "v1.2.0"
-#hook_add = '''
-#source ~/.config/nvim/plugins/blamer.vim
-#'''
+[[plugins]]
+repo = 'iamcco/markdown-preview.nvim'
+on_ft = ['markdown','pandoc.markdown','rmd']
+build = 'sh -c "cd app && yarn install"'
+hooks_add = '''
+  source ~/.config/nvim/plugins/markdown-preview.vim
+'''
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'

@@ -1,3 +1,9 @@
-fzf-preview.Buffers
-fzf-preview.GitActions
 fzf-preview.ProjectFiles
+fzf-preview.ProjectGrepRecall
+eslint.executeAutofix
+eslint.createConfig
+fzf-preview.GitBranches
+fzf-preview.GitStatus
+fzf-preview.GitActions
+fzf-preview.GitLogs
+fzf-preview.Buffers

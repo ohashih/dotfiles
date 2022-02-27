@@ -1,3 +1,7 @@
+true|true|json
+aucnet|aucnet|around
+false|false|json
+docs|docs|around
 ad|addEventListener|tsserver-javascript
 df|detailField|around
 dfd|detailField|around

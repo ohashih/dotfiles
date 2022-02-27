@@ -7,7 +7,7 @@ nnoremap <C-n> :Fern . -reveal=% -drawer -toggle<CR>
 
 let g:fern#disable_default_mappings = 1
 
-let g:fern#drawer_width = 30
+let g:fern#drawer_width = 40
 let g:fern#default_hidden = 1
 
 let g:fern#keepalt_on_edit = 1
