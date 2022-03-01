@@ -12,7 +12,7 @@ languages:
     lint-stdin: true
 
   markdown:
-    lint-command: 'markdownlint -s'
+    lint-command: "${HOME}/.config/yarn/global/node_modules/.bin/markdownlint -s"
     lint-stdin: true
     filetypes: ["markdown"]
     lint-formats:
