@@ -18,7 +18,7 @@ nnoremap <silent> [fzf-p]q     :<C-u>CocCommand fzf-preview.QuickFix<CR>
 nnoremap <silent> [fzf-p]l     :<C-u>CocCommand fzf-preview.LocationList<CR>
 
 " floating window size ratio
-let g:fzf_preview_floating_window_rate = 0.9
+let g:fzf_preview_floating_window_rate = 1
 
 " fzf command default options
 let g:fzf_preview_default_fzf_options = { '--reverse': v:true, '--preview-window': 'wrap' }

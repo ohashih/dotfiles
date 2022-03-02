@@ -1,3 +1,6 @@
+iFlower|iFlowerによる販売用語|around
+May|May|around
+Wed|Wednesday|around
 distribution|distribution|around
 true|true|json
 aucnet|aucnet|around

@@ -40,16 +40,51 @@ _fzf_comprun() {
   esac
 }
 
-# fbr
-fbr() {
-  local branches branch
-  branches=$(git --no-pager branch -vv) &&
-  branch=$(echo "$branches" | fzf +m) &&
-  git checkout $(echo "$branch")
+## fvi open file for vim
+fvi() {
+  local file
+  file=$(find . | fzf)
+  vi "$file"
 }
-zle     -N   fbr
-bindkey "^v" fbr
 
+## fvir search word
+fvir() {
+  local file
+  file=$(rg $1 | fzf | cut -d ":" -f 1)
+  vim $file
+}
+
+## fgc git checkout
+fgc() {
+  local branches branch
+  branches=$(git branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
+zle -N fgc
+bindkey '^N' fgc
+
+## fgcl
+fgcl() {
+  local commits commit
+  commits=$(git log --color=always --pretty=oneline --abbrev-commit --reverse) &&
+  commit=$(echo "$commits" | fzf --tac +s +m -e --ansi --reverse) &&
+  echo -n $(echo "$commit" | sed "s/ .*//") | xargs git checkout
+}
+
+# fcb google bookmark
+fcb() {
+  bookmarks_path=~/Library/Application\ Support/Google/Chrome/Default/Bookmarks
+  jq_script='
+     def ancestors: while(. | length >= 2; del(.[-1,-2]));
+     . as $in | paths(.url?) as $key | $in | getpath($key) | {name,url, path: [$key[0:-2] | ancestors as $a | $in | getpath($a) | .name?] | reverse | join("/") } | .path + "/" + .name + "\t" + .url'
+ jq -r "$jq_script" < "$bookmarks_path" \
+     | sed -E $'s/(.*)\t(.*)/\\1\t\x1b[36m\\2\x1b[m/g' \
+     | fzf --ansi \
+     | cut -d$'\t' -f2 \
+     | xargs open
+}
 # fzf-cdr
 alias cdd='fzf-cdr'
 function fzf-cdr() {
