@@ -50,3 +50,6 @@ command! -bang FzfGitBranchFiles
   \   'sink': 'e',
   \   'options': '-m --prompt "GitBranchFiles>" --preview "bat --color=always  {}"',
   \   })
+
+nnoremap <silent> <Leader>g :<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>
+nnoremap <silent> <Leader>c :<C-u>CocCommand fzf-preview.GitStatus<CR>

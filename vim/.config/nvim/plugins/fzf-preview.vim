@@ -17,6 +17,10 @@ nnoremap <silent> [fzf-p]t     :<C-u>CocCommand fzf-preview.BufferTags<CR>
 nnoremap <silent> [fzf-p]q     :<C-u>CocCommand fzf-preview.QuickFix<CR>
 nnoremap <silent> [fzf-p]l     :<C-u>CocCommand fzf-preview.LocationList<CR>
 
+nnoremap <silent> <Leader>p :<C-u>CocCommand fzf-preview.ProjectGrep<Space><CR>
+nnoremap <silent> <Leader>p "sy:CocCommand   fzf-preview.ProjectGrep<Space>-F<Space>"<C-r>=substitute(substitute(@s, '\n', '', 'g'), '/', '\\/', 'g')<CR>"
+nnoremap <silent> <Leader>s :<C-u>CocCommand fzf-preview.GitStatus<CR>
+
 " floating window size ratio
 let g:fzf_preview_floating_window_rate = 1
 
