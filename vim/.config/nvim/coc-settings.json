@@ -92,7 +92,7 @@
   "typescript.preferences.useAliasesForRenames": false,
   "languageserver": {
     "efm": {
-      "command": "${HOME}/.asdf/shims/efm-langserver",
+      "command": "/Users/kurage/.asdf/shims/efm-langserver",
       "args": [],
       "filetypes": ["markdown"]
     }

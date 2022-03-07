@@ -176,3 +176,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'thinca/vim-qfreplace'
+
+[[plugins]]
+repo = 'vim-scripts/dbext.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/dbext.vim
+'''

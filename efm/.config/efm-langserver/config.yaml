@@ -11,9 +11,10 @@ languages:
     lint-command: 'vint -'
     lint-stdin: true
 
-  markdown:
-    lint-command: "${HOME}/.config/yarn/global/node_modules/.bin/markdownlint -s"
+  markdown-markdownlint: &markdown-markdownlint
+    lint-command: 'markdownlint -s -c ~\.markdownlint.json'
     lint-stdin: true
-    filetypes: ["markdown"]
     lint-formats:
+      - '%f:%l %m'
+      - '%f:%l:%c %m'
       - '%f: %l: %m'

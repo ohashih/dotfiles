@@ -63,7 +63,7 @@ fgc() {
 }
 
 zle -N fgc
-bindkey '^N' fgc
+bindkey '^v' fgc
 
 ## fgcl
 fgcl() {
@@ -85,6 +85,7 @@ fcb() {
      | cut -d$'\t' -f2 \
      | xargs open
 }
+
 # fzf-cdr
 alias cdd='fzf-cdr'
 function fzf-cdr() {
