@@ -1,2 +1,3 @@
 *node_modules/
 coc-settings/.config/coc/suggest.txt
+*secret*

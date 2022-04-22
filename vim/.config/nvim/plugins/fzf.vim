@@ -53,3 +53,6 @@ command! -bang FzfGitBranchFiles
 
 nnoremap <silent> <Leader>g :<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>
 nnoremap <silent> <Leader>c :<C-u>CocCommand fzf-preview.GitStatus<CR>
+nnoremap <silent> <Leader>r :Rg<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>h :History<CR>

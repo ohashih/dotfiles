@@ -54,16 +54,38 @@ fvir() {
   vim $file
 }
 
-## fgc git checkout
-fgc() {
-  local branches branch
-  branches=$(git branch -vv) &&
-  branch=$(echo "$branches" | fzf +m) &&
-  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+function select-git-switch() {
+  target_br=$(
+    git branch -a |
+      fzf --exit-0 --layout=reverse --info=hidden --no-multi --preview-window="right,65%" --prompt="CHECKOUT BRANCH > " --preview='f() { echo $1 | tr -d " *" | xargs git lg --color=always }; f {}' |
+      head -n 1 |
+      perl -pe "s/\s//g; s/\*//g; s/remotes\/origin\///g"
+  )
+  if [ -n "$target_br" ]; then
+    echo "git switch $target_br"
+    git switch $target_br
+    zle accept-line
+  fi
 }
+zle -N select-git-switch
+bindkey "^v" select-git-switch
 
-zle -N fgc
-bindkey '^v' fgc
+function select-git-directory() {
+  cd $(ghq list | fzf)
+}
+zle -N select-git-directory
+bindkey "^w" select-git-directory
+
+## fgc git checkout
+#fgc() {
+#  local branches branch
+#  branches=$(git branch -vv) &&
+#  branch=$(echo "$branches" | fzf +m) &&
+#  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+#}
+#
+#zle -N fgc
+#bindkey '^v' fgc
 
 ## fgcl
 fgcl() {
@@ -107,3 +129,8 @@ then
 fi
 
 alias co='git checkout $(git branch -a | tr -d " " |fzf --height 100% --prompt "CHECKOUT BRANCH>" --preview "git log --color=always {}" | head -n 1 | sed -e "s/^\*\s*//g" | perl -pe "s/remotes\/origin\///g")'
+
+gd() {
+  preview="git diff develop --color=always -- {-1}"
+  git diff develop --name-only | fzf -m --ansi --preview $preview
+}
