@@ -1,5 +1,3 @@
-let mapleader = "\<Space>"
-
 nnoremap <silent> <S-j> :split<CR>
 nnoremap <silent> <S-l> :vsplit<CR>
 nnoremap <Bar> $:let pos = getpos(".")<CR>:join<CR>:call setpos('.', pos)<CR>
@@ -48,12 +46,6 @@ inoremap <c-l> <right>
 inoremap <M-Right> <ESC><S-a>
 
 inoremap <M-Left> <ESC><S-i>
-
-" Shift + 矢印でウィンドウサイズを変更 TODO
-nnoremap <g-Left>  <C-w><<CR>
-nnoremap <g-Right> <C-w><CR>
-nnoremap <g-Up>    <C-w>-<CR>
-nnoremap <g-Down>  <C-w>+<CR>
 
 " buffer
 nnoremap <silent> <C-w> :bprev<CR>
