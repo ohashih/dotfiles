@@ -178,7 +178,7 @@ hook_add = '''
 repo = 'thinca/vim-qfreplace'
 
 [[plugins]]
-repo = 'vim-scripts/dbext.vim'
+repo = 'nathanaelkane/vim-indent-guides'
 hook_add = '''
-  source ~/.config/nvim/plugins/dbext.vim
+  source ~/.config/nvim/plugins/vim-indent-guides.vim
 '''
