@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/Users/kurage/git/kurage/dotfiles/coc-settings/.config/coc/extensions/coc-java-data/jdt_ws_282f785ede4658529237cbac593a237f/.metadata/.plugins/org.eclipse.jdt.core

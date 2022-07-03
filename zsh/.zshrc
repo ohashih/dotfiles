@@ -59,3 +59,5 @@ source /Users/kurage/.config/broot/launcher/bash/br
 # Created by `pipx` on 2022-02-01 07:57:20
 export PATH="$PATH:/Users/kurage/.local/bin"
 export PATH="/Users/kurage/git/git-fuzzy/bin:$PATH"
+
+. ~/.asdf/plugins/java/set-java-home.zsh

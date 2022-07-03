@@ -64,6 +64,9 @@ source ~/.config/nvim/plugins/vim-table-mode.vim
 
 [[plugins]]
 repo = 'rust-lang/rust.vim'
+hook_add = '''
+  let g:rustfmt_autosave = 1
+'''
 
 [[plugins]]
 repo = 'MattesGroeger/vim-bookmarks'
@@ -181,4 +184,22 @@ repo = 'thinca/vim-qfreplace'
 repo = 'nathanaelkane/vim-indent-guides'
 hook_add = '''
   source ~/.config/nvim/plugins/vim-indent-guides.vim
+'''
+
+[[plugins]]
+repo = 'ap/vim-css-color'
+
+[[plugins]]
+repo = 'elixir-editors/vim-elixir'
+
+[[plugins]]
+repo = 'puremourning/vimspector'
+hook_add = '''
+  source ~/.config/nvim/plugins/vimspector.vim
+'''
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/tcomment_vim.vim
 '''

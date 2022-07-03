@@ -134,3 +134,10 @@ gd() {
   preview="git diff develop --color=always -- {-1}"
   git diff develop --name-only | fzf -m --ansi --preview $preview
 }
+
+function sshsp() {
+  local host=$(grep -E "^Host " ~/.ssh/config | sed -e 's/Host[ ]*//g' | fzf)
+  if [ -n "$host" ]; then
+    ssh $host
+  fi
+}

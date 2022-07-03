@@ -19,7 +19,7 @@ alias diff='colordiff'
 alias diffy='diff -y --suppress-common-lines'
 
 # ls settings
-alias ls="ls -G"
+alias ls="ls"
 alias ll="ls -l"
 
 # standard command settings
@@ -52,6 +52,7 @@ alias home="~/Desktop"
 alias kurage="~/git/kurage"
 alias aucnet="~/git/aucnet"
 alias pwdc="pwd | pbcopy"
+alias gui="gitui"
 
 # utility
 alias remote="ssh -L 3389:192.168.146.197:3389  stg-business1"
@@ -65,6 +66,10 @@ alias tree="exa -T --git-ignore"
 
 # docker
 alias docker-purge='docker stop $(docker ps -q) && docker rm $(docker ps -aq)'
+
+# tmuxinator
+
+alias mux='tmuxinator'
 
 # AWS
 # measure plugin weight
