@@ -1,5 +1,8 @@
 {
   "coc-rust-analyzer|global": {
     "release": "2022-06-27"
+  },
+  "@yaegassy/coc-volar|/Users/kurage/git/kurage/typescript/kurage": {
+    "coc-volar-ts-server-path": "/Users/kurage/git/kurage/dotfiles/coc-settings/.config/coc/extensions/node_modules/@yaegassy/coc-volar/node_modules/typescript/lib/tsserverlibrary.js"
   }
 }

@@ -25,7 +25,7 @@ alias ll="ls -l"
 # standard command settings
 alias vim='nvim'
 alias vi='nvim'
-alias cat='bat'
+alias cat='bat --theme="TwoDark" --style="header,changes" --map-syntax ".ignore:Git Ignore"'
 
 # js-beautify setting
 alias js-beautify="js-beautify \

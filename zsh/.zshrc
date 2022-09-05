@@ -61,3 +61,4 @@ export PATH="$PATH:/Users/kurage/.local/bin"
 export PATH="/Users/kurage/git/git-fuzzy/bin:$PATH"
 
 . ~/.asdf/plugins/java/set-java-home.zsh
+export TERM=xterm-color256
