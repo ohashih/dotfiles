@@ -53,6 +53,7 @@ alias kurage="~/git/kurage"
 alias aucnet="~/git/aucnet"
 alias pwdc="pwd | pbcopy"
 alias gui="gitui"
+alias vitask="vi ~/private/task.md"
 
 # utility
 alias remote="ssh -L 3389:192.168.146.197:3389  stg-business1"

@@ -26,10 +26,8 @@
     "line-length": false
   },
   "suggest.floatConfig": {
-    "border": true,
     "shadow": true,
-    "highlight": "CocFloating",
-    "maxWidth": 100
+    "highlight": "CocFloating"
   },
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
@@ -86,6 +84,11 @@
       "command": "/Users/kurage/.asdf/shims/efm-langserver",
       "args": [],
       "filetypes": ["markdown"]
+    },
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"]
     }
   }
 }
