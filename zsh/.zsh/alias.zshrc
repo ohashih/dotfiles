@@ -54,10 +54,12 @@ alias aucnet="~/git/aucnet"
 alias pwdc="pwd | pbcopy"
 alias gui="gitui"
 alias vitask="vi ~/private/task.md"
+alias dynamo="node ~/dynamo/dynamo.js"
 
 # utility
 alias remote="ssh -L 3389:192.168.146.197:3389  stg-business1"
 alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
+alias calen="icalBuddy -f -sd eventsToday+10"
 
 # exa
 

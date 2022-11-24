@@ -83,12 +83,19 @@
     "efm": {
       "command": "/Users/kurage/.asdf/shims/efm-langserver",
       "args": [],
-      "filetypes": ["markdown"]
+      "filetypes": ["vim", "markdown"]
     },
     "elmLS": {
       "command": "elm-language-server",
       "filetypes": ["elm"],
       "rootPatterns": ["elm.json"]
+    },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
     }
   }
 }
