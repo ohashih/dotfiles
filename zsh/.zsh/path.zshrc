@@ -27,7 +27,7 @@ eval "$(/usr/libexec/path_helper)"
 
 # asdf
 . /usr/local/opt/asdf/libexec/asdf.sh
-. $(brew --prefix asdf)/asdf.sh
+#. $(brew --prefix asdf)/asdf.sh
 export PATH="$HOME/.asdf/bin:$PATH"
 eval "$(asdf exec direnv hook bash)"
 eval "$(gh completion -s zsh)"

@@ -104,3 +104,9 @@ set listchars=tab:>-,extends:<,trail:-
 
 " color設定
 set termguicolors
+
+" 折り返し設定
+set showbreak=↪
+
+set list listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set ambiwidth=double

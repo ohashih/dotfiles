@@ -57,9 +57,11 @@ alias vitask="vi ~/private/task.md"
 alias dynamo="node ~/dynamo/dynamo.js"
 
 # utility
-alias remote="ssh -L 3389:192.168.146.197:3389  stg-business1"
+alias remote="ssh -NL 4308:10.220.110.199:3308 stg-business1"
+alias anshMysql="mysql --host=127.0.0.1 --user=am2work --password=6440 --port=4308"
 alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
 alias calen="icalBuddy -f -sd eventsToday+10"
+alias lzd="lazydocker"
 
 # exa
 

@@ -38,6 +38,8 @@ if dein#check_install()
   call dein#install()
 endif
 
+au FileType html let b:coc_root_patterns = ['.git', '.env', 'tailwind.config.js', 'tailwind.config.cjs']
+
 " 各設定ファイル読み込み
 runtime! ./rc/color.vim
 runtime! ./rc/function.vim
