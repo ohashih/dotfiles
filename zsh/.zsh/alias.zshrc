@@ -55,6 +55,8 @@ alias pwdc="pwd | pbcopy"
 alias gui="gitui"
 alias vitask="vi ~/private/task.md"
 alias dynamo="node ~/dynamo/dynamo.js"
+alias gdiff="git-split-diffs --color | less -RFX"
+alias imgcat="imgcat_tmux"
 
 # utility
 alias remote="ssh -NL 4308:10.220.110.199:3308 stg-business1"
@@ -62,6 +64,8 @@ alias anshMysql="mysql --host=127.0.0.1 --user=am2work --password=6440 --port=43
 alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
 alias calen="icalBuddy -f -sd eventsToday+10"
 alias lzd="lazydocker"
+alias compression="tar -zcvf"
+alias uncompression="tar -zxvf"
 
 # exa
 

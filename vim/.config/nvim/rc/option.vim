@@ -15,6 +15,12 @@ set softtabstop=0
 set shiftround
 set hls
 set number
+set ruler
+
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
 " ========== Character code =======
 " 文字コードをUFT-8に設定
 set fenc=utf-8

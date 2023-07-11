@@ -34,3 +34,6 @@ eval "$(gh completion -s zsh)"
 
 # Rust
 source $HOME/.cargo/env
+
+# ITN
+export PATH="$PATH:$HOME/bin-itn"

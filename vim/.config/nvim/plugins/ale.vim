@@ -37,14 +37,21 @@ nmap <silent> [ale]<C-N> <Plug>(ale_next)
 
 " fixer
 let g:ale_fixers = {
-\  '*': ['remove_trailing_lines', 'trim_whitespace'],
-\  'javascript': ['eslint'],
-\  'scss': ['stylelint'],
-\  'html': [
-      \   {buffer, lines -> {'command': 'html-beautify  -c ~/.htmlBeautifyConfig', 'read_temporary_file': 1}}
-      \   ],
-\  'markdown': [
-      \   {buffer, lines -> {'command': 'textlint -c ~/.config/textlintrc -o /dev/null --fix --no-color --quiet %t', 'read_temporary_file': 1}}
-      \   ],
+\   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
+\   'javascript': ['prettier'],
+\   'javascriptreact': ['prettier'],
+\   'css': ['prettier'],
 \}
+
+let g:ale_sign_error = '>'
+let g:ale_sign_warning = '-'
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+let g:ale_statusline_format = ['E%d', 'W%d', 'OK']
+
+nmap <silent> <C-w>j <Plug>(ale_next_wrap)
+nmap <silent> <C-w>k <Plug>(ale_previous_wrap)
+
 let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all'

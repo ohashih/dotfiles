@@ -10,42 +10,47 @@
       "http://json.schemastore.org/prettierrc": {
         "etag": "\"80e08ca9849bd81:0\"",
         "fileName": "b2ed7a7b6c79e58baf94e4ce160282de.schema.json",
-        "updateTime": 1676473896329
+        "updateTime": 1689068295506
       },
       "https://json.schemastore.org/package.json": {
-        "etag": "\"0ff6ca2e030d91:0\"",
+        "etag": "\"0cbc4ae1193d91:0\"",
         "fileName": "473f72b44c2905902dfbcc770aab7f7a.schema.json",
-        "updateTime": 1676473896577
+        "updateTime": 1689068295565
       },
       "https://json.schemastore.org/semantic-release.json": {
         "etag": "\"808cdec3a9a4d81:0\"",
         "fileName": "fbc95702ba6eddb3e2de4f52e31ca82a.schema.json",
-        "updateTime": 1676473897239
+        "updateTime": 1689068296052
       },
       "https://json.schemastore.org/jscpd.json": {
         "etag": "\"80bec5ba1984d81:0\"",
         "fileName": "22bfc1ab1ff56aae62322f6ce45dab5a.schema.json",
-        "updateTime": 1676473897220
+        "updateTime": 1689068296109
       },
       "https://json.schemastore.org/ava.json": {
         "etag": "\"80cdbd40989d91:0\"",
         "fileName": "635f57185b22bce9d3a56c68f5da4ad7.schema.json",
-        "updateTime": 1676473897252
+        "updateTime": 1689068296075
       },
       "https://json.schemastore.org/eslintrc.json": {
         "etag": "\"09c10cf5f2bd91:0\"",
         "fileName": "c5064f140d4cfdbf4d6fbe68f68abbb1.schema.json",
-        "updateTime": 1676473897225
+        "updateTime": 1689068296103
       },
       "https://json.schemastore.org/prettierrc.json": {
         "etag": "\"80e08ca9849bd81:0\"",
         "fileName": "ea5ab10330a3ab77dfd6d00a735b0925.schema.json",
-        "updateTime": 1676473897222
+        "updateTime": 1689068296106
       },
       "https://json.schemastore.org/stylelintrc.json": {
-        "etag": "\"80e08ca9849bd81:0\"",
+        "etag": "\"0d52dd6eabd91:0\"",
         "fileName": "000bfbdd14d2fb8ec5b0d59bec32ef98.schema.json",
-        "updateTime": 1676473897235
+        "updateTime": 1689068296091
+      },
+      "https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json": {
+        "etag": "W/\"72403343a5a13bf04cab10e49473cc572ddd4ea04bd16f030f8e6c8836004e50\"",
+        "fileName": "99f3c27d626efee252183bd6852498c1.schema.json",
+        "updateTime": 1679155116214
       }
     }
   }
