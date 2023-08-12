@@ -2,11 +2,10 @@
   "dependencies": {
     "@yaegassy/coc-phpstan": ">=0.4.1",
     "@yaegassy/coc-tailwindcss3": ">=0.4.7",
-    "@yaegassy/coc-volar": ">=0.25.25",
+    "@yaegassy/coc-volar": ">=0.34.7",
     "coc-css": ">=2.0.0",
-    "coc-diagnostic": ">=0.23.8",
-    "coc-docker": ">=0.5.0",
-    "coc-eslint": ">=1.6.0",
+    "coc-diagnostic": ">=0.24.0",
+    "coc-docker": ">=1.0.2",
     "coc-fzf-preview": ">=2.16.5",
     "coc-git": ">=2.6.1",
     "coc-html": ">=1.8.0",
@@ -14,18 +13,18 @@
     "coc-java-debug": ">=0.3.0",
     "coc-jedi": ">=0.35.0",
     "coc-json": ">=1.8.0",
-    "coc-lua": ">=1.0.1",
-    "coc-markdownlint": ">=1.27.0",
-    "coc-phpls": ">=2.2.2",
+    "coc-lua": ">=2.0.5",
+    "coc-markdownlint": ">=1.29.0",
+    "coc-phpls": ">=2.2.3",
     "coc-sql": ">=0.11.0",
-    "coc-sumneko-lua": ">=0.0.35",
+    "coc-sumneko-lua": ">=0.0.39",
     "coc-toml": ">=1.2.5",
+    "coc-vimlsp": ">=0.13.1",
+    "coc-tailwindcss": ">=0.7.0",
     "coc-tsserver": ">=2.1.3",
-    "coc-vimlsp": ">=0.13.0",
-    "coc-prettier": ">=9.3.1",
-    "coc-tailwindcss": ">=0.7.0"
+    "coc-eslint": ">=1.6.0"
   },
   "disabled": [],
   "locked": [],
-  "lastUpdate": 1689052129842
+  "lastUpdate": 1691826732657
 }

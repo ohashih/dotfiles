@@ -14,14 +14,17 @@
     "css",
     "scss"
   ],
+  "html.hover.references": true,
   "coc.source.file.ignoreHidden": false,
   "diagnostic.format": "%message [%source]",
   "diagnostic.virtualText": true,
   "diagnostic.checkCurrentLine": true,
   "diagnostic.separateRelatedInformationAsDiagnostics": true,
+  "eslint.alwaysShowStatus": true,
   "eslint.autoFixOnSave": true,
   "eslint.format.enable": true,
   "eslint.packageManager": "yarn",
+  "tsserver.enable": false,
   "git.addGBlameToVirtualText": true,
   "git.semanticCommit.scope": false,
   "list.normalMappings": {
@@ -65,7 +68,7 @@
     "default": "\uf29c"
   },
   "snippet.highlight": true,
-  "semanticTokens.filetypes": ["*"],
+  "json.enable": true,
   "codeLens.position": "eol",
   "suggest.timeout": 5000,
   "diagnostic.displayByAle": true,
@@ -76,9 +79,10 @@
   "sumneko-lua.enableNvimLuaDev": true,
   "Lua.completion.callSnippet": "Both",
   "Lua.runtime.version": "LuaJIT",
-  "Lua.telemetry.enable": false,
-  "Lua.diagnostics.globals": ["vim", "jit"],
-  "typescript.format.semicolons": "ignore",
+  "Lua.diagnostics.globals": [
+    "vim",
+    "jit"
+  ],
   "typescript.autoClosingTags": true,
   "typescript.referencesCodeLens.showOnAllFunctions": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
@@ -92,17 +96,29 @@
     "efm": {
       "command": "/Users/kurage/.asdf/shims/efm-langserver",
       "args": [],
-      "filetypes": ["vim", "markdown"]
+      "filetypes": [
+        "vim",
+        "markdown"
+      ]
     },
     "elmLS": {
       "command": "elm-language-server",
-      "filetypes": ["elm"],
-      "rootPatterns": ["elm.json"]
+      "filetypes": [
+        "elm"
+      ],
+      "rootPatterns": [
+        "elm.json"
+      ]
     },
     "terraform": {
       "command": "terraform-ls",
-      "args": ["serve"],
-      "filetypes": ["terraform", "tf"],
+      "args": [
+        "serve"
+      ],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
       "initializationOptions": {},
       "settings": {}
     }

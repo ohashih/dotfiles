@@ -179,7 +179,6 @@ let g:coc_global_extensions = [
   \'coc-lua',
   \'coc-markdownlint',
   \'coc-phpls',
-  \'coc-prettier',
   \'coc-sql',
   \'coc-sumneko-lua',
   \'coc-toml',

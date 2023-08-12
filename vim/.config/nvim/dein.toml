@@ -74,9 +74,9 @@ hook_add = '''
 source ~/.config/nvim/plugins/vim-bookmarks.vim
 '''
 
- [[plugins]]
- repo = 'prettier/vim-prettier'
- build = 'yarn install --frozen-lockfile --production'
+#  [[plugins]]
+#  repo = 'prettier/vim-prettier'
+#  build = 'yarn install --frozen-lockfile --production'
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
