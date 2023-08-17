@@ -6,7 +6,7 @@ require("plugins")
 require("lualine").setup()
 require("tabline").setup()
 require("mini.indentscope").setup({
-  symbol = '| '
+  symbol = '|'
 })
 require("nvim-treesitter").setup({
   auto_install = true,
