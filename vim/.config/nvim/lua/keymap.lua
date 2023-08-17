@@ -98,7 +98,11 @@ keymap("i", "<C-l>", "<Right>", opts)
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 keymap("v", "j", "gj", opts)
-keymap("v", "j", "gk", opts)
+keymap("v", "k", "gk", opts)
+
+-- buffer
+keymap("n", "<C-w>", ":bprev<CR>", opts)
+keymap("n", "<C-e>", ":bnext<CR>", opts)
 
 -- NeoTree
 keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)

@@ -315,4 +315,57 @@ packer.startup(function(use)
     'nvim-telescope/telescope-file-browser.nvim',
     requires = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' }
   }
+  -- LSP
+	use({
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("plugin.lspconfig")
+		end,
+	})
+
+	use("onsails/lspkind-nvim")
+	use({
+		"L3MON4D3/LuaSnip",
+		tag = "v<CurrentMajor>.*",
+	})
+
+	-- cmp: Autocomplete
+	use({
+		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
+		config = function()
+			require("plugin.lspconfig")
+		end,
+	})
+
+	use("hrsh7th/cmp-nvim-lsp")
+
+	use({ "hrsh7th/cmp-path", after = "nvim-cmp" })
+
+	use({ "hrsh7th/cmp-buffer", after = "nvim-cmp" })
+
+	-- LSP diagnostics, code actions, and more via Lua.
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		config = function()
+			require("plugin.lspconfig")
+		end,
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+
+	-- Mason: Portable package manager
+	use({
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	})
+
+	use({
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
+			require("plugin.lspconfig")
+		end,
+		after = "mason.nvim",
+	})
 end)

@@ -65,7 +65,7 @@ local options = {
 	background = "dark",
 	scrolloff = 8,
 	sidescrolloff = 8,
-	guifont = "monospace:h17",
+	guifont = "Hack Nerd Font Mono",
 	splitbelow = false,
 	splitright = false,
 }
