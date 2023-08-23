@@ -5,8 +5,7 @@ local cmp = require("cmp")
 
 cmp.setup({
   completion = {
-    -- 4文字目から補完を開始
-    keyword_length = 3,
+    keyword_length = 2,
   },
   snippet = {
     expand = function(args)

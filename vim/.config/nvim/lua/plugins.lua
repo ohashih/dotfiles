@@ -12,20 +12,31 @@ packer.startup(function(use)
   use {
     'folke/tokyonight.nvim'
   }
-
+  use {
+    'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'
+  }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { "nvim-tree/nvim-web-devicons", opt = true }
   }
   use {
+    'windwp/nvim-ts-autotag'
+  }
+  use {
     'kdheepak/tabline.nvim'
   }
   use {
-    'echasnovski/mini.indentscope'
+    'lukas-reineke/indent-blankline.nvim'
   }
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
+  }
+  use {
+    'bronson/vim-trailing-whitespace'
+  }
+  use {
+    'simeji/winresizer',
   }
   use {
   "folke/noice.nvim",
@@ -46,7 +57,6 @@ packer.startup(function(use)
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
       {
-        -- only needed if you want to use the commands with "_with_window_picker" suffix
         's1n7ax/nvim-window-picker',
         tag = "v1.*",
         config = function()
@@ -54,12 +64,8 @@ packer.startup(function(use)
             autoselect_one = true,
             include_current = false,
             filter_rules = {
-              -- filter using buffer options
               bo = {
-                -- if the file type is one of following, the window will be ignored
                 filetype = { 'neo-tree', "neo-tree-popup", "notify" },
-
-                -- if the buffer type is one of following, the window will be ignored
                 buftype = { 'terminal', "quickfix" },
               },
             },

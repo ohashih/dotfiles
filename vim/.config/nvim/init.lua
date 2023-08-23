@@ -5,14 +5,14 @@ require("plugins")
 
 require("lualine").setup()
 require("tabline").setup()
-require("mini.indentscope").setup({
-  symbol = '|'
-})
 require("nvim-treesitter").setup({
   auto_install = true,
   highlight = {
     enable = true,
   },
+  autotag = {
+    enable = true,
+  }
 })
 require("noice").setup({
   lsp = {
@@ -113,3 +113,11 @@ require('gitsigns').setup {
 }
 
 vim.cmd[[autocmd BufWritePost plugins.lua PackerCompile]]
+
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+
+require("indent_blankline").setup {
+    show_end_of_line = true,
+    space_char_blankline = " ",
+}

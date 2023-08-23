@@ -5,12 +5,6 @@ vim.wo.number = true
 local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
--- Remove whitespace on save
-autocmd("BufWritePre", {
-	pattern = "*",
-	command = ":%s/\\s\\+$//e",
-})
-
 -- Don't auto commenting new lines
 autocmd("BufEnter", {
 	pattern = "*",
@@ -70,6 +64,9 @@ local options = {
 	splitright = false,
 }
 
+vim.opt.winblend = 20
+vim.opt.pumblend = 20
+vim.opt.termguicolors=true
 vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do
@@ -79,3 +76,27 @@ end
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]])
+
+vim.api.nvim_create_augroup('extra-whitespace', {})
+vim.api.nvim_create_autocmd({'VimEnter', 'WinEnter'}, {
+    group = 'extra-whitespace',
+    pattern = {'*'},
+    command = [[call matchadd('ExtraWhitespace', '[\u200B\u3000]')]]
+})
+vim.api.nvim_create_autocmd({'ColorScheme'}, {
+    group = 'extra-whitespace',
+    pattern = {'*'},
+    command = [[highlight default ExtraWhitespace ctermbg=202 ctermfg=202 guibg=salmon]]
+})
+
+vim.cmd [[
+if executable('fcitx5')
+  let g:fcitx_state = 1
+  augroup fcitx_savestate
+    autocmd!
+    autocmd InsertLeave * let g:fcitx_state = str2nr(system('fcitx5-remote'))
+    autocmd InsertLeave * call system('fcitx5-remote -c')
+    autocmd InsertEnter * call system(g:fcitx_state == 1 ? 'fcitx5-remote -c': 'fcitx5-remote -o')
+  augroup END
+endif
+]]
