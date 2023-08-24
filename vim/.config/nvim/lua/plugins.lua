@@ -10,6 +10,13 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
+    'sindrets/diffview.nvim',
+    config = function()
+      require('configs.git')
+    end
+  }
+
+  use {
     'folke/tokyonight.nvim'
   }
   use {

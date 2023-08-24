@@ -51,9 +51,6 @@ keymap("n", "dw", 'vb"_d', opts)
 keymap("n", "<Space>h", "^", opts)
 keymap("n", "<Space>l", "$", opts)
 
--- ;でコマンド入力( ;と:を入れ替)
-keymap("n", ";", ":", opts)
-
 -- 行末までのヤンクにする
 keymap("n", "Y", "y$", opts)
 
@@ -103,8 +100,8 @@ keymap("v", "j", "gj", opts)
 keymap("v", "k", "gk", opts)
 
 -- buffer
-keymap("n", "<tab>", ":bprev<CR>", opts)
-keymap("n", "<S-tab>", ":bnext<CR>", opts)
+keymap("n", "<tab>", ":bnext<CR>", opts)
+keymap("n", "<S-tab>", ":bprev<CR>", opts)
 
 -- NeoTree
 keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)
