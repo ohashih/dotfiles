@@ -61,7 +61,7 @@ local options = {
 	sidescrolloff = 8,
 	guifont = "Hack Nerd Font Mono",
 	splitbelow = false,
-	splitright = false,
+	splitright = true,
 }
 
 vim.opt.winblend = 20
@@ -88,15 +88,3 @@ vim.api.nvim_create_autocmd({'ColorScheme'}, {
     pattern = {'*'},
     command = [[highlight default ExtraWhitespace ctermbg=202 ctermfg=202 guibg=salmon]]
 })
-
-vim.cmd [[
-if executable('fcitx5')
-  let g:fcitx_state = 1
-  augroup fcitx_savestate
-    autocmd!
-    autocmd InsertLeave * let g:fcitx_state = str2nr(system('fcitx5-remote'))
-    autocmd InsertLeave * call system('fcitx5-remote -c')
-    autocmd InsertEnter * call system(g:fcitx_state == 1 ? 'fcitx5-remote -c': 'fcitx5-remote -o')
-  augroup END
-endif
-]]
