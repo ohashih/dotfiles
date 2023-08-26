@@ -30,9 +30,6 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "te", ":tabedit", opts)
 -- 新しいタブを一番右に作る
 keymap("n", "t", ":tabnew<Return>", opts)
--- move tab
---keymap("n", "<Tab>", "gT", opts)
---keymap("n", "<S-Tab>", "gt", opts)
 
 -- Split window
 keymap("n", "<S-j>", ":split<Return><C-w>w", opts)
@@ -102,6 +99,7 @@ keymap("v", "k", "gk", opts)
 -- buffer
 keymap("n", "<tab>", ":bnext<CR>", opts)
 keymap("n", "<S-tab>", ":bprev<CR>", opts)
+keymap("n", "<C-c>", ":bd %<CR>:bprev<CR>", opts)
 
 -- NeoTree
 keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)
