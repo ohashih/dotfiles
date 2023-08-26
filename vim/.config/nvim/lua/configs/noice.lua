@@ -18,4 +18,3 @@ require("noice").setup({
 })
 
 return M
-

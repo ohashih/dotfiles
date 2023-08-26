@@ -7,7 +7,7 @@ require("nvim-treesitter").setup({
   },
   autotag = {
     enable = true,
-  }
+  },
 })
 
 return M

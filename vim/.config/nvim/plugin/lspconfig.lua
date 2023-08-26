@@ -1,29 +1,27 @@
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 
 local on_attach = function(client, bufnr)
-
   client.server_capabilities.documentFormattingProvider = false
 
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
   -- -- Mappings.
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
-  vim.keymap.set('n', 'rn', vim.lsp.buf.rename, bufopts)
-
+  vim.keymap.set("n", "rn", vim.lsp.buf.rename, bufopts)
 end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("mason").setup()
 require("mason-lspconfig").setup()
-require("mason-lspconfig").setup_handlers {
-  function (server_name) -- default handler (optional)
-    require("lspconfig")[server_name].setup {
+require("mason-lspconfig").setup_handlers({
+  function(server_name) -- default handler (optional)
+    require("lspconfig")[server_name].setup({
       on_attach = on_attach,
       capabilities = capabilities,
-    }
+    })
   end,
-}
+})
 
 -- Diagnostic symbols in the sign column
 local signs = { Error = " ", Warn = ">>", Hint = ">", Info = ">" }
@@ -33,18 +31,16 @@ for type, icon in pairs(signs) do
 end
 
 -- LSP-Diagnostic Settings(LSP-Handler)
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = { spacing = 2, prefix = "◆",severity = 'Error'},
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  virtual_text = { spacing = 2, prefix = "◆", severity = "Error" },
   severity_sort = true,
   underline = true,
   update_in_insert = false,
-}
-)
+})
 
 -- Diagnostic Setting(Gloabal)
 vim.diagnostic.config({
-  virtual_text = { spacing = 2, prefix = "◆",severity = 'Error'},
+  virtual_text = { spacing = 2, prefix = "◆", severity = "Error" },
   severity_sort = true,
   underline = true,
   update_in_insert = false,
@@ -54,9 +50,11 @@ vim.diagnostic.config({
 })
 
 local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
+if not status then
+  return
+end
 
-local protocol = require('vim.lsp.protocol')
+local protocol = require("vim.lsp.protocol")
 
 local on_attach = function(client, bufnr)
   -- format on save
@@ -64,14 +62,16 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = vim.api.nvim_create_augroup("Format", { clear = true }),
       buffer = bufnr,
-      callback = function() vim.lsp.buf.formatting_seq_sync() end
+      callback = function()
+        vim.lsp.buf.formatting_seq_sync()
+      end,
     })
   end
 end
 
 -- TypeScript
-nvim_lsp.tsserver.setup {
+nvim_lsp.tsserver.setup({
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" }
-}
+  cmd = { "typescript-language-server", "--stdio" },
+})
