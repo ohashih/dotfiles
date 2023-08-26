@@ -88,3 +88,6 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
   pattern = { "*" },
   command = [[highlight default ExtraWhitespace ctermbg=202 ctermfg=202 guibg=salmon]],
 })
+
+vim.opt.list = true
+vim.opt.listchars:append("space:⋅")
