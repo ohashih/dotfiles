@@ -141,16 +141,22 @@ packer.startup(function(use)
   use({
     "j-hui/fidget.nvim",
     tag = "legacy",
-    config = function()
-      require("fidget").setup({})
-    end,
+    require("fidget").setup({}),
   })
 
   use({
     "s1n7ax/nvim-window-picker",
     tag = "v2.*",
-    config = function()
-      require("window-picker").setup()
-    end,
+    require("window-picker").setup(),
+  })
+
+  -- Formatter & Linter
+  use({
+    "mfussenegger/nvim-lint",
+    require("configs.nvim-lint"),
+  })
+  use({
+    "mhartington/formatter.nvim",
+    require("configs.formatter"),
   })
 end)
