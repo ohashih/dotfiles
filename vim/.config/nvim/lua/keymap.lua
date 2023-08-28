@@ -103,3 +103,7 @@ keymap("n", "<C-c>", ":bd %<CR>:bprev<CR>", opts)
 
 -- NeoTree
 keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)
+
+-- DiffviewOpen
+
+keymap("n", "<leader>g", ":DiffviewOpen<CR>", opts)
