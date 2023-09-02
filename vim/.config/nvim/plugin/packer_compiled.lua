@@ -167,11 +167,6 @@ _G.packer_plugins = {
     path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
   },
-  ["nvim-autopairs"] = {
-    loaded = true,
-    path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/nvim-cmp",
