@@ -1,162 +1,154 @@
-local status, packer = pcall(require, "packer")
+local status, packer = pcall(require, 'packer')
 if not status then
-  print("Packer is not installed")
+  print 'Packer is not installed'
   return
 end
 
-vim.cmd([[packadd packer.nvim]])
+vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
-  use("wbthomason/packer.nvim")
+  use 'wbthomason/packer.nvim'
 
   -- emphasize & delete space
-  use({
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-    config = function()
-      require("configs.treesitter")
-    end,
-  })
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    require 'configs.treesitter',
+  }
 
-  use({
-    "bronson/vim-trailing-whitespace",
-  })
+  use {
+    'bronson/vim-trailing-whitespace',
+  }
 
   -- tab & buffer & status
-  use({
-    "kdheepak/tabline.nvim",
-  })
-  use({
-    "akinsho/bufferline.nvim",
-    tag = "*",
-    requires = "nvim-tree/nvim-web-devicons",
-  })
-  use({
-    "nvim-lualine/lualine.nvim",
-    requires = { "nvim-tree/nvim-web-devicons", opt = true },
-  })
+  use {
+    'kdheepak/tabline.nvim',
+  }
+  use {
+    'akinsho/bufferline.nvim',
+    tag = '*',
+    requires = 'nvim-tree/nvim-web-devicons',
+  }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+  }
   -- color
-  use({
-    "folke/tokyonight.nvim",
-  })
+  use {
+    'folke/tokyonight.nvim',
+  }
 
   -- indent
-  use({
-    "lukas-reineke/indent-blankline.nvim",
-  })
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+  }
 
   -- resize window
-  use({
-    "simeji/winresizer",
-  })
+  use {
+    'simeji/winresizer',
+  }
 
   -- atuotag notwork
-  use({ "windwp/nvim-ts-autotag" })
+  use { 'windwp/nvim-ts-autotag' }
 
   -- git
-  use({
-    "sindrets/diffview.nvim",
-    config = function()
-      require("configs.git")
-    end,
-  })
+  use {
+    'sindrets/diffview.nvim',
+    require 'configs.git',
+  }
 
-  use({
-    "lewis6991/gitsigns.nvim",
-    config = function()
-      require("gitsigns").setup()
-    end,
-  })
+  use {
+    'lewis6991/gitsigns.nvim',
+    require('gitsigns').setup(),
+  }
 
   -- notice
-  use({
-    "folke/noice.nvim",
-    config = function()
-      require("configs.noice")
-    end,
+  use {
+    'folke/noice.nvim',
+    require 'configs.noice',
     requires = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
     },
-  })
+  }
 
   -- filetree
-  use({
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
+  use {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v3.x',
     requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons',
+      'MunifTanjim/nui.nvim',
       {
-        "s1n7ax/nvim-window-picker",
-        tag = "v1.*",
+        's1n7ax/nvim-window-picker',
+        tag = 'v1.*',
         config = function()
-          require("window-picker").setup({
+          require('window-picker').setup {
             autoselect_one = true,
             include_current = false,
             filter_rules = {
               bo = {
-                filetype = { "neo-tree", "neo-tree-popup", "notify" },
-                buftype = { "terminal", "quickfix" },
+                filetype = { 'neo-tree', 'neo-tree-popup', 'notify' },
+                buftype = { 'terminal', 'quickfix' },
               },
             },
-            other_win_hl_color = "#e35e4f",
-          })
+            other_win_hl_color = '#e35e4f',
+          }
         end,
       },
     },
     config = function()
-      require("configs.neo-tree")
+      require 'configs.neo-tree'
     end,
-    vim.cmd([[nnoremap \ :Neotree reveal<cr>]]),
-  })
+    vim.cmd [[nnoremap \ :Neotree reveal<cr>]],
+  }
 
   -- telescope
-  use({
-    "nvim-telescope/telescope-file-browser.nvim",
-    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-  })
+  use {
+    'nvim-telescope/telescope-file-browser.nvim',
+    requires = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' },
+  }
 
   -- lsp
-  use({
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-  })
+  use {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+  }
 
-  use("hrsh7th/nvim-cmp")
-  use("hrsh7th/cmp-nvim-lsp")
-  use("hrsh7th/cmp-buffer")
-  use("hrsh7th/cmp-path")
-  use("hrsh7th/cmp-path")
-  use("hrsh7th/cmp-cmdline")
-  use("hrsh7th/vim-vsnip")
-  use("hrsh7th/cmp-vsnip")
-  use("onsails/lspkind.nvim")
-  use({
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-  })
-  use({
-    "j-hui/fidget.nvim",
-    tag = "legacy",
-    require("fidget").setup({}),
-  })
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/cmp-vsnip'
+  use 'onsails/lspkind.nvim'
+  use {
+    'glepnir/lspsaga.nvim',
+    branch = 'main',
+  }
+  use {
+    'j-hui/fidget.nvim',
+    tag = 'legacy',
+    require('fidget').setup {},
+  }
 
-  use({
-    "s1n7ax/nvim-window-picker",
-    tag = "v2.*",
-    require("window-picker").setup(),
-  })
+  use {
+    's1n7ax/nvim-window-picker',
+    tag = 'v2.*',
+    require('window-picker').setup(),
+  }
 
   -- Formatter & Linter
-  use({
-    "mfussenegger/nvim-lint",
-    require("configs.nvim-lint"),
-  })
-  use({
-    "mhartington/formatter.nvim",
-    require("configs.formatter"),
-  })
+  use {
+    'mfussenegger/nvim-lint',
+    require 'configs.nvim-lint',
+  }
+  use {
+    'mhartington/formatter.nvim',
+    require 'configs.formatter',
+  }
 end)
