@@ -52,6 +52,7 @@ packer.startup(function(use)
 
   -- atuotag notwork
   use({ "windwp/nvim-ts-autotag" })
+  use({ "windwp/nvim-autopairs" })
 
   -- git
   use({
