@@ -37,3 +37,6 @@ source $HOME/.cargo/env
 
 # ITN
 export PATH="$PATH:$HOME/bin-itn"
+
+# postgres
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"

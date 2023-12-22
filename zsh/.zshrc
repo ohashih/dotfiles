@@ -52,6 +52,10 @@ source_file ~/.zsh/cdpath.zshrc
 
 source_file ~/.zsh/flyio.zshrc
 
+# Setting Andy Photobook AI
+
+source_file ~/.zsh/apb.zshrc
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -115,3 +119,9 @@ function imgcat_tmux() {
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 source_file ~/.mdbook.zsh
+
+## Copilot
+source <(copilot completion zsh)
+
+## Trivy
+source <(trivy completion zsh)
