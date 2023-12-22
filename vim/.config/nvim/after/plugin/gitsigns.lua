@@ -81,7 +81,7 @@ require("gitsigns").setup({
     map("n", "<leader>hu", gs.undo_stage_hunk)
     map("n", "<leader>hR", gs.reset_buffer)
     map("n", "<leader>hp", gs.preview_hunk)
-    map("n", "<leader>hb", function()
+    map("n", "<leader>gb", function()
       gs.blame_line({ full = true })
     end)
     map("n", "<leader>tb", gs.toggle_current_line_blame)

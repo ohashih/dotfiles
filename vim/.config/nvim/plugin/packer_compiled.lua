@@ -115,6 +115,12 @@ _G.packer_plugins = {
     path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
   },
+  ["git-blame.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitblame\frequire\0" },
+    loaded = true,
+    path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
+    url = "https://github.com/f-person/git-blame.nvim"
+  },
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
     loaded = true,
@@ -223,6 +229,11 @@ _G.packer_plugins = {
     path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/tabline.nvim",
     url = "https://github.com/kdheepak/tabline.nvim"
   },
+  tcomment_vim = {
+    loaded = true,
+    path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/tcomment_vim",
+    url = "https://github.com/tomtom/tcomment_vim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -237,6 +248,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-coloresque"] = {
+    loaded = true,
+    path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/vim-coloresque",
+    url = "https://github.com/gko/vim-coloresque"
+  },
+  ["vim-highlightedyank"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27configs.highlight-yank\frequire\0" },
+    loaded = true,
+    path = "/Users/kurage/.local/share/nvim/site/pack/packer/start/vim-highlightedyank",
+    url = "https://github.com/machakann/vim-highlightedyank"
   },
   ["vim-trailing-whitespace"] = {
     loaded = true,
@@ -260,6 +282,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23configs.treesitter\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
+-- Config for: git-blame.nvim
+time([[Config for git-blame.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitblame\frequire\0", "config", "git-blame.nvim")
+time([[Config for git-blame.nvim]], false)
+-- Config for: vim-highlightedyank
+time([[Config for vim-highlightedyank]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27configs.highlight-yank\frequire\0", "config", "vim-highlightedyank")
+time([[Config for vim-highlightedyank]], false)
 -- Config for: diffview.nvim
 time([[Config for diffview.nvim]], true)
 try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16configs.git\frequire\0", "config", "diffview.nvim")

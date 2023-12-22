@@ -49,10 +49,12 @@ require("formatter").setup({
     markdown = {
       require("formatter.filetypes.markdown").prettierd,
     },
+    javascript = {
+      require("formatter.filetypes.javascript").eslint_d,
+    },
     css = {
       require("formatter.filetypes.css").prettierd,
     },
-    scs = { stylelint },
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace,
     },

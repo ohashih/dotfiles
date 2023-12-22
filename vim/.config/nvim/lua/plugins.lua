@@ -40,9 +40,26 @@ packer.startup(function(use)
     "folke/tokyonight.nvim",
   })
 
+  use({
+    "gko/vim-coloresque",
+  })
+
   -- indent
   use({
     "lukas-reineke/indent-blankline.nvim",
+  })
+
+  -- commentout
+  use({
+    "tomtom/tcomment_vim",
+  })
+
+  -- yank highlight
+  use({
+    "machakann/vim-highlightedyank",
+    config = function()
+      require("configs.highlight-yank")
+    end,
   })
 
   -- resize window
@@ -65,6 +82,13 @@ packer.startup(function(use)
     "lewis6991/gitsigns.nvim",
     config = function()
       require("gitsigns").setup()
+    end,
+  })
+
+  use({
+    "f-person/git-blame.nvim",
+    config = function()
+      require("gitblame").setup()
     end,
   })
 
@@ -129,7 +153,6 @@ packer.startup(function(use)
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
-  use("hrsh7th/cmp-path")
   use("hrsh7th/cmp-cmdline")
   use("hrsh7th/vim-vsnip")
   use("hrsh7th/cmp-vsnip")
@@ -155,8 +178,9 @@ packer.startup(function(use)
     "mfussenegger/nvim-lint",
     require("configs.nvim-lint"),
   })
+
   use({
-    "mhartington/formatter.nvim",
+    "mhartington/formatter",
     require("configs.formatter"),
   })
 end)

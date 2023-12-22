@@ -36,7 +36,7 @@ keymap("n", "<S-j>", ":split<Return><C-w>w", opts)
 keymap("n", "<S-l>", ":vsplit<Return><C-w>w", opts)
 
 -- Select all
-keymap("n", "<C-a>", "gg<S-v>G", opts)
+-- keymap("n", "<C-a>", "gg<S-v>G", opts)
 
 -- Do not yank with x
 keymap("n", "x", '"_x', opts)
@@ -100,6 +100,7 @@ keymap("v", "k", "gk", opts)
 keymap("n", "<tab>", ":bnext<CR>", opts)
 keymap("n", "<S-tab>", ":bprev<CR>", opts)
 keymap("n", "<C-c>", ":bd %<CR>:bprev<CR>", opts)
+keymap("n", "<Space>a", ":%bdelete<CR>", opts)
 
 -- NeoTree
 keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)
@@ -107,3 +108,8 @@ keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)
 -- DiffviewOpen
 
 keymap("n", "<leader>g", ":DiffviewOpen<CR>", opts)
+keymap("n", "gb", ":GitBlameToggle<CR>", opts)
+
+-- private memo
+
+keymap("n", "me", ":e ~/admin/memo.md<CR>", opts)

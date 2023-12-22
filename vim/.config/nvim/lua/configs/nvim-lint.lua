@@ -1,6 +1,7 @@
 require("lint").linters_by_ft = {
   lua = { "luacheck" },
   markdown = { "markdownlint" },
+  docker = { "hadolint" },
 }
 
 -- file on save
