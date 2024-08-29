@@ -161,26 +161,9 @@ packer.startup(function(use)
     "glepnir/lspsaga.nvim",
     branch = "main",
   })
-  use({
-    "j-hui/fidget.nvim",
-    tag = "legacy",
-    require("fidget").setup({}),
-  })
 
   use({
-    "s1n7ax/nvim-window-picker",
-    tag = "v2.*",
-    require("window-picker").setup(),
-  })
-
-  -- Formatter & Linter
-  use({
-    "mfussenegger/nvim-lint",
-    require("configs.nvim-lint"),
-  })
-
-  use({
-    "mhartington/formatter",
+    "mhartington/formatter.nvim",
     config = function()
       require("configs.formatter")
     end,
