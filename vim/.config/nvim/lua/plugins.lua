@@ -181,6 +181,8 @@ packer.startup(function(use)
 
   use({
     "mhartington/formatter",
-    require("configs.formatter"),
+    config = function()
+      require("configs.formatter")
+    end,
   })
 end)
