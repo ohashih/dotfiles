@@ -55,7 +55,7 @@ alias pwdc="pwd | pbcopy"
 alias gui="gitui"
 alias vitask="vi ~/private/task.md"
 alias dynamo="node ~/dynamo/dynamo.js"
-alias gdiff="git-split-diffs --color | less -RFX"
+alias gdiff="git-split-diffs --color | less -+LFX"
 alias imgcat="imgcat_tmux"
 
 # utility
