@@ -44,16 +44,19 @@ require("formatter").setup({
       end,
     },
     html = {
-      require("formatter.filetypes.html").prettierd,
+      require("formatter.filetypes.html").biome,
     },
     markdown = {
-      require("formatter.filetypes.markdown").prettierd,
+      require("formatter.filetypes.markdown").biome,
     },
     javascript = {
-      require("formatter.filetypes.javascript").prettierd,
+      require("formatter.filetypes.javascript").biome,
     },
     css = {
-      require("formatter.filetypes.css").prettierd,
+      require("formatter.filetypes.css").biome,
+    },
+    terraform = {
+      require("formatter.filetypes.terraform").biome,
     },
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace,

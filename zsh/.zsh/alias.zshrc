@@ -55,7 +55,7 @@ alias pwdc="pwd | pbcopy"
 alias gui="gitui"
 alias vitask="vi ~/private/task.md"
 alias dynamo="node ~/dynamo/dynamo.js"
-alias gdiff="git-split-diffs --color | less -+LFX"
+alias gdiff="git-split-diffs --color"
 alias imgcat="imgcat_tmux"
 
 # utility
@@ -87,3 +87,9 @@ alias mux='tmuxinator'
 # private
 
 alias memo="vi ~/admin/memo.md"
+
+# AWS Git checkout
+
+alias aws-main="pushd ~/.aws && git checkout main && popd"
+alias aws-flex="pushd ~/.aws && git checkout flex && popd"
+alias aws-kurage="pushd ~/.aws && git checkout kurage && popd"

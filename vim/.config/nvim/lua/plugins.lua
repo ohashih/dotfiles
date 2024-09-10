@@ -168,4 +168,16 @@ packer.startup(function(use)
       require("configs.formatter")
     end,
   })
+
+  -- vim help
+  use({
+    "vim-jp/vimdoc-ja",
+    lazy = true,
+    key = {
+      {
+        "h",
+        mode = "c",
+      },
+    },
+  })
 end)
