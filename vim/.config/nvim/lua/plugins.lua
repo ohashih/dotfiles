@@ -180,4 +180,8 @@ packer.startup(function(use)
       },
     },
   })
+  --copilot
+  use({
+    "github/copilot.vim",
+  })
 end)

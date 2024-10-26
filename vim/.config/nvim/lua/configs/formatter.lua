@@ -60,6 +60,10 @@ require("formatter").setup({
       require("formatter.filetypes.javascript").eslint_d,
     },
 
+    json = {
+      require("formatter.filetypes.json").prettier
+    },
+
     terraform = {
       require("formatter.filetypes.terraform").terraformfmt,
     },
@@ -85,4 +89,4 @@ require("formatter").setup({
 
 -- shortCut
 local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<Space>k", ":Format<CR>", opts)
+vim.keymap.set("n", "<Space>h", ":Format<CR>", opts)
