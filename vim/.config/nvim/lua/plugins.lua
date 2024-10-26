@@ -149,7 +149,12 @@ packer.startup(function(use)
     "neovim/nvim-lspconfig",
   })
 
-  use("hrsh7th/nvim-cmp")
+  use({
+    "hrsh7th/nvim-cmp",
+    config = function()
+      require("configs.cmp")
+    end,
+  })
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
@@ -161,6 +166,13 @@ packer.startup(function(use)
     "glepnir/lspsaga.nvim",
     branch = "main",
   })
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  }
 
   use({
     "mhartington/formatter.nvim",
@@ -181,7 +193,12 @@ packer.startup(function(use)
     },
   })
   --copilot
-  use({
-    "github/copilot.vim",
-  })
+  use {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("configs.copilot").setup({})
+    end,
+  }
 end)
