@@ -1,7 +1,19 @@
 return {
-  "zbirenbaum/copilot.lua",
-  cmd = "Copilot",
-  suggestion = {enabled = false},
-  panel = {enabled = false},
-  copilot_node_command = 'node'
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    config = function()
+      require("copilot").setup({
+        suggestion = {enabled = false},
+        panel = {enabled = false},
+        copilot_node_command = 'node'
+      })
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  }
 }

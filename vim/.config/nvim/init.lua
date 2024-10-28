@@ -6,4 +6,3 @@ require("core.lazy")
 vim.cmd([[colorscheme tokyonight-storm]])
 vim.cmd([[autocmd BufWritePost plugins.lua PackerCompile]])
 require("core.keymaps")
-
