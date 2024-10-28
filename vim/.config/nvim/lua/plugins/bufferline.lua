@@ -4,9 +4,16 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons"
   },
---[[   opts = {
-    mode = buffers,
-     highlights = {
+  opts = {
+    options = {
+      mode = buffers,
+      separator_style = "slant",
+      always_show_bufferline = false,
+      show_buffer_close_icons = false,
+      show_close_icon = false,
+      color_icons = true,
+    },
+    highlights = {
       separator = {
         guifg = "#073642",
         guibg = "#002b36",
@@ -26,10 +33,5 @@ return {
         guibg = "#073642",
       },
     },
-    separator_style = "slant",
-    always_show_bufferline = false,
-    show_buffer_close_icons = false,
-    show_close_icon = false,
-    color_icons = true,
-  }, ]]
+  }
 }
