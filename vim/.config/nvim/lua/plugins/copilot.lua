@@ -1,19 +1,18 @@
 return {
   {
     "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter", -- InsertEnter イベントを追加
+    event = "InsertEnter",
+    lazy = true,
+    opts = { suggestion = { enabled = false }, panel = { enabled = false }, copilot_node_command = "node" },
     config = function()
-      require("copilot").setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-        copilot_node_command = "node",
-      })
+      require("copilot").setup()
     end,
   },
   {
     "zbirenbaum/copilot-cmp",
-    after = "copilot.lua", -- copilot.luaの後に読み込む
+    event = "InsertEnter",
+    lazy = true,
+    dependencies = { "zbirenbaum/copilot.lua" },
     config = function()
       require("copilot_cmp").setup()
     end,
