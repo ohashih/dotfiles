@@ -1,4 +1,4 @@
 return {
   { "f-person/git-blame.nvim" },
-  { "sindrets/diffview.nvim" }
+  { "sindrets/diffview.nvim" },
 }

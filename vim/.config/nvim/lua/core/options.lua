@@ -82,5 +82,3 @@ vim.cmd([[set formatoptions-=cro]])
 vim.opt.list = true
 vim.opt.listchars = { tab = ">>", trail = "-", nbsp = "+" }
 vim.opt.listchars:append("space:⋅")
-
-

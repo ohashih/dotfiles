@@ -1,3 +1,3 @@
 return {
-  "kdheepak/tabline.nvim"
+  "kdheepak/tabline.nvim",
 }
