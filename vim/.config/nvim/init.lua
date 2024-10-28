@@ -1,7 +1,9 @@
-require("plugins")
-require("option")
-require("keymap")
-require("color")
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-require("tabline").setup()
+require("core.options")
+require("core.lazy")
+vim.cmd([[colorscheme tokyonight-storm]])
 vim.cmd([[autocmd BufWritePost plugins.lua PackerCompile]])
+require("core.keymaps")
+
