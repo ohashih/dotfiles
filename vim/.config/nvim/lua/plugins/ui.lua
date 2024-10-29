@@ -83,4 +83,12 @@ return {
       )
     end,
   },
+  -- scroll smooth
+  {
+    "karb94/neoscroll.nvim",
+    lazy = true,
+    config = function()
+      require("neoscroll").setup()
+    end,
+  },
 }
