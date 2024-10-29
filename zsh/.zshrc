@@ -125,3 +125,7 @@ source <(copilot completion zsh)
 
 ## Trivy
 source <(trivy completion zsh)
+
+GITSTATUS_LOG_LEVEL=DEBUG
+
+complete -o nospace -C /Users/kurage/.asdf/installs/terraform/1.5.7/bin/terraform terraform
