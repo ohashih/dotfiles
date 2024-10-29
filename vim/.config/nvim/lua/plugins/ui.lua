@@ -62,4 +62,25 @@ return {
   {
     "bronson/vim-trailing-whitespace",
   },
+  -- yank highlight
+  {
+    "machakann/vim-highlightedyank",
+    lazy = true, -- 遅延読み込みを有効に
+    event = "TextYankPost", -- ヤンクイベントが発生したときに読み込む
+    config = function()
+      -- ハイライトの設定
+      vim.g.highlightedyank_highlight_duration = 300 -- ハイライトが表示される時間（ミリ秒）
+
+      -- ヤンク後のハイライト
+      vim.api.nvim_exec(
+        [[
+        augroup highlight_yank
+          autocmd!
+          autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
+        augroup END
+      ]],
+        false
+      )
+    end,
+  },
 }
