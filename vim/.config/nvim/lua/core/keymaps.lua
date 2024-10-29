@@ -72,16 +72,6 @@ keymap("n", "<Space>a", ":%bdelete<CR>", opts)
 -- Select all
 -- keymap("n", "<C-a>", "gg<S-v>G", opts)
 
--- Noice
-keymap("n", "<leader>na", ":NoiceAll<CR>", ex_opts("Noice all"))
-keymap("n", "<leader>nh", ":NoiceHistory<CR>", ex_opts("Noice history"))
-keymap("n", "<leader>ne", ":NoiceErrors<CR>", ex_opts("Noice error"))
-
--- git
-keymap("n", "<leader>df", ":DiffviewOpen<CR>", ex_opts("DiffviewOpen"))
-keymap("n", "<leader>dc", ":DiffviewClose<CR>", ex_opts("DiffviewClose"))
-keymap("n", "<leader>fv", ":DiffviewFileHistory<CR>", ex_opts("DiffviewFileHistory"))
-
 -- private memo
 
 keymap("n", "me", ":e ~/admin/memo.md<CR>", opts)
@@ -122,6 +112,17 @@ keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 keymap("v", "j", "gj", opts)
 keymap("v", "k", "gk", opts)
+
+-- Plugins
+-- Noice
+keymap("n", "<leader>ma", ":NoiceAll<CR>", ex_opts("Noice all"))
+keymap("n", "<leader>mh", ":NoiceHistory<CR>", ex_opts("Noice history"))
+keymap("n", "<leader>me", ":NoiceErrors<CR>", ex_opts("Noice error"))
+
+-- git
+keymap("n", "<leader>df", ":DiffviewOpen<CR>", ex_opts("DiffviewOpen"))
+keymap("n", "<leader>dc", ":DiffviewClose<CR>", ex_opts("DiffviewClose"))
+keymap("n", "<leader>fv", ":DiffviewFileHistory<CR>", ex_opts("DiffviewFileHistory"))
 
 -- NeoTree
 keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)

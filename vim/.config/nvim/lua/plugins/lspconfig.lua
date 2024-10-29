@@ -10,6 +10,7 @@ local lsp_servers = {
   "html",
   "cssls",
   "terraformls",
+  "elixirls",
 }
 
 local formatters = {
@@ -18,6 +19,7 @@ local formatters = {
   "shfmt",
   "prettier",
   "hclfmt",
+  "elixirls",
 }
 local diagnostics = {
   "yamllint",
