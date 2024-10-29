@@ -58,4 +58,8 @@ return {
       })
     end,
   },
+  --trailing space
+  {
+    "bronson/vim-trailing-whitespace",
+  },
 }
