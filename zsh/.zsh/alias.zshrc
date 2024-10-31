@@ -55,7 +55,7 @@ alias pwdc="pwd | pbcopy"
 alias gui="gitui"
 alias vitask="vi ~/private/task.md"
 alias dynamo="node ~/dynamo/dynamo.js"
-alias gdiff="git-split-diffs --color | less -RFX"
+alias gdiff="git-split-diffs --color"
 alias imgcat="imgcat_tmux"
 
 # utility
@@ -83,3 +83,14 @@ alias mux='tmuxinator'
 # AWS
 # measure plugin weight
 # alias timeNvim="echo \"scale=3; $(nvim --startuptime /tmp/stime_mine.log -c 'quit' > /dev/null && tail -n 1 /tmp/stime_mine.log | cut -d ' ' -f1) / $(vi -u DEFAULTS --startuptime /tmp/stime_def.log -c 'quit' > /dev/null && tail -n 1 /tmp/stime_def.log | cut -d ' ' -f1)\" | bc | xargs echo {}x slower your Vim than the default."
+
+# private
+
+alias memo="vi ~/admin/memo.md"
+
+# AWS Git checkout
+
+alias aws-main="pushd ~/.aws && git checkout main && popd"
+alias aws-flex="pushd ~/.aws && git checkout flex && popd"
+alias aws-kurage="pushd ~/.aws && git checkout kurage && popd"
+alias aws-aba="pushd ~/.aws && git checkout aba && popd"
