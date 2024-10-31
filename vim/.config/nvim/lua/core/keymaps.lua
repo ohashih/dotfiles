@@ -123,14 +123,10 @@ keymap("n", "<leader>me", ":NoiceErrors<CR>", ex_opts("Noice error"))
 keymap("n", "<leader>df", ":DiffviewOpen<CR>", ex_opts("DiffviewOpen"))
 keymap("n", "<leader>dc", ":DiffviewClose<CR>", ex_opts("DiffviewClose"))
 keymap("n", "<leader>fv", ":DiffviewFileHistory<CR>", ex_opts("DiffviewFileHistory"))
+keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 
 -- NeoTree
 keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)
-
--- DiffviewOpen
-
-keymap("n", "<leader>g", ":DiffviewOpen<CR>", opts)
-keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 
 -- lsp
 vim.api.nvim_create_autocmd("LspAttach", {
