@@ -11,6 +11,7 @@ local lsp_servers = {
   "cssls",
   "terraformls",
   "elixirls",
+  "ansiblels",
 }
 
 local formatters = {
@@ -23,6 +24,7 @@ local formatters = {
 }
 local diagnostics = {
   "yamllint",
+  "ansible-lint",
   "selene",
 }
 

@@ -56,6 +56,9 @@ source_file ~/.zsh/flyio.zshrc
 
 source_file ~/.zsh/apb.zshrc
 
+# Setting secret
+source_file ~/.zsh/secret.zshrc
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -76,6 +79,9 @@ export PATH="$PATH:/Users/kurage/.local/bin"
 export PATH="/Users/kurage/git/git-fuzzy/bin:$PATH"
 
 . ~/.asdf/plugins/java/set-java-home.zsh
+
+# homebrew package path
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
