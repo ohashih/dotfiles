@@ -5,8 +5,11 @@ return {
     version = "*",
     config = function()
       require("toggleterm").setup({
-        direction = "horizontal",
-        size = 20,
+        direction = "float",
+        float_opts = {
+          border = "curved",
+          winblend = 3
+        },
         open_mapping = [[<c-\>]],
         start_in_insert = true,
         insert_mappings = true,
