@@ -97,4 +97,4 @@ alias aws-aba="pushd ~/.aws && git checkout aba && popd"
 
 # deepl
 # https://github.com/kojix2/deepl-cli
-alias deepl="deepl -t ja -i"
+alias deepl="deepl -t ja"

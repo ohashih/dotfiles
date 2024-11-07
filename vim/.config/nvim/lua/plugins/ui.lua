@@ -1,7 +1,7 @@
 return {
   --Color
   {
-    "folke/tokyonight.nvim",
+    "catppuccin/nvim", name = "catppuccin",
     lazy = false,
     priority = 1000,
   },

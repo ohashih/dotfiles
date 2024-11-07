@@ -26,6 +26,7 @@ local diagnostics = {
   "yamllint",
   "ansible-lint",
   "selene",
+  "markdownlint",
 }
 
 local vim = vim
