@@ -52,7 +52,7 @@ alias home="~/Desktop"
 alias kurage="~/git/kurage"
 alias aucnet="~/git/aucnet"
 alias pwdc="pwd | pbcopy"
-alias gui="gitui"
+alias gui="lazygit"
 alias vitask="vi ~/private/task.md"
 alias dynamo="node ~/dynamo/dynamo.js"
 alias gdiff="git-split-diffs --color"
@@ -98,3 +98,6 @@ alias aws-aba="pushd ~/.aws && git checkout aba && popd"
 # deepl
 # https://github.com/kojix2/deepl-cli
 alias deepl="deepl -t ja"
+
+# kitty
+alias icat="kitty +kitten icat"
