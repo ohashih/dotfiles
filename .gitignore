@@ -1,4 +1,4 @@
 *node_modules/
-coc-settings/.config/coc/suggest.txt
 *secret*
-coc-settings/.config/coc/extensions/*
+.DS_Store
+
