@@ -91,4 +91,13 @@ return {
       require("neoscroll").setup()
     end,
   },
+  -- auto-pairs
+  --[[ {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    lazy = true,
+    config = function()
+      require("nvim-autopairs").setup()
+    end,
+  }, ]]
 }
