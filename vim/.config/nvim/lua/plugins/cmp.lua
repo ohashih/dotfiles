@@ -47,11 +47,11 @@ M.config = function()
       documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
-      ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-      ["<C-f>"] = cmp.mapping.scroll_docs(4),
+      ["<C-n>"] = cmp.mapping.scroll_docs(-4),
+      ["<C-p>"] = cmp.mapping.scroll_docs(4),
       ["<C-t>"] = cmp.mapping.complete(),
-      ["<C-w>"] = cmp.mapping.abort(),
-      ["<CR>"] = cmp.mapping.confirm({ select = true }),
+      ["<CR>"] = cmp.mapping.abort(),
+      ["<C-f>"] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources({
       { name = "nvim_lsp" },
