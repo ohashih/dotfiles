@@ -1,5 +1,7 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export FZF_COMPLETION_TRIGGER="," # default: '**'
+
 export FZF_DEFAULT_OPTS='
   --height 100%
   --reverse

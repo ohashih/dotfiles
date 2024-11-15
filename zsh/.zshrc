@@ -1,10 +1,25 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+#zmodload zsh/zprof
+# https://chocoby.com/blog/2021/05/05/speed-up-zsh-startup-time/
+
+# Powerlevel10k のShell起動のcache
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+
+# custom source_file function
 function source_file {
   if [ $# -lt 1 ];then
     echo "ERROR!!! source_file is called w/o an argument"
@@ -16,12 +31,6 @@ function source_file {
     source "$arg"
   fi
 }
-
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
-autoload -Uz compinit
-compinit
 
 # Setting zsh color
 source_file ~/.zsh/style.zshrc
@@ -44,94 +53,50 @@ source_file ~/.zsh/option.zshrc
 # Setting zsh options
 source_file ~/.zsh/fzf.zshrc
 
+# Setting complete
+source_file ~/.zsh/complete.zsh
+
 # Setting zsh cdpath
 
 source_file ~/.zsh/cdpath.zshrc
 
 # Setting fly.io complication
 
-source_file ~/.zsh/flyio.zshrc
+# source_file ~/.zsh/flyio.zshrc
 
 # Setting Andy Photobook AI
 
-source_file ~/.zsh/apb.zshrc
+# source_file ~/.zsh/apb.zshrc
 
 # Setting secret
 source_file ~/.zsh/secret.zshrc
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# source /usr/local/bin/aws_zsh_completer.sh
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
-
-source /Users/kurage/.config/broot/launcher/bash/br
-
-# Created by `pipx` on 2022-02-01 07:57:20
-export PATH="$PATH:/Users/kurage/.local/bin"
-export PATH="/Users/kurage/git/git-fuzzy/bin:$PATH"
-
-. ~/.asdf/plugins/java/set-java-home.zsh
-
-# homebrew package path
-export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-complete -o nospace -C /Users/kurage/.asdf/installs/terraform/1.3.3/bin/terraform terraform
+# source /usr/local/bin/aws_zsh_completer.sh
+autoload -U +X bashcompinit && bashcompinit
+autoload -Uz compinit
+compinit
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_COMPLETION_TRIGGER="," # default: '**'
+# terraform
+complete -o nospace -C /usr/local/bin/terraform terraform
 
 # stripe compoletion
 fpath=(~/.stripe $fpath)
-autoload -Uz compinit && compinit -i
 
-#autoload -U compinit; compinit
-
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
+# aws compoletion
 complete -C '/usr/local/bin/aws_completer' aws
 
-function imgcat_tmux() {
-    # @See: https://qastack.jp/unix/88296/get-vertical-cursor-position
-    get_cursor_position() {
-        old_settings=$(stty -g) || exit
-        stty -icanon -echo min 0 time 3 || exit
-        printf '\033[6n'
-        pos=$(dd count=1 2> /dev/null)
-        pos=${pos%R*}
-        pos=${pos##*\[}
-        x=${pos##*;} y=${pos%%;*}
-        stty "$old_settings"
-    }
-    command imgcat "$1"
-    [ $? -ne 0 ] && return
-    [ ! "$TMUX" ] && return
-    get_cursor_position
-    # 2行分画像が残ってしまうためtputで再描画判定させて消す
-    read && tput cup `expr $y - 2` 0
-}
+#[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # don't run the completion function when being source-ed or eval-ed
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+# source_file ~/.mdbook.zsh
+# source ~/.config/broot/launcher/bash/br
+#. ~/.asdf/plugins/java/set-java-home.zsh
+## Created by `pipx` on 2022-02-01 07:57:20
+# export PATH="$PATH:~/.local/bin"
+# GITSTATUS_LOG_LEVEL=DEBUG
 
-source_file ~/.mdbook.zsh
 
-## Copilot
-source <(copilot completion zsh)
-
-## Trivy
-source <(trivy completion zsh)
-
-GITSTATUS_LOG_LEVEL=DEBUG
-
-complete -o nospace -C /Users/kurage/.asdf/installs/terraform/1.5.7/bin/terraform terraform
+#zprof

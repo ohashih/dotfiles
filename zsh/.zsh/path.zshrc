@@ -40,3 +40,9 @@ export PATH="$PATH:$HOME/bin-itn"
 
 # postgres
 export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+
+# fuzzy
+export PATH="~/git/git-fuzzy/bin:$PATH"
+
+# homebrew package path
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
