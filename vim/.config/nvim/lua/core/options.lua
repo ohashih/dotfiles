@@ -1,5 +1,8 @@
 vim.scriptencoding = "utf-8"
 vim.wo.number = true
+vim.opt.wrap = true         -- 折り返し表示を有効化
+vim.opt.linebreak = true    -- 単語単位で折り返す
+vim.opt.showbreak = ">> "   -- 折り返し行の先頭に表示する文字列
 
 --[[
 vim.cmd("autocmd!")
@@ -54,7 +57,7 @@ local options = {
   relativenumber = false,
   numberwidth = 4,
   signcolumn = "yes",
-  wrap = false,
+  wrap = true,
   winblend = 0,
   wildoptions = "pum",
   pumblend = 5,

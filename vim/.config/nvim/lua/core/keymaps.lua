@@ -88,9 +88,6 @@ keymap("i", "<C-l>", "<Right>", opts)
 keymap("i", "<C-f>", "<Right>", opts)
 keymap("i", "<C-b>", "<Left>", opts)
 
--- コンマの後に自動的にスペースを挿入
--- keymap("i", ",", ",<Space>", opts)
-
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

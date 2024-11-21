@@ -20,11 +20,9 @@ local formatters = {
   "shfmt",
   "prettier",
   "hclfmt",
-  "elixirls",
 }
 local diagnostics = {
   "yamllint",
-  "ansible-lint",
   "selene",
   "markdownlint",
 }
@@ -114,6 +112,7 @@ return {
         diagnostics_format = "[#{m}] #{s} (#{c})",
         -- sources = vim.tbl_flatten({ formatting_sources, diagnostics_sources }),
         sources = vim.tbl_flatten({ formatting_sources, diagnostics_sources }),
+        null_ls.builtins.formatting.mix,
       })
     end,
     event = { "BufReadPre", "BufNewFile" },

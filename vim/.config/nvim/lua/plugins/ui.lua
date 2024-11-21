@@ -1,7 +1,8 @@
 return {
   --Color
   {
-    "catppuccin/nvim", name = "catppuccin",
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000,
   },
@@ -9,36 +10,16 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    event = "UIEnter",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter-textobjects",
-    },
-    opts = {
-      highlight = { enable = true },
-      auto_install = false,
-      ensure_installed = "all",
-      textobjects = {
-        select = {
-          enable = true,
-          lookahead = true,
-          keymaps = {
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
-            ["ab"] = "@block.outer",
-            ["ib"] = "@block.inner",
-            ["al"] = "@call.outer",
-            ["il"] = "@call.inner",
-            ["aP"] = "@parameter.outer",
-            ["iP"] = "@parameter.inner",
-            ["ao"] = "@conditional.outer",
-            ["io"] = "@conditional.inner",
-            ["as"] = "@statement.outer",
-          },
-        },
-      },
-    },
+    config = function()
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+        ensure_installed = "all",
+        sync_install = false,
+        highlight = { enable = true },
+        indent = { enable = true },
+      })
+    end,
   },
   {
     "shellRaining/hlchunk.nvim",
@@ -65,7 +46,7 @@ return {
   -- yank highlight
   {
     "machakann/vim-highlightedyank",
-    lazy = true, -- 遅延読み込みを有効に
+    lazy = true,            -- 遅延読み込みを有効に
     event = "TextYankPost", -- ヤンクイベントが発生したときに読み込む
     config = function()
       -- ハイライトの設定
