@@ -50,17 +50,18 @@ M.config = function()
       ["<C-n>"] = cmp.mapping.scroll_docs(-4),
       ["<C-p>"] = cmp.mapping.scroll_docs(4),
       ["<C-t>"] = cmp.mapping.complete(),
-      ["<CR>"] = cmp.mapping.abort(),
-      ["<C-f>"] = cmp.mapping.confirm({ select = true }),
+      ["<C-f>"] = cmp.mapping.abort(),
+      ["<CR>"] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources({
-      { name = "nvim_lsp" },
-      { name = "copilot" },
-      { name = "nvim_lua", keyword_length = 2 },
+      { name = "nvim_lsp", keyword_length = 2, priority = 1000 },
+      -- { name = "copilot", keywrod_length = 3 , priority = 800 },
+      { name = "nvim_lua", keyword_length = 2, priority = 700  },
       { name = "luasnip" },
     }, {
-      { name = "buffer", keyword_length = 2 },
-      { name = "path" },
+      { name = "buffer", keyword_length = 1, priority = 500  },
+      { name = "path", keywrod_length = 1 , priority = 400 },
+      { name = "cmdline", keyword_length = 1 , priority = 300 },
     }),
   })
 
