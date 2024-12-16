@@ -56,10 +56,11 @@ M.config = function()
     sources = cmp.config.sources({
       { name = "nvim_lsp", keyword_length = 2, priority = 1000 },
       -- { name = "copilot", keywrod_length = 3 , priority = 800 },
-      { name = "nvim_lua", keyword_length = 2, priority = 700  },
+      { name= 'render-markdown' },
+      { name = "nvim_lua", keyword_length = 2, priority = 700 },
       { name = "luasnip" },
     }, {
-      { name = "buffer", keyword_length = 1, priority = 500  },
+      { name = "buffer", keyword_length = 1, priority = 500 },
       { name = "path", keywrod_length = 1 , priority = 400 },
       { name = "cmdline", keyword_length = 1 , priority = 300 },
     }),
