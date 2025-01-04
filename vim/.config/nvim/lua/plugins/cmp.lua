@@ -47,23 +47,36 @@ M.config = function()
       documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
-      ["<C-n>"] = cmp.mapping.scroll_docs(-4),
-      ["<C-p>"] = cmp.mapping.scroll_docs(4),
+      ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+      ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
       ["<C-t>"] = cmp.mapping.complete(),
       ["<C-f>"] = cmp.mapping.abort(),
       ["<CR>"] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources({
-      { name = "nvim_lsp", keyword_length = 2, priority = 1000 },
-      -- { name = "copilot", keywrod_length = 3 , priority = 800 },
-      { name= 'render-markdown' },
-      { name = "nvim_lua", keyword_length = 2, priority = 700 },
-      { name = "luasnip" },
+      { name = "nvim_lsp",        keyword_length = 1, priority = 1000 },
+      { name = "copilot",         keyword_length = 3, priority = 600 },
+      { name = "render-markdown", keyword_length = 2, priority = 300 },
+      { name = "nvim_lua",        keyword_length = 3, priority = 400 },
+      { name = "luasnip",         keyword_length = 2, priority = 200 },
     }, {
-      { name = "buffer", keyword_length = 1, priority = 500 },
-      { name = "path", keywrod_length = 1 , priority = 400 },
-      { name = "cmdline", keyword_length = 1 , priority = 300 },
+      -- {
+      --   name = "buffer",
+      --   keyword_length = 3,
+      --   priority = 10,
+      --   option = {
+      --     get_bufnrs = function()
+      --       return vim.api.nvim_list_bufs()
+      --     end,
+      --   },
+      -- },
+      { name = "path",    keyword_length = 2, priority = 100 },
+      { name = "cmdline", keyword_length = 3, priority = 500 },
     }),
+    experimental = {
+      native_menu = false,
+      ghost_text = false,
+    },
   })
 
   cmp.setup.cmdline(":", {
