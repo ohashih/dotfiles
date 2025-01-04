@@ -4,7 +4,7 @@ autoload -Uz compinit
 compinit
 
 # terraform
-complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C ~/.asdf/shims/terraform terraform
 
 # stripe compoletion
 fpath=(~/.stripe $fpath)

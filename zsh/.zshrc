@@ -74,20 +74,6 @@ source_file ~/.zsh/secret.zshrc
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# source /usr/local/bin/aws_zsh_completer.sh
-autoload -U +X bashcompinit && bashcompinit
-autoload -Uz compinit
-compinit
-
-# terraform
-complete -o nospace -C /usr/local/bin/terraform terraform
-
-# stripe compoletion
-fpath=(~/.stripe $fpath)
-
-# aws compoletion
-complete -C '/usr/local/bin/aws_completer' aws
-
 #[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # don't run the completion function when being source-ed or eval-ed
@@ -97,6 +83,5 @@ complete -C '/usr/local/bin/aws_completer' aws
 ## Created by `pipx` on 2022-02-01 07:57:20
 # export PATH="$PATH:~/.local/bin"
 # GITSTATUS_LOG_LEVEL=DEBUG
-
 
 #zprof
