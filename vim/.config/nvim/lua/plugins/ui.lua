@@ -46,7 +46,7 @@ return {
   -- yank highlight
   {
     "machakann/vim-highlightedyank",
-    event = "TextYankPost",                          -- ヤンクイベントが発生したときに読み込む
+    event = "TextYankPost", -- ヤンクイベントが発生したときに読み込む
     config = function()
       vim.g.highlightedyank_highlight_duration = 300 -- ハイライトが表示される時間（ミリ秒）
       vim.api.nvim_exec(

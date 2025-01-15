@@ -55,7 +55,7 @@ M.config = function()
     }),
     sources = cmp.config.sources({
       { name = "nvim_lsp",        keyword_length = 1, priority = 1000 },
-      { name = "copilot",         keyword_length = 3, priority = 600 },
+      { name = "copilot",         keyword_length = 2, priority = 600 },
       { name = "render-markdown", keyword_length = 2, priority = 300 },
       { name = "nvim_lua",        keyword_length = 3, priority = 400 },
       { name = "luasnip",         keyword_length = 2, priority = 200 },
@@ -63,7 +63,7 @@ M.config = function()
       -- {
       --   name = "buffer",
       --   keyword_length = 3,
-      --   priority = 10,
+      --   priority = 700,
       --   option = {
       --     get_bufnrs = function()
       --       return vim.api.nvim_list_bufs()

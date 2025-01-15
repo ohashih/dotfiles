@@ -85,3 +85,6 @@ source_file ~/.zsh/secret.zshrc
 # GITSTATUS_LOG_LEVEL=DEBUG
 
 #zprof
+
+## mise
+eval "$(/usr/local/bin/mise activate zsh)"
