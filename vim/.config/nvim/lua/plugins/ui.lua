@@ -46,7 +46,7 @@ return {
   -- yank highlight
   {
     "machakann/vim-highlightedyank",
-    event = "TextYankPost", -- ヤンクイベントが発生したときに読み込む
+    event = "TextYankPost",
     config = function()
       vim.g.highlightedyank_highlight_duration = 300 -- ハイライトが表示される時間（ミリ秒）
       vim.api.nvim_exec(
@@ -88,27 +88,26 @@ return {
   --fold
   {
     "anuvyklack/pretty-fold.nvim",
-    lazy = true,                             -- 必要に応じて遅延読み込み
-    event = { "BufReadPost", "BufNewFile" }, -- ファイル読み込み時に読み込む
+    lazy = true,
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       require("pretty-fold").setup({
         sections = {
           left = {
-            "content", -- フォールド内のテキストを表示
+            "content",
           },
           right = {
             " ",
             "number_of_folded_lines",
-            " lines ", -- 折り畳まれた行数を表示
+            " lines ",
           },
         },
-        fill_char = "·",            -- フォールドラインを埋める文字
-        remove_fold_markers = true, -- デフォルトのフォールドマーカーを非表示
-        -- カスタマイズ可能なキーマッピング
+        fill_char = "·",
+        remove_fold_markers = true,
         key_mappings = {
-          toggle_fold = "za",     -- フォールドの開閉
-          close_all_folds = "zM", -- 全てのフォールドを閉じる
-          open_all_folds = "zR",  -- 全てのフォールドを開く
+          toggle_fold = "za",
+          close_all_folds = "zM",
+          open_all_folds = "zR",
         },
       })
     end,
@@ -116,15 +115,15 @@ return {
   --fold-preview
   {
     "anuvyklack/fold-preview.nvim",
-    dependencies = { "anuvyklack/keymap-amend.nvim" }, -- 必須依存プラグイン
-    lazy = true,                                       -- 遅延読み込みを有効化
-    event = { "BufReadPost", "BufNewFile" },           -- ファイル読み込み時に読み込む
+    dependencies = { "anuvyklack/keymap-amend.nvim" },
+    lazy = true,
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       require("fold-preview").setup({
-        border = "rounded",                                   -- プレビューウィンドウのボーダータイプ ("none", "single", "double", "rounded", "shadow")
-        auto = 500,                                           -- 自動プレビューまでの遅延時間（ms）
-        preview_command = "bat --style=plain --paging=never", -- プレビュー内容を整形するコマンド
-        default_keymaps = true,                               -- デフォルトのキーマッピングを有効にする
+        border = "rounded",
+        auto = 500,
+        preview_command = "bat --style=plain --paging=never",
+        default_keymaps = true,
       })
     end,
   },
@@ -132,7 +131,7 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' },
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
     opts = {},
