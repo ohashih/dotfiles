@@ -1,5 +1,12 @@
 local vim = vim
 
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "*" },
+  callback = function()
+    vim.bo.omnifunc = ""
+  end,
+})
+
 -- ファイル保存時に自動フォーマット
 
 --[[ vim.api.nvim_create_augroup("LspFormatOnSave", { clear = true })
