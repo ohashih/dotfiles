@@ -68,11 +68,11 @@ alias lzd="lazydocker"
 alias compression="tar -zcvf"
 alias uncompression="tar -zxvf"
 
-# exa
+# eza
 
-alias ls="exa"
-alias ll="exa -ahl --git"
-alias tree="exa -T --git-ignore"
+alias ls="eza"
+alias ll="eza -ahl --icons --git --group-directories-first"
+alias tree="eza -T --git-ignore"
 
 # docker
 alias docker-purge='docker stop $(docker ps -q) && docker rm $(docker ps -aq)'

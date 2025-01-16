@@ -63,7 +63,7 @@ M.config = function()
       -- {
       --   name = "buffer",
       --   keyword_length = 3,
-      --   priority = 700,
+      --   priority = 250,
       --   option = {
       --     get_bufnrs = function()
       --       return vim.api.nvim_list_bufs()
