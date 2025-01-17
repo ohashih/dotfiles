@@ -10,6 +10,14 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    opts = function(_, opts)
+      if type(opts.ensure_installed) == "table" then
+        vim.list_extend(opts.ensure_installed, { "terraform", "hcl" })
+      end
+      vim.filetype.add({
+        extension = { tofu = "terraform" },
+      })
+    end,
     config = function()
       local configs = require("nvim-treesitter.configs")
 
