@@ -51,7 +51,6 @@ alias aibs="~/git/a-ibs"
 alias vineo="~/.config/nvim"
 alias home="~/Desktop"
 alias kurage="~/git/kurage"
-alias aucnet="~/git/aucnet"
 alias pwdc="pwd | pbcopy"
 alias gui="lazygit"
 alias vitask="vi ~/private/task.md"
@@ -70,9 +69,9 @@ alias uncompression="tar -zxvf"
 
 # exa
 
-alias ls="exa"
-alias ll="exa -ahl --git"
-alias tree="exa -T --git-ignore"
+alias ls="eza"
+alias ll="eza -ahl --git"
+alias tree="eza -T --git-ignore"
 
 # docker
 alias docker-purge='docker stop $(docker ps -q) && docker rm $(docker ps -aq)'

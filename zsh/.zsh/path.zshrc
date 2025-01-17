@@ -20,20 +20,12 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # JAVA
-export JAVA_HOME=`/usr/libexec/java_home -v 15`
+#export JAVA_HOME=`/usr/libexec/java_home -v 15`
 
 # libexec
 eval "$(/usr/libexec/path_helper)"
 
-# asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
-#. $(brew --prefix asdf)/asdf.sh
-export PATH="$HOME/.asdf/bin:$PATH"
-eval "$(asdf exec direnv hook bash)"
 eval "$(gh completion -s zsh)"
-
-# Rust
-source $HOME/.cargo/env
 
 # ITN
 export PATH="$PATH:$HOME/bin-itn"
@@ -45,4 +37,4 @@ export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
 export PATH="~/git/git-fuzzy/bin:$PATH"
 
 # homebrew package path
-export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+#export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"

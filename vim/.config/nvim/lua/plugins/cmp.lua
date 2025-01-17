@@ -47,14 +47,14 @@ M.config = function()
       documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
-      ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-      ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-      ["<C-t>"] = cmp.mapping.complete(),
+      ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+      ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+      ["<C-n>"] = cmp.mapping.complete(),
       ["<C-f>"] = cmp.mapping.abort(),
       ["<CR>"] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources({
-      { name = "nvim_lsp",        keyword_length = 1, priority = 1000 },
+      { name = "nvim_lsp",        keyword_length = 0, priority = 1000 },
       { name = "copilot",         keyword_length = 2, priority = 600 },
       { name = "render-markdown", keyword_length = 2, priority = 300 },
       { name = "nvim_lua",        keyword_length = 3, priority = 400 },

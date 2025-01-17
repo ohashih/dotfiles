@@ -7,7 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # zplug
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=/opt/homebrew/Cellar/zplug/2.4.2
 source $ZPLUG_HOME/init.zsh
 
 # Install plugins if there are plugins that have not been installed
@@ -87,4 +87,4 @@ source_file ~/.zsh/secret.zshrc
 #zprof
 
 ## mise
-eval "$(/usr/local/bin/mise activate zsh)"
+eval "$(/opt/homebrew/bin/mise activate zsh)"

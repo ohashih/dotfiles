@@ -6,6 +6,6 @@ export GPG_TTY=$(tty)
 export EDITOR=nvim
 
 # homebrew cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications" 
-export LDFLAGS="-L/usr/local/opt/ncurses/lib"
-export CPPFLAGS="-I/usr/local/opt/ncurses/include"
+#export HOMEBREW_CASK_OPTS="--appdir=/Applications" 
+#export LDFLAGS="-L/usr/local/opt/ncurses/lib"
+#export CPPFLAGS="-I/usr/local/opt/ncurses/include"

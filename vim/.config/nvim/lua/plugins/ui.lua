@@ -86,48 +86,48 @@ return {
     end,
   },
   --fold
-  {
-    "anuvyklack/pretty-fold.nvim",
-    lazy = true,                             -- 必要に応じて遅延読み込み
-    event = { "BufReadPost", "BufNewFile" }, -- ファイル読み込み時に読み込む
-    config = function()
-      require("pretty-fold").setup({
-        sections = {
-          left = {
-            "content", -- フォールド内のテキストを表示
-          },
-          right = {
-            " ",
-            "number_of_folded_lines",
-            " lines ", -- 折り畳まれた行数を表示
-          },
-        },
-        fill_char = "·",            -- フォールドラインを埋める文字
-        remove_fold_markers = true, -- デフォルトのフォールドマーカーを非表示
-        -- カスタマイズ可能なキーマッピング
-        key_mappings = {
-          toggle_fold = "za",     -- フォールドの開閉
-          close_all_folds = "zM", -- 全てのフォールドを閉じる
-          open_all_folds = "zR",  -- 全てのフォールドを開く
-        },
-      })
-    end,
-  },
-  --fold-preview
-  {
-    "anuvyklack/fold-preview.nvim",
-    dependencies = { "anuvyklack/keymap-amend.nvim" }, -- 必須依存プラグイン
-    lazy = true,                                       -- 遅延読み込みを有効化
-    event = { "BufReadPost", "BufNewFile" },           -- ファイル読み込み時に読み込む
-    config = function()
-      require("fold-preview").setup({
-        border = "rounded",                                   -- プレビューウィンドウのボーダータイプ ("none", "single", "double", "rounded", "shadow")
-        auto = 500,                                           -- 自動プレビューまでの遅延時間（ms）
-        preview_command = "bat --style=plain --paging=never", -- プレビュー内容を整形するコマンド
-        default_keymaps = true,                               -- デフォルトのキーマッピングを有効にする
-      })
-    end,
-  },
+  -- {
+  --   "anuvyklack/pretty-fold.nvim",
+  --   lazy = true,                             -- 必要に応じて遅延読み込み
+  --   event = { "BufReadPost", "BufNewFile" }, -- ファイル読み込み時に読み込む
+  --   config = function()
+  --     require("pretty-fold").setup({
+  --       sections = {
+  --         left = {
+  --           "content", -- フォールド内のテキストを表示
+  --         },
+  --         right = {
+  --           " ",
+  --           "number_of_folded_lines",
+  --           " lines ", -- 折り畳まれた行数を表示
+  --         },
+  --       },
+  --       fill_char = "·",            -- フォールドラインを埋める文字
+  --       remove_fold_markers = true, -- デフォルトのフォールドマーカーを非表示
+  --       -- カスタマイズ可能なキーマッピング
+  --       key_mappings = {
+  --         toggle_fold = "za",     -- フォールドの開閉
+  --         close_all_folds = "zM", -- 全てのフォールドを閉じる
+  --         open_all_folds = "zR",  -- 全てのフォールドを開く
+  --       },
+  --     })
+  --   end,
+  -- },
+  -- --fold-preview
+  -- {
+  --   "anuvyklack/fold-preview.nvim",
+  --   dependencies = { "anuvyklack/keymap-amend.nvim" }, -- 必須依存プラグイン
+  --   lazy = true,                                       -- 遅延読み込みを有効化
+  --   event = { "BufReadPost", "BufNewFile" },           -- ファイル読み込み時に読み込む
+  --   config = function()
+  --     require("fold-preview").setup({
+  --       border = "rounded",                                   -- プレビューウィンドウのボーダータイプ ("none", "single", "double", "rounded", "shadow")
+  --       auto = 500,                                           -- 自動プレビューまでの遅延時間（ms）
+  --       preview_command = "bat --style=plain --paging=never", -- プレビュー内容を整形するコマンド
+  --       default_keymaps = true,                               -- デフォルトのキーマッピングを有効にする
+  --     })
+  --   end,
+  -- },
   --render-markdown
   {
     "MeanderingProgrammer/render-markdown.nvim",
