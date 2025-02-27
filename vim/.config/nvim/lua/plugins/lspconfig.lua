@@ -1,5 +1,6 @@
 local lsp_servers = {
   "pyright",
+  "rust_analyzer",
   "ruff",
   "bashls",
   "lua_ls",
@@ -20,6 +21,7 @@ local formatters = {
   "shfmt",
   "prettier",
   "hclfmt",
+  "rust_analyzer",
 }
 local diagnostics = {
   "yamllint",

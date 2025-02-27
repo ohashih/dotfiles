@@ -46,6 +46,9 @@ M.config = function()
       completion = cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
     },
+    completion = {
+      autocomplete = false,
+    },
     mapping = cmp.mapping.preset.insert({
       ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
       ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
