@@ -70,7 +70,7 @@ alias uncompression="tar -zxvf"
 # exa
 
 alias ls="eza"
-alias ll="eza -ahl --git"
+alias ll="eza -ahl --git --icons=always"
 alias tree="eza -T --git-ignore"
 
 # docker

@@ -1,5 +1,4 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 export FZF_COMPLETION_TRIGGER="," # default: '**'
 
 export FZF_DEFAULT_OPTS='
@@ -35,7 +34,7 @@ _fzf_comprun() {
   shift
 
   case "$command" in
-    cd)           fzf "$@" --preview 'exa -T --git-ignore {} | head -200' ;;
+    cd)           fzf "$@" --preview 'eza -T --git-ignore {} | head -200' ;;
     export|unset) fzf "$@" --preview "eval 'echo \$'{}" ;;
     ssh)          fzf "$@" --preview 'dig {}' ;;
     *)            fzf "$@" ;;

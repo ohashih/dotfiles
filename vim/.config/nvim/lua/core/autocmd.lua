@@ -2,7 +2,7 @@ local vim = vim
 
 -- ファイル保存時に自動フォーマット
 
---[[ vim.api.nvim_create_augroup("LspFormatOnSave", { clear = true })
+vim.api.nvim_create_augroup("LspFormatOnSave", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
   group = "LspFormatOnSave",
   pattern = "*",
@@ -16,4 +16,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
       bufnr = vim.api.nvim_get_current_buf(),
     })
   end,
-}) ]]
+})

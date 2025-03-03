@@ -88,3 +88,5 @@ source_file ~/.zsh/secret.zshrc
 
 ## mise
 eval "$(/opt/homebrew/bin/mise activate zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
