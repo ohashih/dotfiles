@@ -95,6 +95,9 @@ alias aws-main="pushd ~/.aws && git checkout main && popd"
 alias aws-flex="pushd ~/.aws && git checkout flex && popd"
 alias aws-kurage="pushd ~/.aws && git checkout kurage && popd"
 alias aws-aba="pushd ~/.aws && git checkout aba && popd"
+alias aws-jfn="pushd ~/.aws && git checkout jfn && popd"
+alias aws-drive="pushd ~/.aws && git checkout drive-recorder && popd"
+alias aws-branch="pushd ~/.aws && git branch && popd"
 
 # deepl
 # https://github.com/kojix2/deepl-cli

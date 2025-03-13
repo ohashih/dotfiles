@@ -88,3 +88,6 @@ source_file ~/.zsh/secret.zshrc
 
 ## mise
 eval "$(/usr/local/bin/mise activate zsh)"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /Users/kurage/.local/share/mise/installs/opentofu/1.9.0/bin/tofu tofu
