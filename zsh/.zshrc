@@ -1,4 +1,4 @@
-#zmodload zsh/zprof
+# zmodload zsh/zprof
 # https://chocoby.com/blog/2021/05/05/speed-up-zsh-startup-time/
 
 # Powerlevel10k のShell起動のcache
@@ -57,15 +57,9 @@ source_file ~/.zsh/fzf.zshrc
 source_file ~/.zsh/complete.zsh
 
 # Setting zsh cdpath
-
 source_file ~/.zsh/cdpath.zshrc
 
-# Setting fly.io complication
-
-# source_file ~/.zsh/flyio.zshrc
-
 # Setting Andy Photobook AI
-
 # source_file ~/.zsh/apb.zshrc
 
 # Setting secret
@@ -76,18 +70,9 @@ source_file ~/.zsh/secret.zshrc
 
 #[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-# don't run the completion function when being source-ed or eval-ed
-# source_file ~/.mdbook.zsh
-# source ~/.config/broot/launcher/bash/br
-#. ~/.asdf/plugins/java/set-java-home.zsh
-## Created by `pipx` on 2022-02-01 07:57:20
-# export PATH="$PATH:~/.local/bin"
-# GITSTATUS_LOG_LEVEL=DEBUG
-
-#zprof
-
 ## mise
 eval "$(/usr/local/bin/mise activate zsh)"
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /Users/kurage/.local/share/mise/installs/opentofu/1.9.0/bin/tofu tofu
+# if (which zprof > /dev/null 2>&1) ;then
+#   zprof
+# fi

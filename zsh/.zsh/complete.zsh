@@ -8,7 +8,10 @@ compinit -u
 autoload -U ~/.zsh/complete/*
 
 # terraform
-complete -o nospace -C ~/.asdf/shims/terraform terraform
+complete -o nospace -C "terraform" terraform
+
+# tofu
+complete -o nospace -C "tofu" tofu
 
 # aws compoletion
-complete -C 'aws_completer' aws
+complete -o nospace -C "aws_completer" aws

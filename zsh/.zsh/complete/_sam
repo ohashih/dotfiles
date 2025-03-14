@@ -1,90 +1,342 @@
 #compdef sam
 compdef _sam sam
 
-# _sam: Zsh用のAWS SAM CLIの補完関数
 _sam() {
   local -a commands
   local curcontext="$curcontext" state state_descr line
   local -A opt_args
 
   _arguments -C \
-    '1: :->first' \
-    '2: :->second' \
-    '3: :->third' \
-    '4: :->fourth' \
-    '*:: :->options'
+    "1: :->first" \
+    "2: :->second" \
+    "3: :->third" \
+    "4: :->fourth" \
+    "*:: :->options"
 
   case $state in
     first)
-      commands=(docs init build local validate sync remote package deploy logs traces list delete pipeline publish help)
-      _describe 'commands' commands
+      commands=(
+        "docs"
+        "init"
+        "build"
+        "local"
+        "validate"
+        "sync"
+        "remote"
+        "package"
+        "deploy"
+        "logs"
+        "traces"
+        "list"
+        "delete"
+        "pipeline"
+        "publish"
+        "help"
+      )
+      _describe "commands" commands
       return
       ;;
     second)
       case $words[2] in
         docs)
-          commands=("config" "build" "local" "local invoke" "local start-api" "local start" "local start-lambda" "list" "list stack-outputs" "list endpoints" "list resource" "deploy" "remote invoke" "package" "delete" "sync" "publish" "validate" "init" "logs" "traces")
+          commands=(
+            "config"
+            "build"
+            "local"
+            "list"
+            "deploy"
+            "remote"
+            "package"
+            "delete"
+            "sync"
+            "publish"
+            "validate"
+            "init"
+            "logs"
+            "traces"
+          )
           ;;
         init)
-          commands=("todo")
+          commands=(
+            "--name"
+            "--architecture"
+            "--dependency-manager"
+            "--location"
+            "--package-type"
+            "--base-image"
+            "--app-template"
+            "--output-dir"
+            "--no-interactive"
+            "--no-input"
+            "--extra-context"
+            "--config-env"
+            "--config-file"
+            "--tracing"
+            "--application-insights"
+            "--beta-features"
+            "--debug"
+          )
           ;;
         build)
-          commands=("todo")
+          commands=(
+            "--template-file"
+            "--parameter-overrides"
+            "--region"
+            "--profile"
+            "--parallel"
+            "--manifest"
+            "--cached"
+            "--use-container"
+            "--container-env-var"
+            "--container-env-var-file"
+            "--build-image"
+            "--mount-with"
+            "--skip-pull-image"
+            "--docker-network"
+            "--build-dir"
+            "--cache-dir"
+            "--base-dir"
+            "--hook-name"
+            "--skip-prepare-infra"
+            "--config-env"
+            "--config-file"
+            "--terraform-project-root-paht"
+            "--beta-features"
+            "--debug"
+          )
           ;;
         local)
-          commands=("start-api" "invoke" "generate-event" "help")
+          commands=(
+            "generate-event"
+            "invoke"
+            "start-api"
+            "start-lambda"
+          )
           ;;
         validate)
-          _files
-          return
+          commands=(
+            "--template-file"
+            "--lint"
+            "--region"
+            "--profile"
+            "--config-env"
+            "--config-file"
+            "--beta-features"
+            "--debug"
+          )
           ;;
         sync)
-          commands=("todo")
+          commands=(
+            "--config-env"
+            "--config-file"
+            "--watch"
+            "--code"
+            "--skip-depoly-sync"
+            "--dependency-layer"
+            "--use-container"
+            "--resource-id"
+            "--resource"
+            "--base-dir"
+            "--beta-features"
+            "--debug"
+          )
           ;;
         remote)
-          commands=("todo")
+          commands=("invoke")
           ;;
         package)
-          commands=("--template-file" "--s3-bucket" "--s3-prefix" "--kms-key-id" "--output-template-file" "--use-json" "--force-upload")
+          commands=(
+            "--s3-bucket"
+            "--resolve-s3"
+            "--region"
+            "--profile"
+            "--s3-prefix"
+            "--image-repository"
+            "--image-repositories"
+            "--kms-key-id"
+            "--metadata"
+            "--force-upload"
+            "--config-env"
+            "--config-file"
+            "--no-progressbar"
+            "--signing-profiles"
+            "--template-file"
+            "--output-template-file"
+            "--use-json"
+            "--bata-features"
+            "--debug"
+          )
           ;;
         deploy)
-          commands=("--template-file" "--stack-name" "--parameter-overrides" "--capabilities" "--no-execute-changeset" "--role-arn" "--notification-arns" "help")
+          commands=(
+            "--stack-name"
+            "--capabilities"
+            "--resolve-s3"
+            "--guided"
+            "--region"
+            "--profile"
+            "--parameter-overrides"
+            "--s3-bucket"
+            "--s3-prefix"
+            "--image-repository"
+            "--image-repositories"
+            "--role-arn"
+            "--kms-key-id"
+            "--notification-arns"
+            "--tags"
+            "--metadata"
+            "--no-execute-changeset"
+            "--fail-on-empty-changeset"
+            "--confirm-changeset"
+            "--disable-rollback"
+            "--on-failure"
+            "--force-upload"
+            "--config-env"
+            "--config-file"
+            "--no-progressbar"
+            "--signing-profiles"
+            "--template-file"
+            "--output-template-file"
+            "--use-json"
+            "--bata-features"
+            "--debug"
+          )
           ;;
         logs)
-          commands=("todo")
+          commands=(
+            "--stack-name"
+            "cw-log-group"
+            "--name"
+            "--region"
+            "--profile"
+            "--include-traces"
+            "--filter"
+            "--output"
+            "--tail"
+            "--start-time"
+            "--end-time"
+            "--config-env"
+            "--config-file"
+            "--bata-features"
+            "--debug"
+          )
           ;;
         traces)
-          commands=("todo")
+          commands=(
+            "--config-env"
+            "--config-file"
+            "--output"
+            "--start-time"
+            "--end-time"
+            "--region"
+            "--profile"
+            "--bata-features"
+            "--debug"
+          )
           ;;
         list)
-          commands=("todo")
+          commands=(
+            "endpoints"
+            "resources"
+            "stack-outputs"
+          )
           ;;
         delete)
-          commands=("todo")
+          commands=(
+            "--stack-name"
+            "--config-env"
+            "--config-file"
+            "--no-prompts"
+            "--s3-bucket"
+            "--s3-prefix"
+            "--region"
+            "--profile"
+            "--bata-features"
+            "--debug"
+          )
           ;;
         pipeline)
-          commands=("todo")
+          commands=(
+            "bootstrap"
+            "init"
+          )
           ;;
         publish)
-          commands=("todo")
+          commands=(
+            "--config-env"
+            "--config-file"
+            "--template-file"
+            "--semantic-version"
+            "--region"
+            "--profile"
+            "--bata-features"
+            "--debug"
+          )
           ;;
       esac
-      _describe 'commands' commands
+      _describe -V "commands" commands
       return
       ;;
     third)
       case $words[3] in
         generate-event)
-          commands=("s3" "sns" "kinesis" "dynamodb" "api" "schedule" "-help")
+          commands=(
+            "s3"
+            "sns"
+            "kinesis"
+            "dynamodb"
+            "api"
+            "schedule"
+          )
           ;;
         invoke)
-          commands=("--template" "--parameter-values" "--log-file" "--env-vars" "--event" "--debug-port" "--docker-volume-basedir" "--docker-network" "--skip-pull-image" "--profile")
+          commands=(
+            "--stack-name"
+            "--event"
+            "--event-file"
+            "--parameter"
+            "--output"
+            "--region"
+            "--profile"
+          )
           ;;
         start-api)
-          commands=("--template" "--parameter-values" "--log-file" "--static-dir" "--port" "--host" "--env-vars" "--debug-port" "--docker-volume-basedir" "--docker-network" "--skip-pull-image" "--profile" "--prefix-routing")
+          commands=(
+            "--template"
+            "--parameter-values"
+            "--log-file"
+            "--static-dir"
+            "--port"
+            "--host"
+            "--env-vars"
+            "--debug-port"
+            "--docker-volume-basedir"
+            "--docker-network"
+            "--skip-pull-image"
+            "--profile"
+            "--prefix-routing"
+          )
+          ;;
+        local)
+          commands=(
+            "invoke"
+            "start-api"
+            "start"
+            "start-lambda"
+          )
+          ;;
+        list)
+          commands=(
+            "stack-outputs"
+            "endpoints"
+            "resources"
+          )
+          ;;
+        remote)
+          commands=("invoke")
           ;;
       esac
-      _describe 'commands' commands
+      _describe "commands" commands
       return
       ;;
     fourth)
@@ -108,7 +360,7 @@ _sam() {
           commands=("--message" "--topic" "--subject")
           ;;
       esac
-      _describe 'commands' commands
+      _describe "commands" commands
       return
       ;;
     options)
@@ -121,5 +373,3 @@ _sam() {
       ;;
   esac
 }
-
-compdef _sam sam
