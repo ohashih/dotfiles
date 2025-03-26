@@ -101,3 +101,7 @@ alias deepl="deepl -t ja"
 
 # kitty
 alias icat="kitty +kitten icat"
+
+# pass
+alias rpass="cat ~/admin/password.md"
+alias wpass="vi ~/admin/password.md"

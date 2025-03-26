@@ -30,8 +30,8 @@ eval "$(gh completion -s zsh)"
 # ITN
 export PATH="$PATH:$HOME/bin-itn"
 
-# postgres
-export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+# postgres installer
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # fuzzy
 export PATH="~/git/git-fuzzy/bin:$PATH"
