@@ -1,0 +1,1021 @@
+#compdef ec2s
+
+autoload -U is-at-least
+
+_ec2s() {
+    typeset -A opt_args
+    typeset -a _arguments_options
+    local ret=1
+
+    if is-at-least 5.2; then
+        _arguments_options=(-s -S -C)
+    else
+        _arguments_options=(-s -C)
+    fi
+
+    local context curcontext="$curcontext" state line
+    _arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+":: :_ec2s_commands" \
+"*::: :->ec2-search" \
+&& ret=0
+    case $state in
+    (ec2-search)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:ec2s-command-$line[1]:"
+        case $line[1] in
+            (i)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+":: :_ec2s__instance_commands" \
+"*::: :->instance" \
+&& ret=0
+case $state in
+    (instance)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:ec2s-instance-command-$line[1]:"
+        case $line[1] in
+            (ids)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(instance-ids)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(ips)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(dns)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(dns-name)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(info)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'-o+[Output format. One of:
+    name|wide]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+    Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+    Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+(instance)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+":: :_ec2s__instance_commands" \
+"*::: :->instance" \
+&& ret=0
+case $state in
+    (instance)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:ec2s-instance-command-$line[1]:"
+        case $line[1] in
+            (ids)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(instance-ids)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(ips)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(dns)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(dns-name)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(info)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on tag name. if set comma, search OR]' \
+'-o+[Output format. One of:
+    name|wide]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+    Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+    Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+(tg)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+":: :_ec2s__target-group_commands" \
+"*::: :->target-group" \
+&& ret=0
+case $state in
+    (target-group)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:ec2s-target-group-command-$line[1]:"
+        case $line[1] in
+            (info)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(lb)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(load-balancer-arn)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(port)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(health)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+(target-group)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+":: :_ec2s__target-group_commands" \
+"*::: :->target-group" \
+&& ret=0
+case $state in
+    (target-group)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:ec2s-target-group-command-$line[1]:"
+        case $line[1] in
+            (info)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(lb)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(load-balancer-arn)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(port)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(health)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+(asg)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+":: :_ec2s__auto-scaling-group_commands" \
+"*::: :->auto-scaling-group" \
+&& ret=0
+case $state in
+    (auto-scaling-group)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:ec2s-auto-scaling-group-command-$line[1]:"
+        case $line[1] in
+            (info)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(act)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(activities)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(inst)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(instances)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+(auto-scaling-group)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+":: :_ec2s__auto-scaling-group_commands" \
+"*::: :->auto-scaling-group" \
+&& ret=0
+case $state in
+    (auto-scaling-group)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:ec2s-auto-scaling-group-command-$line[1]:"
+        case $line[1] in
+            (info)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'-T+[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--tag-columns=[Accepts a comma separated list of tags that are going to be presented as columns.
+        Tags are case-sensitive.]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'--show-all-tags[Show all tags.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(act)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(activities)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(inst)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(instances)
+_arguments "${_arguments_options[@]}" \
+'-q+[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--query=[ambiguous search with asterisk on target group name or ALB arn.  if set comma, search OR]' \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+(version)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(completion)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+":: :_ec2s__completion_commands" \
+"*::: :->completion" \
+&& ret=0
+case $state in
+    (completion)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:ec2s-completion-command-$line[1]:"
+        case $line[1] in
+            (zsh)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(bash)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(fish)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'--region=[The region to use. Overrides config/env settings.]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+}
+
+(( $+functions[_ec2s_commands] )) ||
+_ec2s_commands() {
+    local commands; commands=(
+        "instance:Search instance" \
+"i:Search instance" \
+"target-group:Search target group" \
+"tg:Search target group" \
+"auto-scaling-group:Search auto scaling group" \
+"asg:Search auto scaling group" \
+"version:Prints version information" \
+"completion:Prints Completion" \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'ec2s commands' commands "$@"
+}
+(( $+functions[_ec2s__act_commands] )) ||
+_ec2s__act_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s act commands' commands "$@"
+}
+(( $+functions[_ec2s__auto-scaling-group__act_commands] )) ||
+_ec2s__auto-scaling-group__act_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s auto-scaling-group act commands' commands "$@"
+}
+(( $+functions[_ec2s__auto-scaling-group__activities_commands] )) ||
+_ec2s__auto-scaling-group__activities_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s auto-scaling-group activities commands' commands "$@"
+}
+(( $+functions[_asg_commands] )) ||
+_asg_commands() {
+    local commands; commands=(
+        "info:display basic info" \
+"activities:display activities" \
+"act:display activities" \
+"instances:display instances" \
+"inst:display instances" \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'asg commands' commands "$@"
+}
+(( $+functions[_ec2s__auto-scaling-group_commands] )) ||
+_ec2s__auto-scaling-group_commands() {
+    local commands; commands=(
+        "info:display basic info" \
+"activities:display activities" \
+"act:display activities" \
+"instances:display instances" \
+"inst:display instances" \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'ec2s auto-scaling-group commands' commands "$@"
+}
+(( $+functions[_ec2s__completion__bash_commands] )) ||
+_ec2s__completion__bash_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s completion bash commands' commands "$@"
+}
+(( $+functions[_ec2s__completion_commands] )) ||
+_ec2s__completion_commands() {
+    local commands; commands=(
+        "zsh:" \
+"bash:" \
+"fish:" \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'ec2s completion commands' commands "$@"
+}
+(( $+functions[_ec2s__dns_commands] )) ||
+_ec2s__dns_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s dns commands' commands "$@"
+}
+(( $+functions[_ec2s__instance__dns_commands] )) ||
+_ec2s__instance__dns_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s instance dns commands' commands "$@"
+}
+(( $+functions[_ec2s__instance__dns-name_commands] )) ||
+_ec2s__instance__dns-name_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s instance dns-name commands' commands "$@"
+}
+(( $+functions[_ec2s__completion__fish_commands] )) ||
+_ec2s__completion__fish_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s completion fish commands' commands "$@"
+}
+(( $+functions[_ec2s__target-group__health_commands] )) ||
+_ec2s__target-group__health_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s target-group health commands' commands "$@"
+}
+(( $+functions[_ec2s__auto-scaling-group__help_commands] )) ||
+_ec2s__auto-scaling-group__help_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s auto-scaling-group help commands' commands "$@"
+}
+(( $+functions[_ec2s__completion__help_commands] )) ||
+_ec2s__completion__help_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s completion help commands' commands "$@"
+}
+(( $+functions[_ec2s__help_commands] )) ||
+_ec2s__help_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s help commands' commands "$@"
+}
+(( $+functions[_ec2s__instance__help_commands] )) ||
+_ec2s__instance__help_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s instance help commands' commands "$@"
+}
+(( $+functions[_ec2s__target-group__help_commands] )) ||
+_ec2s__target-group__help_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s target-group help commands' commands "$@"
+}
+(( $+functions[_i_commands] )) ||
+_i_commands() {
+    local commands; commands=(
+        "instance-ids:search instance ids with query." \
+"ids:search instance ids with query." \
+"ips:search instance ips with query." \
+"dns-name:search instance DNS name with query." \
+"dns:search instance DNS name with query." \
+"info:search instance basic info with query." \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'i commands' commands "$@"
+}
+(( $+functions[_ec2s__ids_commands] )) ||
+_ec2s__ids_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s ids commands' commands "$@"
+}
+(( $+functions[_ec2s__instance__ids_commands] )) ||
+_ec2s__instance__ids_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s instance ids commands' commands "$@"
+}
+(( $+functions[_ec2s__auto-scaling-group__info_commands] )) ||
+_ec2s__auto-scaling-group__info_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s auto-scaling-group info commands' commands "$@"
+}
+(( $+functions[_ec2s__instance__info_commands] )) ||
+_ec2s__instance__info_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s instance info commands' commands "$@"
+}
+(( $+functions[_ec2s__target-group__info_commands] )) ||
+_ec2s__target-group__info_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s target-group info commands' commands "$@"
+}
+(( $+functions[_ec2s__auto-scaling-group__inst_commands] )) ||
+_ec2s__auto-scaling-group__inst_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s auto-scaling-group inst commands' commands "$@"
+}
+(( $+functions[_ec2s__inst_commands] )) ||
+_ec2s__inst_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s inst commands' commands "$@"
+}
+(( $+functions[_ec2s__instance_commands] )) ||
+_ec2s__instance_commands() {
+    local commands; commands=(
+        "instance-ids:search instance ids with query." \
+"ids:search instance ids with query." \
+"ips:search instance ips with query." \
+"dns-name:search instance DNS name with query." \
+"dns:search instance DNS name with query." \
+"info:search instance basic info with query." \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'ec2s instance commands' commands "$@"
+}
+(( $+functions[_ec2s__instance__instance-ids_commands] )) ||
+_ec2s__instance__instance-ids_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s instance instance-ids commands' commands "$@"
+}
+(( $+functions[_ec2s__auto-scaling-group__instances_commands] )) ||
+_ec2s__auto-scaling-group__instances_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s auto-scaling-group instances commands' commands "$@"
+}
+(( $+functions[_ec2s__instance__ips_commands] )) ||
+_ec2s__instance__ips_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s instance ips commands' commands "$@"
+}
+(( $+functions[_ec2s__lb_commands] )) ||
+_ec2s__lb_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s lb commands' commands "$@"
+}
+(( $+functions[_ec2s__target-group__lb_commands] )) ||
+_ec2s__target-group__lb_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s target-group lb commands' commands "$@"
+}
+(( $+functions[_ec2s__target-group__load-balancer-arn_commands] )) ||
+_ec2s__target-group__load-balancer-arn_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s target-group load-balancer-arn commands' commands "$@"
+}
+(( $+functions[_ec2s__target-group__port_commands] )) ||
+_ec2s__target-group__port_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s target-group port commands' commands "$@"
+}
+(( $+functions[_ec2s__target-group_commands] )) ||
+_ec2s__target-group_commands() {
+    local commands; commands=(
+        "info:display basic info" \
+"load-balancer-arn:display load balancer" \
+"lb:display load balancer" \
+"port:display port" \
+"health:get target healths" \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'ec2s target-group commands' commands "$@"
+}
+(( $+functions[_tg_commands] )) ||
+_tg_commands() {
+    local commands; commands=(
+        "info:display basic info" \
+"load-balancer-arn:display load balancer" \
+"lb:display load balancer" \
+"port:display port" \
+"health:get target healths" \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'tg commands' commands "$@"
+}
+(( $+functions[_ec2s__version_commands] )) ||
+_ec2s__version_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s version commands' commands "$@"
+}
+(( $+functions[_ec2s__completion__zsh_commands] )) ||
+_ec2s__completion__zsh_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'ec2s completion zsh commands' commands "$@"
+}
+
+_ec2s "$@"
