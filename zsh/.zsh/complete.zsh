@@ -1,3 +1,4 @@
+fpath=(/usr/local/share/zsh/site-functions $fpath)
 fpath=(~/.zsh/complete $fpath)
 
 # source /usr/local/bin/aws_zsh_completer.sh
