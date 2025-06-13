@@ -11,10 +11,8 @@ return {
       "jay-babu/mason-null-ls.nvim",
     },
     config = function()
-      -- mason 基本セットアップ
       require("mason").setup()
 
-      -- mason-lspconfig のセットアップ
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
