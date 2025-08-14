@@ -39,7 +39,7 @@ source_file ~/.zsh/style.zshrc
 source_file ~/.zsh/path.zshrc
 
 # Setting env
-source_file ~/.zsh/env.zsrhrc
+source_file ~/.zsh/env.zshrc
 
 # Setting alias
 source_file ~/.zsh/alias.zshrc
@@ -96,3 +96,6 @@ autoload -U +X bashcompinit && bashcompinit
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/kurage/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Added by Windsurf
+export PATH="/Users/kurage/.codeium/windsurf/bin:$PATH"
