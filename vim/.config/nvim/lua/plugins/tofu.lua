@@ -16,19 +16,20 @@ return {
       },
     },
   },
-  {
-    "nathom/filetype.nvim",
-    config = function()
-      require("filetype").setup({
-        overrides = {
-          extensions = {
-            tf = "terraform",
-            tofu = "terraform",
-            tfvars = "terraform",
-            tfstate = "json",
-          },
-        },
-      })
-    end,
-  },
+  -- {
+  --   "nathom/filetype.nvim",
+  --   enable = false,
+  --   config = function()
+  --     require("filetype").setup({
+  --       overrides = {
+  --         extensions = {
+  --           tf = "terraform",
+  --           tofu = "terraform",
+  --           tfvars = "terraform",
+  --           tfstate = "json",
+  --         },
+  --       },
+  --     })
+  --   end,
+  -- },
 }
