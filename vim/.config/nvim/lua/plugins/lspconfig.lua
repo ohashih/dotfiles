@@ -8,11 +8,13 @@ return {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "nvimtools/none-ls.nvim",
-      "jay-babu/mason-null-ls.nvim",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
+      "rshkarin/mason-nvim-lint",
     },
     config = function()
       require("mason").setup()
 
+      -- LSP サーバー自動インストール
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
@@ -27,8 +29,8 @@ return {
       })
 
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
       local lspconfig = require("lspconfig")
+
       local servers = {
         "lua_ls",
         "rust_analyzer",
@@ -46,6 +48,7 @@ return {
         })
       end
 
+      -- none-ls 設定
       local null_ls = require("null-ls")
       null_ls.setup({
         sources = {
@@ -54,15 +57,27 @@ return {
         },
       })
 
-      -- mason-null-ls 設定
-      require("mason-null-ls").setup({
+      -- mason-tool-installer で自動インストールするツールを指定
+      require("mason-tool-installer").setup({
         ensure_installed = {
-          "prettier",
           "stylua",
-          "eslint",
-          "golangci-lint",
+          "prettier",
+          "eslint_d",
         },
-        automatic_installation = true,
+      })
+
+      -- mason-nvim-lint 設定
+      require("mason-nvim-lint").linters_by_ft = {
+        javascript = { "eslint_d" },
+        typescript = { "eslint_d" },
+        lua = { "luacheck" },
+      }
+
+      -- 保存時に lint 実行
+      vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+        callback = function()
+          require("lint").try_lint()
+        end,
       })
     end,
   },
