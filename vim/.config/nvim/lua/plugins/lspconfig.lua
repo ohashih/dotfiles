@@ -74,11 +74,11 @@ return {
       }
 
       -- 保存時に lint 実行
-      vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-        callback = function()
-          require("lint").try_lint()
-        end,
-      })
+      -- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+      --   callback = function()
+      --     require("mason-nvim-lint").try_lint()
+      --   end,
+      -- })
     end,
   },
 }
