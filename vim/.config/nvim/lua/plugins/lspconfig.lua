@@ -10,11 +10,11 @@ return {
       "nvimtools/none-ls.nvim",
       "WhoIsSethDaniel/mason-tool-installer.nvim",
       "rshkarin/mason-nvim-lint",
+      "glepnir/lspsaga.nvim",
     },
     config = function()
       require("mason").setup()
 
-      -- LSP サーバー自動インストール
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
@@ -24,13 +24,29 @@ return {
           "html",
           "cssls",
           "tailwindcss",
-          "ts_ls",
+          "ts_ls", -- tsserver renamed
         },
       })
 
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local lspconfig = require("lspconfig")
 
+      -- on_attach: keymaps + inlay hints
+      local on_attach = function(client, bufnr)
+        local opts = { buffer = bufnr, noremap = true, silent = true }
+
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+        vim.keymap.set("n", "gD", vim.lsp.buf.type_definition, opts)
+        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+
+        -- Neovim 標準 InlayHints API
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+        end
+      end
+
+      -- ✅ 新しいAPIでLSPを設定
       local servers = {
         "lua_ls",
         "rust_analyzer",
@@ -43,21 +59,13 @@ return {
       }
 
       for _, server in ipairs(servers) do
-        lspconfig[server].setup({
+        vim.lsp.config(server, {
           capabilities = capabilities,
+          on_attach = on_attach,
         })
       end
 
-      -- none-ls 設定
-      local null_ls = require("null-ls")
-      null_ls.setup({
-        sources = {
-          null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.prettier,
-        },
-      })
-
-      -- mason-tool-installer で自動インストールするツールを指定
+      -- ✅ Masonツール設定
       require("mason-tool-installer").setup({
         ensure_installed = {
           "stylua",
@@ -66,19 +74,21 @@ return {
         },
       })
 
-      -- mason-nvim-lint 設定
+      -- ✅ null-ls 設定
+      local null_ls = require("null-ls")
+      null_ls.setup({
+        sources = {
+          null_ls.builtins.formatting.stylua,
+          null_ls.builtins.formatting.prettier,
+        },
+      })
+
+      -- ✅ linter設定
       require("mason-nvim-lint").linters_by_ft = {
         javascript = { "eslint_d" },
         typescript = { "eslint_d" },
         lua = { "luacheck" },
       }
-
-      -- 保存時に lint 実行
-      -- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-      --   callback = function()
-      --     require("mason-nvim-lint").try_lint()
-      --   end,
-      -- })
     end,
   },
 }
