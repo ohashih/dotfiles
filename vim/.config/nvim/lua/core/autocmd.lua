@@ -7,6 +7,11 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  command = [[%s/\s\+$//e]],
+})
+
 -- ファイル保存時に自動フォーマット
 
 --[[ vim.api.nvim_create_augroup("LspFormatOnSave", { clear = true })

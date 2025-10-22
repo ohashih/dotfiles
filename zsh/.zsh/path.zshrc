@@ -25,9 +25,9 @@ export JAVA_HOME=`/usr/libexec/java_home -v 15`
 # libexec
 eval "$(/usr/libexec/path_helper)"
 
-# asdf
+# # asdf
 . /usr/local/opt/asdf/libexec/asdf.sh
-#. $(brew --prefix asdf)/asdf.sh
+# . $(brew --prefix asdf)/libexec/asdf.sh
 export PATH="$HOME/.asdf/bin:$PATH"
 eval "$(asdf exec direnv hook bash)"
 eval "$(gh completion -s zsh)"
