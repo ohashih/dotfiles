@@ -14,16 +14,14 @@
 
 2. Select and place dotfiles
 
-        $ stow -v git \
-            && stow -v zsh \
-            && stow -v tmux \
-            && stow -v vim
+        $ stow -v -t ~/ zsh \
+            && stow -v -t ~/ tmux \
+            && stow -v -t ~/ vim
 
 3. If you want to remove the symlinks, just use the -D arguement:
 
-        $ stow -vD git \
-            && stow -vD zsh \
-            && stow -vD tmux \
-            && stow -vD vim
+        $ stow -vD -t ~/ zsh \
+            && stow -vD -t ~/ tmux \
+            && stow -vD -t ~/ vim
 
 [GNU Stow]: https://www.gnu.org/software/stow/
