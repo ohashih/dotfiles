@@ -7,12 +7,17 @@ return {
     priority = 1000,
   },
   -- hightlight
+  -- lazy.nvim の設定に追加
+{
+  "davidmh/mdx.nvim",
+  config = true,
+  dependencies = { "nvim-treesitter/nvim-treesitter" }
+},
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
       local configs = require("nvim-treesitter.configs")
-
       configs.setup({
         ensure_installed = "all",
         sync_install = false,
@@ -20,7 +25,10 @@ return {
         indent = { enable = true },
       })
       vim.filetype.add({
-        extension = { tofu = "terraform" },
+        extension = {
+          tofu = "terraform",
+          mdx = "mdx",
+        },
       })
     end,
   },
@@ -134,8 +142,8 @@ return {
   --render-markdown
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' },
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" },
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
     opts = {},
@@ -143,7 +151,7 @@ return {
   --obsidian
   {
     "oflisback/obsidian-bridge.nvim",
-    opts = { scroll_sync = true }
+    opts = { scroll_sync = true },
   },
 
   -- auto-pairs
