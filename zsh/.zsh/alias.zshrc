@@ -91,6 +91,7 @@ alias kintone='cli-kintone'
 # private
 
 alias memo="vi ~/admin/memo.md"
+alias p-memo="cd /Users/kurage/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/md/private-memo/"
 
 # AWS Git checkout
 
@@ -99,6 +100,7 @@ alias aws-flex="pushd ~/.aws && git checkout flex && popd"
 alias aws-kurage="pushd ~/.aws && git checkout kurage && popd"
 alias aws-aba="pushd ~/.aws && git checkout aba && popd"
 alias aws-jfn="pushd ~/.aws && git checkout jfn && popd"
+alias aws-sso="pushd ~/.aws && git checkout sso && popd"
 alias aws-drive="pushd ~/.aws && git checkout drive-recorder && popd"
 alias aws-branch="pushd ~/.aws && git branch && popd"
 

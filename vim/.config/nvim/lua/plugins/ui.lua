@@ -15,7 +15,10 @@ return {
         vim.list_extend(opts.ensure_installed, { "terraform", "hcl" })
       end
       vim.filetype.add({
-        extension = { tofu = "terraform" },
+        extension = {
+          tofu = "terraform",
+          mdx = "markdown"
+        },
       })
     end,
     config = function()
@@ -138,7 +141,7 @@ return {
   --render-markdown
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' },
+    dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" },
     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
@@ -147,7 +150,7 @@ return {
   --obsidian
   {
     "oflisback/obsidian-bridge.nvim",
-    opts = { scroll_sync = true }
+    opts = { scroll_sync = true },
   },
 
   -- auto-pairs

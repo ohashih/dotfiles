@@ -1,3 +1,4 @@
+
 -- plugins/lspconfig.lua
 
 return {
@@ -23,6 +24,7 @@ return {
           "cssls",
           "tailwindcss",
           "ts_ls",
+          "terraformls",
         },
       })
 
@@ -38,6 +40,7 @@ return {
         "cssls",
         "tailwindcss",
         "ts_ls",
+        "terraformls",
       }
 
       for _, server in ipairs(servers) do
@@ -51,6 +54,7 @@ return {
         sources = {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.prettier,
+          null_ls.builtins.formatting.terraform_fmt,
         },
       })
 
@@ -61,6 +65,7 @@ return {
           "stylua",
           "eslint",
           "golangci-lint",
+          "terraform_fmt",
         },
         automatic_installation = true,
       })
