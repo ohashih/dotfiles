@@ -8,4 +8,4 @@ function cdup() {
 zle -N cdup
 bindkey '^K' cdup
 
-bindkey "^R" history-incremental-search-backward
+bindkey "^R" fzf-history-widget

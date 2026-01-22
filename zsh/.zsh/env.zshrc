@@ -6,7 +6,7 @@ export GPG_TTY=$(tty)
 export EDITOR=nvim
 
 # Rancher Desktop Docker
-export DOCKER_HOST=unix:///Users/kurage/.rd/docker.sock
+export DOCKER_HOST=unix:///~/.rd/docker.sock
 # homebrew cask
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications" 
 #export LDFLAGS="-L/usr/local/opt/ncurses/lib"
