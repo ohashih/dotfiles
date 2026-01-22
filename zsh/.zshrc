@@ -94,7 +94,7 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 autoload -U +X bashcompinit && bashcompinit
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="~/.rd/bin:$PATH"
+export PATH="/Users/kurage/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # Added by Windsurf
