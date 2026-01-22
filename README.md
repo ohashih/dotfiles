@@ -19,7 +19,8 @@ cd \
 ```shell
 stow -v -t ~/ zsh \
     && stow -v -t ~/ tmux \
-    && stow -v -t ~/ vim
+    && stow -v -t ~/ vim \
+    && stow -v -t ~/ kitty
 ```
 
 ## If you want to remove the symlinks
@@ -28,6 +29,7 @@ stow -v -t ~/ zsh \
 stow -vD -t ~/ zsh \
     && stow -vD -t ~/ tmux \
     && stow -vD -t ~/ vim
+    && stow -vD -t ~/ kitty
 ```
 
 [GNU Stow]: https://www.gnu.org/software/stow/
