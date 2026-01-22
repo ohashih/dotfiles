@@ -1,0 +1,12 @@
+[tools]
+node = "22.13.0"
+python = "3.13.1"
+awscli = "2.23.2"
+go = "1.23.5"
+terraform = "1.10.4"
+rust="1.84.1"
+yarn="1.22.22"
+direnv="2.37.1"
+usage = "latest"
+aws-sam-cli="1.135.0"
+lazydocker="latest"
