@@ -6,20 +6,29 @@ return {
     lazy = false,
     priority = 1000,
   },
-  -- hightlight
-  -- lazy.nvim の設定に追加
-{
-  "davidmh/mdx.nvim",
-  config = true,
-  dependencies = { "nvim-treesitter/nvim-treesitter" }
-},
+  {
+    "davidmh/mdx.nvim",
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
       local configs = require("nvim-treesitter.configs")
       configs.setup({
-        ensure_installed = "all",
+        ensure_installed = {
+          "lua",
+          "vim",
+          "vimdoc",
+          "query",
+          "bash",
+          "python",
+          "javascript",
+          "typescript",
+          "go",
+          "rust",
+        },
         sync_install = false,
         highlight = { enable = true },
         indent = { enable = true },
