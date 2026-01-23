@@ -1,1 +1,1 @@
-cdpath=($HOME/git/a-ibs $HOME/git/kurage)
+cdpath=($HOME/git/a-ibs $HOME/git/kurage $HOME/git/aucnet)

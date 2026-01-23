@@ -156,11 +156,11 @@ return {
     ---@type render.md.UserConfig
     opts = {},
   },
-  --obsidian
-  {
-    "oflisback/obsidian-bridge.nvim",
-    opts = { scroll_sync = true },
-  },
+  -- --obsidian
+  -- {
+  --   "oflisback/obsidian-bridge.nvim",
+  --   opts = { scroll_sync = true },
+  -- },
 
   -- auto-pairs
   --[[ {
