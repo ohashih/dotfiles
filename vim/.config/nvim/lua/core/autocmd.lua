@@ -17,3 +17,13 @@ local vim = vim
 --     })
 --   end,
 -- })
+-- 保存時にトレーリングスペースを削除
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.sh", "*.bash", "*.zsh" },
+  callback = function()
+    -- トレーリングスペースを削除
+    local save_cursor = vim.fn.getpos(".")
+    vim.cmd([[%s/\s\+$//e]])
+    vim.fn.setpos(".", save_cursor)
+  end,
+})

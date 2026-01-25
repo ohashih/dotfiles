@@ -7,9 +7,7 @@ return {
     dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
-      "nvimtools/none-ls.nvim",
       "WhoIsSethDaniel/mason-tool-installer.nvim",
-      "rshkarin/mason-nvim-lint",
       "glepnir/lspsaga.nvim",
     },
     config = function()
@@ -24,13 +22,12 @@ return {
           "html",
           "cssls",
           "tailwindcss",
-          "ts_ls", -- tsserver renamed
+          "ts_ls",
         },
       })
 
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      -- on_attach: keymaps + inlay hints
       local on_attach = function(client, bufnr)
         local opts = { buffer = bufnr, noremap = true, silent = true }
 
@@ -40,13 +37,11 @@ return {
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
         vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
-        -- Neovim 標準 InlayHints API
         if client.server_capabilities.inlayHintProvider then
           vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
         end
       end
 
-      -- ✅ 新しいAPIでLSPを設定
       local servers = {
         "lua_ls",
         "rust_analyzer",
@@ -65,30 +60,84 @@ return {
         })
       end
 
-      -- ✅ Masonツール設定
+      -- フォーマッターとリンターのインストール
       require("mason-tool-installer").setup({
         ensure_installed = {
-          "stylua",
-          "prettier",
-          "eslint_d",
+          "stylua",      -- Lua
+          "prettier",    -- JS/TS/JSON/HTML/CSS
+          "shfmt",       -- Shell
+          "eslint_d",    -- JS/TS linter
         },
       })
-
-      -- ✅ null-ls 設定
-      local null_ls = require("null-ls")
-      null_ls.setup({
-        sources = {
-          null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.prettier,
+    end,
+  },
+  
+  -- フォーマッター管理
+  {
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        "<leader>f",
+        function()
+          require("conform").format({ async = true, lsp_fallback = true })
+        end,
+        mode = "",
+        desc = "Format buffer",
+      },
+    },
+    config = function()
+      require("conform").setup({
+        formatters_by_ft = {
+          lua = { "stylua" },
+          javascript = { "prettier" },
+          typescript = { "prettier" },
+          javascriptreact = { "prettier" },
+          typescriptreact = { "prettier" },
+          json = { "prettier" },
+          html = { "prettier" },
+          css = { "prettier" },
+          markdown = { "prettier" },
+          sh = { "shfmt" },
+          bash = { "shfmt" },
+          zsh = { "shfmt" },
+        },
+        -- 保存時に自動フォーマット
+        format_on_save = {
+          timeout_ms = 500,
+          lsp_fallback = true,
+        },
+        -- shfmtの設定
+        formatters = {
+          shfmt = {
+            prepend_args = { "-i", "2", "-ci" },
+          },
         },
       })
+    end,
+  },
 
-      -- ✅ linter設定
-      require("mason-nvim-lint").linters_by_ft = {
+  -- リンター管理
+  {
+    "mfussenegger/nvim-lint",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      local lint = require("lint")
+      
+      lint.linters_by_ft = {
         javascript = { "eslint_d" },
         typescript = { "eslint_d" },
-        lua = { "luacheck" },
+        javascriptreact = { "eslint_d" },
+        typescriptreact = { "eslint_d" },
       }
+
+      -- 自動リント実行
+      vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+        callback = function()
+          lint.try_lint()
+        end,
+      })
     end,
   },
 }
