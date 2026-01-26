@@ -1,9 +1,8 @@
 #zmodload zsh/zprof
 # https://chocoby.com/blog/2021/05/05/speed-up-zsh-startup-time/
 
-# Powerlevel10k のShell起動のcache
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+ source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # zplug
@@ -12,16 +11,16 @@ source $ZPLUG_HOME/init.zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo
+    zplug install
+  fi
 fi
-
 
 # custom source_file function
 function source_file {
-  if [ $# -lt 1 ];then
+  if [ $# -lt 1 ]; then
     echo "ERROR!!! source_file is called w/o an argument"
     return
   fi
@@ -94,7 +93,7 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 autoload -U +X bashcompinit && bashcompinit
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/kurage/.rd/bin:$PATH"
+export PATH="~/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # Added by Windsurf
