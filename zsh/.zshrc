@@ -98,3 +98,5 @@ export PATH="~/.rd/bin:$PATH"
 
 # Added by Windsurf
 export PATH="~/.codeium/windsurf/bin:$PATH"
+
+# eval "$(starship init zsh)"
