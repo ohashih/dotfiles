@@ -22,7 +22,8 @@ stow -v -t ~/ zsh \
     && stow -v -t ~/ vim \
     && stow -v -t ~/ kitty \
     && stow -v -t ~/ mise \
-    && stow -v -t ~/ brew
+    && stow -v -t ~/ brew \
+    && stow -v -t ~/ gpg
 ```
 
 ## If you want to remove the symlinks
@@ -33,7 +34,8 @@ stow -vD -t ~/ zsh \
     && stow -vD -t ~/ vim \
     && stow -vD -t ~/ kitty \
     && stow -vD -t ~/ mise \
-    && stow -vD -t ~/ brew
+    && stow -vD -t ~/ brew \
+    && stow -vD -t ~/ gpg
 ```
 
 [GNU Stow]: https://www.gnu.org/software/stow/
