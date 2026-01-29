@@ -6,25 +6,33 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    config = function()
-      local configs = require("nvim-treesitter.configs")
-      configs.setup({
-        ensure_installed = {
-          "lua",
-          "vim",
-          "vimdoc",
-          "query",
-          "bash",
-          "python",
-          "javascript",
-          "typescript",
-          "go",
-          "rust",
-        },
-        sync_install = false,
-        highlight = { enable = true },
-        indent = { enable = true },
-      })
+    main = "nvim-treesitter.configs",
+    opts = {
+      ensure_installed = {
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+        "bash",
+        "python",
+        "javascript",
+        "typescript",
+        "go",
+        "rust",
+      },
+      sync_install = false,
+      highlight = { enable = true },
+      indent = { enable = true },
+    },
+    config = function(_, opts)
+      -- 新しいAPI（v1.0+）を試し、失敗したら旧APIにフォールバック
+      local ok, configs = pcall(require, "nvim-treesitter.configs")
+      if ok then
+        configs.setup(opts)
+      else
+        -- v1.0+: 直接vim.treesitterを使用
+        require("nvim-treesitter").setup(opts)
+      end
       vim.filetype.add({
         extension = {
           tofu = "terraform",
