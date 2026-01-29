@@ -1,6 +1,9 @@
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+  },
   opts = {
     lsp = {
       override = {
@@ -16,9 +19,15 @@ return {
       inc_rename = false,
       lsp_doc_border = false,
     },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+    messages = {
+      view = "mini",
+      view_error = "mini",
+      view_warn = "mini",
+      view_history = "messages",
+      view_search = "mini",
+    },
+    notify = {
+      view = "mini",
     },
   },
 }
