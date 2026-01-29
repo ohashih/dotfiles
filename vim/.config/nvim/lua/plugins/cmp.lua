@@ -23,6 +23,7 @@ return {
             mode = "symbol",
             maxwidth = 50,
             ellipsis_char = "...",
+            symbol_map = { Copilot = "" },
           }),
         },
         snippet = {
@@ -41,10 +42,12 @@ return {
           ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
           ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
           ["<C-n>"] = cmp.mapping.complete(),
-          ["<C-f>"] = cmp.mapping.abort(),
+          ["<C-e>"] = cmp.mapping.abort(),
+          ["<C-f>"] = cmp.mapping.confirm({ select = true }),
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
+          { name = "copilot", keyword_length = 0, priority = 1100 },
           { name = "nvim_lsp", keyword_length = 0, priority = 1000 },
           { name = "render-markdown", keyword_length = 2, priority = 300 },
           { name = "nvim_lua", keyword_length = 3, priority = 400 },
@@ -60,7 +63,18 @@ return {
       })
 
       cmp.setup.cmdline(":", {
-        mapping = cmp.mapping.preset.cmdline(),
+        mapping = cmp.mapping.preset.cmdline({
+          ["<C-f>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.confirm({ select = true })
+            else
+              fallback()
+            end
+          end, { "c" }),
+        }),
+        completion = {
+          autocomplete = { require("cmp.types").cmp.TriggerEvent.TextChanged },
+        },
         sources = cmp.config.sources({
           { name = "path" },
         }, {

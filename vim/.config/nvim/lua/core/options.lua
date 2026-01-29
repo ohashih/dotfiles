@@ -77,6 +77,7 @@ for k, v in pairs(options) do
 end
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
+vim.opt.cedit = ""  -- コマンドラインでC-fの履歴ウィンドウを無効化
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]])
 
