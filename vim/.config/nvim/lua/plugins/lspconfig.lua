@@ -29,14 +29,6 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local on_attach = function(client, bufnr)
-        local opts = { buffer = bufnr, noremap = true, silent = true }
-
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-        vim.keymap.set("n", "gD", vim.lsp.buf.type_definition, opts)
-        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-        vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-
         if client.server_capabilities.inlayHintProvider then
           vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
         end
@@ -60,18 +52,17 @@ return {
         })
       end
 
-      -- フォーマッターとリンターのインストール
       require("mason-tool-installer").setup({
         ensure_installed = {
-          "stylua",      -- Lua
-          "prettier",    -- JS/TS/JSON/HTML/CSS
-          "shfmt",       -- Shell
-          "eslint_d",    -- JS/TS linter
+          "stylua",
+          "prettier",
+          "shfmt",
+          "eslint_d",
         },
       })
     end,
   },
-  
+
   -- フォーマッター管理
   {
     "stevearc/conform.nvim",
@@ -124,7 +115,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       local lint = require("lint")
-      
+
       lint.linters_by_ft = {
         javascript = { "eslint_d" },
         typescript = { "eslint_d" },

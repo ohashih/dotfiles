@@ -7,7 +7,7 @@ return {
     },
     opts = {
       options = {
-        mode = buffers,
+        mode = "buffers",
         separator_style = "slant",
         always_show_bufferline = false,
         show_buffer_close_icons = false,

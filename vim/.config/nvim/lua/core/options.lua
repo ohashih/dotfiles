@@ -59,9 +59,9 @@ local options = {
   numberwidth = 4,
   signcolumn = "yes",
   wrap = true,
-  winblend = 0,
+  winblend = 20,
   wildoptions = "pum",
-  pumblend = 5,
+  pumblend = 20,
   background = "dark",
   scrolloff = 8,
   sidescrolloff = 8,
@@ -70,9 +70,6 @@ local options = {
   splitright = true,
 }
 
-vim.opt.winblend = 20
-vim.opt.pumblend = 20
-vim.opt.termguicolors = true
 vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do

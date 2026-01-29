@@ -1,5 +1,12 @@
 local vim = vim
 
+-- yank highlight
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 300 })
+  end,
+})
+
 -- ファイル保存時に自動フォーマット
 
 -- vim.api.nvim_create_augroup("LspFormatOnSave", { clear = true })
