@@ -3,12 +3,11 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPre", "BufNewFile", "VeryLazy" },
     dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "WhoIsSethDaniel/mason-tool-installer.nvim",
-      "glepnir/lspsaga.nvim",
     },
     config = function()
       require("mason").setup()
@@ -23,6 +22,10 @@ return {
           "cssls",
           "tailwindcss",
           "ts_ls",
+          "terraformls",
+          "pyright",
+          "yamlls",
+          "taplo",
         },
       })
 
@@ -37,6 +40,10 @@ return {
         "cssls",
         "tailwindcss",
         "ts_ls",
+        "terraformls",
+        "pyright",
+        "yamlls",
+        "taplo",
       }
 
       for _, server in ipairs(servers) do
@@ -52,8 +59,27 @@ return {
           "prettier",
           "shfmt",
           "eslint_d",
+          "terraform-ls",
+          "tflint",
+          "black",
+          "ruff",
+          "yamllint",
+          "taplo",
         },
       })
+    end,
+  },
+
+  -- Lspsaga
+  {
+    "glepnir/lspsaga.nvim",
+    event = "LspAttach",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("lspsaga").setup({})
     end,
   },
 
@@ -87,6 +113,13 @@ return {
           sh = { "shfmt" },
           bash = { "shfmt" },
           zsh = { "shfmt" },
+          terraform = { "terraform_fmt" },
+          tf = { "terraform_fmt" },
+          ["terraform-vars"] = { "terraform_fmt" },
+          python = { "black" },
+          yaml = { "prettier" },
+          toml = { "taplo" },
+          rust = { "rustfmt" },
         },
         -- 保存時に自動フォーマット
         format_on_save = {
@@ -115,6 +148,10 @@ return {
         typescript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
         typescriptreact = { "eslint_d" },
+        terraform = { "tflint" },
+        tf = { "tflint" },
+        python = { "ruff" },
+        yaml = { "yamllint" },
       }
 
       -- 自動リント実行

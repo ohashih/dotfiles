@@ -25,12 +25,10 @@ return {
       indent = { enable = true },
     },
     config = function(_, opts)
-      -- 新しいAPI（v1.0+）を試し、失敗したら旧APIにフォールバック
       local ok, configs = pcall(require, "nvim-treesitter.configs")
       if ok then
         configs.setup(opts)
       else
-        -- v1.0+: 直接vim.treesitterを使用
         require("nvim-treesitter").setup(opts)
       end
       vim.filetype.add({

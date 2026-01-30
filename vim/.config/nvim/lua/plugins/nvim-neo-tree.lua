@@ -7,22 +7,35 @@ return {
     "MunifTanjim/nui.nvim",
     "3rd/image.nvim",
   },
-  opts = {
+  init = function()
+    -- diagnostic signsの設定（Neo-treeとは別）
     vim.diagnostic.config({
       signs = {
         text = {
-          [vim.diagnostic.severity.ERROR] = " ",
-          [vim.diagnostic.severity.WARN] = " ",
-          [vim.diagnostic.severity.INFO] = " ",
+          [vim.diagnostic.severity.ERROR] = " ",
+          [vim.diagnostic.severity.WARN] = " ",
+          [vim.diagnostic.severity.INFO] = " ",
           [vim.diagnostic.severity.HINT] = "󰌵",
         },
       },
-    }),
+    })
+    -- Neo-treeのmigration警告を抑制
+    vim.g.neo_tree_remove_legacy_commands = 1
+  end,
+  opts = {
     close_if_last_window = false,
     popup_border_style = "rounded",
     enable_git_status = true,
     enable_diagnostics = true,
-    enable_normal_mode_for_inputs = false,
+    event_handlers = {
+      {
+        event = "neo_tree_popup_input_ready",
+        handler = function(args)
+          vim.cmd("stopinsert")
+          vim.keymap.set("i", "<esc>", vim.cmd.stopinsert, { noremap = true, buffer = args.bufnr })
+        end,
+      },
+    },
     open_files_do_not_replace_types = { "terminal", "trouble", "qf" },
     sort_case_insensitive = false,
     sort_function = nil,
