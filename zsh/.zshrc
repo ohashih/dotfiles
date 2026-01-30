@@ -59,6 +59,10 @@ source_file ~/.zsh/complete.zsh
 
 source_file ~/.zsh/cdpath.zshrc
 
+# Setting zsh function
+
+source_file ~/.zsh/function.zshrc
+
 # Setting fly.io complication
 
 # source_file ~/.zsh/flyio.zshrc
