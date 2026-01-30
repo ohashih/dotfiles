@@ -55,7 +55,7 @@ return {
           },
           Docs = {
             prompt = "/COPILOT_GENERATE 選択したコードに関するドキュメントコメントを日本語で生成してください。",
-            mapping = "<leader>cd",
+            mapping = "<leader>cx",
             description = "コードのドキュメント作成をお願いする",
           },
           Tests = {

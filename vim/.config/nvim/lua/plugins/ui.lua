@@ -75,7 +75,7 @@ return {
   -- scroll view
   {
     "dstein64/nvim-scrollview",
-    lazy = true,
+    event = { "BufReadPre", "BufNewFile" },
   },
   -- hightlight
   {
