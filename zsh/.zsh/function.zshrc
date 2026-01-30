@@ -10,28 +10,50 @@ ghcd() {
 }
 
 # gh repo list: List your repositories and clone selected one
+# Usage: ghclone [organization]
 ghclone() {
+  local org="$1"
   local repo
-  repo=$(gh repo list --limit 100 --json nameWithOwner,description,updatedAt \
-    --template '{{range .}}{{.nameWithOwner}}	{{.description}}	{{timeago .updatedAt}}{{"\n"}}{{end}}' \
-    | fzf --delimiter='\t' \
-          --with-nth=1,2 \
-          --preview 'gh repo view {1} --json description,stargazerCount,forkCount,updatedAt --template "⭐ {{.stargazerCount}} | 🍴 {{.forkCount}} | Updated: {{timeago .updatedAt}}\n\n{{.description}}"' \
-    | cut -f1)
+  if [[ -n "$org" ]]; then
+    repo=$(gh repo list "$org" --limit 100 --json nameWithOwner,description,updatedAt \
+      --template '{{range .}}{{.nameWithOwner}}	{{.description}}	{{timeago .updatedAt}}{{"\n"}}{{end}}' \
+      | fzf --delimiter='\t' \
+            --with-nth=1,2 \
+            --preview 'gh repo view {1} --json description,stargazerCount,forkCount,updatedAt --template "⭐ {{.stargazerCount}} | 🍴 {{.forkCount}} | Updated: {{timeago .updatedAt}}\n\n{{.description}}"' \
+      | cut -f1)
+  else
+    repo=$(gh repo list --limit 100 --json nameWithOwner,description,updatedAt \
+      --template '{{range .}}{{.nameWithOwner}}	{{.description}}	{{timeago .updatedAt}}{{"\n"}}{{end}}' \
+      | fzf --delimiter='\t' \
+            --with-nth=1,2 \
+            --preview 'gh repo view {1} --json description,stargazerCount,forkCount,updatedAt --template "⭐ {{.stargazerCount}} | 🍴 {{.forkCount}} | Updated: {{timeago .updatedAt}}\n\n{{.description}}"' \
+      | cut -f1)
+  fi
   if [[ -n "$repo" ]]; then
     gh repo clone "$repo"
   fi
 }
 
 # gh repo list: Browse and open in browser
+# Usage: ghopen [organization]
 ghopen() {
+  local org="$1"
   local repo
-  repo=$(gh repo list --limit 100 --json nameWithOwner,description \
-    --template '{{range .}}{{.nameWithOwner}}	{{.description}}{{"\n"}}{{end}}' \
-    | fzf --delimiter='\t' \
-          --with-nth=1,2 \
-          --preview 'gh repo view {1}' \
-    | cut -f1)
+  if [[ -n "$org" ]]; then
+    repo=$(gh repo list "$org" --limit 100 --json nameWithOwner,description \
+      --template '{{range .}}{{.nameWithOwner}}	{{.description}}{{"\n"}}{{end}}' \
+      | fzf --delimiter='\t' \
+            --with-nth=1,2 \
+            --preview 'gh repo view {1}' \
+      | cut -f1)
+  else
+    repo=$(gh repo list --limit 100 --json nameWithOwner,description \
+      --template '{{range .}}{{.nameWithOwner}}	{{.description}}{{"\n"}}{{end}}' \
+      | fzf --delimiter='\t' \
+            --with-nth=1,2 \
+            --preview 'gh repo view {1}' \
+      | cut -f1)
+  fi
   if [[ -n "$repo" ]]; then
     gh repo view "$repo" --web
   fi
