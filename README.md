@@ -23,6 +23,7 @@ stow -v -t ~/ zsh \
     && stow -v -t ~/ kitty \
     && stow -v -t ~/ mise \
     && stow -v -t ~/ brew \
+    && stow -v -t ~/ p10k \
     && stow -v -t ~/ gpg
 ```
 
@@ -35,6 +36,7 @@ stow -vD -t ~/ zsh \
     && stow -vD -t ~/ kitty \
     && stow -vD -t ~/ mise \
     && stow -vD -t ~/ brew \
+    && stow -v -t ~/ p10k \
     && stow -vD -t ~/ gpg
 ```
 

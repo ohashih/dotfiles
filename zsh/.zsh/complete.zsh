@@ -1,6 +1,5 @@
-autoload bashcompinit && bashcompinit
-autoload -U +X bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
 
 # gh
 eval "$(gh completion -s zsh)"

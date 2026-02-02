@@ -5,8 +5,6 @@ export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:/usr/local/opt/libxml2/bin"
 export PATH="$PATH:/usr/local/opt/libxslt/bin"
 export PATH="$PATH:/usr/local/opt/libiconv/bin"
-export PATH="$PATH:/usr/local/opt/libxslt/bin"
-export PATH="$PATH:/usr/local/opt/libxml2/bin"
 
 # icu4c
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
@@ -20,7 +18,7 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 #export PATH="~/git/git-fuzzy/bin:$PATH"
 
 # Added by Windsurf
-export PATH="~/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 
 # MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="~/.rd/bin:$PATH"
+export PATH="$HOME/.rd/bin:$PATH"

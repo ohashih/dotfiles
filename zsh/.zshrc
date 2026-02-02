@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # zplug
-export ZPLUG_HOME=/opt/homebrew/Cellar/zplug/2.4.2
+export ZPLUG_HOME=$(brew --prefix zplug)
 source $ZPLUG_HOME/init.zsh
 
 # Install plugins if there are plugins that have not been installed
@@ -32,7 +32,7 @@ function source_file {
 }
 
 # Activate Program
-source_file ~/.zsh/init.zsh
+source_file ~/.zsh/init.zshrc
 
 # Setting zsh color
 source_file ~/.zsh/style.zshrc
@@ -68,8 +68,6 @@ source_file ~/.zsh/function.zshrc
 
 # Setting secret
 source_file ~/.zsh/secret.zshrc
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
