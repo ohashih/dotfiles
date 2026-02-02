@@ -7,7 +7,3 @@ export EDITOR=nvim
 
 # Rancher Desktop Docker
 export DOCKER_HOST=unix://${HOME}/.rd/docker.sock
-# homebrew cask
-#export HOMEBREW_CASK_OPTS="--appdir=/Applications" 
-#export LDFLAGS="-L/usr/local/opt/ncurses/lib"
-#export CPPFLAGS="-I/usr/local/opt/ncurses/include"

@@ -31,6 +31,9 @@ function source_file {
   fi
 }
 
+# Activate Program
+source_file ~/.zsh/init.zsh
+
 # Setting zsh color
 source_file ~/.zsh/style.zshrc
 
@@ -63,44 +66,10 @@ source_file ~/.zsh/cdpath.zshrc
 
 source_file ~/.zsh/function.zshrc
 
-# Setting fly.io complication
-
-# source_file ~/.zsh/flyio.zshrc
-
-# Setting Andy Photobook AI
-
-# source_file ~/.zsh/apb.zshrc
-
 # Setting secret
 source_file ~/.zsh/secret.zshrc
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
-
-# don't run the completion function when being source-ed or eval-ed
-# source_file ~/.mdbook.zsh
-# source ~/.config/broot/launcher/bash/br
-#. ~/.asdf/plugins/java/set-java-home.zsh
-## Created by `pipx` on 2022-02-01 07:57:20
-# export PATH="$PATH:~/.local/bin"
-# GITSTATUS_LOG_LEVEL=DEBUG
-
-#zprof
-
-## mise
-eval "$(/opt/homebrew/bin/mise activate zsh)"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-autoload -U +X bashcompinit && bashcompinit
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="~/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-# Added by Windsurf
-export PATH="~/.codeium/windsurf/bin:$PATH"
-
-# eval "$(starship init zsh)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

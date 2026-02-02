@@ -18,10 +18,6 @@ fi
 alias diff='colordiff'
 alias diffy='diff -y --suppress-common-lines'
 
-# ls settings
-alias ls="ls"
-alias ll="ls -l"
-
 # standard command settings
 alias vim='nvim'
 alias vi='nvim'
@@ -57,18 +53,15 @@ alias vitask="vi ~/private/task.md"
 alias dynamo="node ~/dynamo/dynamo.js"
 alias gdiff="git-split-diffs --color"
 alias imgcat="imgcat_tmux"
+alias lzd="lazydocker"
 
 # utility
-alias remote="ssh -NL 4308:10.220.110.199:3308 stg-business1"
-alias anshMysql="mysql --host=127.0.0.1 --user=am2work --password=6440 --port=4308"
 alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
 alias calen="icalBuddy -f -sd eventsToday+10"
-alias lzd="lazydocker"
 alias compression="tar -zcvf"
 alias uncompression="tar -zxvf"
 
 # exa
-
 alias ls="eza"
 alias ll="eza -ahl --git --icons=always"
 alias tree="eza -T --git-ignore"
