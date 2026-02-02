@@ -14,17 +14,10 @@ cd \
     && cd dotfiles
 ```
 
-2. Create Symlinks
+2. Setup
 
 ```shell
-stow -v -t ~/ zsh \
-    && stow -v -t ~/ tmux \
-    && stow -v -t ~/ vim \
-    && stow -v -t ~/ kitty \
-    && stow -v -t ~/ mise \
-    && stow -v -t ~/ brew \
-    && stow -v -t ~/ p10k \
-    && stow -v -t ~/ gpg
+./install.sh
 ```
 
 ## If you want to remove the symlinks
