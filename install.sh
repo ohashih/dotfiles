@@ -88,7 +88,7 @@ setup_stow() {
   if [[ -d "$DOTFILES_DIR/kitty" ]]; then
     mkdir -p "$HOME/.config/kitty"
     info "Copying Kitty configuration to ~/.config/kitty"
-    cp -r "$DOTFILES_DIR/kitty"/* "$HOME/.config/kitty/"
+    cp -r "$DOTFILES_DIR/kitty/." "$HOME/.config/kitty/"
   fi
 }
 
