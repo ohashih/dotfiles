@@ -15,14 +15,14 @@ ghclone() {
   local org="$1"
   local repo
   if [[ -n "$org" ]]; then
-    repo=$(gh repo list "$org" --limit 100 --json nameWithOwner,description,updatedAt \
+    repo=$(gh repo list "$org" --limit 1000 --json nameWithOwner,description,updatedAt \
       --template '{{range .}}{{.nameWithOwner}}	{{.description}}	{{timeago .updatedAt}}{{"\n"}}{{end}}' \
       | fzf --delimiter='\t' \
             --with-nth=1,2 \
             --preview 'gh repo view {1} --json description,stargazerCount,forkCount,updatedAt --template "⭐ {{.stargazerCount}} | 🍴 {{.forkCount}} | Updated: {{timeago .updatedAt}}\n\n{{.description}}"' \
       | cut -f1)
   else
-    repo=$(gh repo list --limit 100 --json nameWithOwner,description,updatedAt \
+    repo=$(gh repo list --limit 1000 --json nameWithOwner,description,updatedAt \
       --template '{{range .}}{{.nameWithOwner}}	{{.description}}	{{timeago .updatedAt}}{{"\n"}}{{end}}' \
       | fzf --delimiter='\t' \
             --with-nth=1,2 \
@@ -40,14 +40,14 @@ ghopen() {
   local org="$1"
   local repo
   if [[ -n "$org" ]]; then
-    repo=$(gh repo list "$org" --limit 100 --json nameWithOwner,description \
+    repo=$(gh repo list "$org" --limit 1000 --json nameWithOwner,description \
       --template '{{range .}}{{.nameWithOwner}}	{{.description}}{{"\n"}}{{end}}' \
       | fzf --delimiter='\t' \
             --with-nth=1,2 \
             --preview 'gh repo view {1}' \
       | cut -f1)
   else
-    repo=$(gh repo list --limit 100 --json nameWithOwner,description \
+    repo=$(gh repo list --limit 1000 --json nameWithOwner,description \
       --template '{{range .}}{{.nameWithOwner}}	{{.description}}{{"\n"}}{{end}}' \
       | fzf --delimiter='\t' \
             --with-nth=1,2 \
