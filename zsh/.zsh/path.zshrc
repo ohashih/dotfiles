@@ -1,6 +1,8 @@
 # Default
 export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+export PATH="$HOME/.yarn/bin:$PATH"
+
 # The next line enables shell command completion for gcloud.
 export PATH="$PATH:/usr/local/opt/libxml2/bin"
 export PATH="$PATH:/usr/local/opt/libxslt/bin"
