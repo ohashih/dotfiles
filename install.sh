@@ -75,14 +75,21 @@ setup_stow() {
     stow_package "$pkg"
   done
 
-  # GPG needs special handling (target is ~/.gnupg)
-  mkdir -p "$HOME/.gnupg"
-  chmod 700 "$HOME/.gnupg"
-  stow_package "gpg" "$HOME/.gnupg"
+  # GPG needs special handling (copy files to ~/.gnupg)
+  if [[ -f "$DOTFILES_DIR/gpg/gpg-agent.conf" ]]; then
+    mkdir -p "$HOME/.gnupg"
+    chmod 700 "$HOME/.gnupg"
+    info "Copying GPG configuration to ~/.gnupg"
+    cp "$DOTFILES_DIR/gpg/gpg-agent.conf" "$HOME/.gnupg/"
+    chmod 600 "$HOME/.gnupg/gpg-agent.conf"
+  fi
 
-  # Kitty (stow to ~/.config/kitty)
-  mkdir -p "$HOME/.config/kitty"
-  stow_package "kitty" "$HOME/.config/kitty"
+  # Kitty (copy files to ~/.config/kitty)
+  if [[ -d "$DOTFILES_DIR/kitty" ]]; then
+    mkdir -p "$HOME/.config/kitty"
+    info "Copying Kitty configuration to ~/.config/kitty"
+    cp -r "$DOTFILES_DIR/kitty/." "$HOME/.config/kitty/"
+  fi
 }
 
 # Install Prezto
