@@ -145,7 +145,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, ex_opts("Code action", ev.buf))
     vim.keymap.set("n", "gr", vim.lsp.buf.references, ex_opts("References", ev.buf))
     vim.keymap.set("n", "<leader><space>", function()
-      vim.lsp.buf.format({ async = true })
+      require("conform").format({ async = true, lsp_fallback = true })
     end, ex_opts("Format", ev.buf))
 
     -- Diagnostic mappings
