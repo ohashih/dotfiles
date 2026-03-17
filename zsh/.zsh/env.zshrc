@@ -4,6 +4,3 @@ export GPG_TTY=$(tty)
 
 # エディタ
 export EDITOR=nvim
-
-# Rancher Desktop Docker
-export DOCKER_HOST=unix://${HOME}/.rd/docker.sock

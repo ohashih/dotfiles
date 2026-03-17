@@ -71,17 +71,3 @@ source_file ~/.zsh/secret.zshrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export PATH="/Users/ohashih/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-# Created by `pipx` on 2026-03-11 01:29:57
-export PATH="$PATH:~/.local/bin"
-
-# # pnpm
-# export PNPM_HOME="~/Library/pnpm"
-# case ":$PATH:" in
-#   *":$PNPM_HOME:"*) ;;
-#   *) export PATH="$PNPM_HOME:$PATH" ;;
-# esac
-# # pnpm end

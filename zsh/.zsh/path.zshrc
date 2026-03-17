@@ -26,8 +26,11 @@ export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 export PATH="$HOME/.rd/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/Users/kurage/Library/pnpm"
+export PNPM_HOME="~/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# Created by `pipx` on 2026-03-11 01:29:57
+export PATH="$PATH:$HOME/.local/bin"
