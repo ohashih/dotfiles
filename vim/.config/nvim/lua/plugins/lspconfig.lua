@@ -86,6 +86,15 @@ return {
   {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
+    keys = {
+      {
+        "<Space><Space>",
+        function()
+          require("conform").format({ async = true, lsp_fallback = true })
+        end,
+        mode = "n",
+      },
+    },
     cmd = { "ConformInfo" },
     config = function()
       require("conform").setup({
@@ -113,10 +122,7 @@ return {
           rust = { "rustfmt" },
         },
         -- 保存時に自動フォーマット
-        format_on_save = {
-          timeout_ms = 500,
-          lsp_fallback = true,
-        },
+        format_on_save = false,
         -- shfmtの設定
         formatters = {
           shfmt = {
