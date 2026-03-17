@@ -88,6 +88,8 @@ alias aws-main="pushd ~/.aws && git checkout main && popd"
 alias aws-flex="pushd ~/.aws && git checkout flex && popd"
 alias aws-kurage="pushd ~/.aws && git checkout kurage && popd"
 alias aws-aba="pushd ~/.aws && git checkout aba && popd"
+alias aws-sso="pushd ~/.aws && git checkout sso && popd"
+alias aws-test-sso="pushd ~/.aws && git checkout test-sso && popd"
 
 # deepl
 # https://github.com/kojix2/deepl-cli
@@ -99,3 +101,6 @@ alias icat="kitty +kitten icat"
 # pass
 alias rpass="cat ~/admin/password.md"
 alias wpass="vi ~/admin/password.md"
+
+# assume
+alias assume=". assume"

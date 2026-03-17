@@ -73,5 +73,8 @@ source_file ~/.zsh/secret.zshrc
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="~/.rd/bin:$PATH"
+export PATH="/Users/ohashih/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Created by `pipx` on 2026-03-11 01:29:57
+export PATH="$PATH:/Users/ohashih/.local/bin"
