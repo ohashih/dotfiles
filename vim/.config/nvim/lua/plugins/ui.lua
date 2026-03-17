@@ -17,6 +17,7 @@ return {
         "python",
         "javascript",
         "typescript",
+        "tsx",
         "go",
         "rust",
       },
@@ -35,6 +36,7 @@ return {
         extension = {
           tofu = "terraform",
           mdx = "mdx",
+          jsx = "javascriptreact",
         },
       })
     end,

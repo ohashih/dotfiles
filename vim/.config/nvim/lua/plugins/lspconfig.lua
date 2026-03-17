@@ -87,16 +87,6 @@ return {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
     cmd = { "ConformInfo" },
-    keys = {
-      {
-        "<leader>f",
-        function()
-          require("conform").format({ async = true, lsp_fallback = true })
-        end,
-        mode = "",
-        desc = "Format buffer",
-      },
-    },
     config = function()
       require("conform").setup({
         formatters_by_ft = {
@@ -105,6 +95,8 @@ return {
           typescript = { "prettier" },
           javascriptreact = { "prettier" },
           typescriptreact = { "prettier" },
+          jsx = { "prettier" },
+          tsx = { "prettier" },
           json = { "prettier" },
           html = { "prettier" },
           css = { "prettier" },
@@ -128,7 +120,7 @@ return {
         -- shfmtの設定
         formatters = {
           shfmt = {
-            prepend_args = { "-i", "2", "-ci" },
+            prepend_args = { "-i", "4", "-ci" },
           },
         },
       })
@@ -147,6 +139,8 @@ return {
         typescript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
         typescriptreact = { "eslint_d" },
+        jsx = { "eslint_d" },
+        tsx = { "eslint_d" },
         terraform = { "tflint" },
         tf = { "tflint" },
         python = { "ruff" },

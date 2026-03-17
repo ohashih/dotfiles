@@ -24,3 +24,10 @@ export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 
 # MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="$HOME/.rd/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/kurage/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
