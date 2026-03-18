@@ -24,6 +24,7 @@ export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 
 # MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="$HOME/.rd/bin:$PATH"
+# END Rancher Desktop configuration
 
 # pnpm
 export PNPM_HOME="~/Library/pnpm"
