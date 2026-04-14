@@ -27,7 +27,7 @@ export PATH="$HOME/.rd/bin:$PATH"
 # END Rancher Desktop configuration
 
 # pnpm
-export PNPM_HOME="~/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
