@@ -90,6 +90,7 @@ alias aws-kurage="pushd ~/.aws && git checkout kurage && popd"
 alias aws-aba="pushd ~/.aws && git checkout aba && popd"
 alias aws-sso="pushd ~/.aws && git checkout sso && popd"
 alias aws-test-sso="pushd ~/.aws && git checkout test-sso && popd"
+alias aws-test-claude="pushd ~/.aws && git checkout test-claude && popd"
 
 # deepl
 # https://github.com/kojix2/deepl-cli
