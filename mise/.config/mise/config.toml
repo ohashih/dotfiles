@@ -1,7 +1,7 @@
 [tools]
 nodejs = '24.14.0'
 python = '3.14.3'
-awscli = '2.33.13'
+awscli = '2.34.58'
 go = "1.23.5"
 terraform = '1.14.7'
 rust="1.84.1"
@@ -9,6 +9,6 @@ direnv="2.37.1"
 usage = "latest"
 aws-sam-cli="1.135.0"
 lazydocker="latest"
-pnpm = "10.32.1"
+pnpm = "10.34.1"
 jq = "latest"
 yq = "latest"
