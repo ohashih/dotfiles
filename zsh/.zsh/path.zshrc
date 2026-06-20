@@ -35,3 +35,6 @@ esac
 
 # Created by `pipx` on 2026-03-11 01:29:57
 export PATH="$PATH:$HOME/.local/bin"
+
+# brew
+export PATH="/opt/homebrew/bin:$PATH"
