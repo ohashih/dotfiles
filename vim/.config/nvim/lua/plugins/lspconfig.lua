@@ -52,6 +52,20 @@ return {
         })
       end
 
+      vim.lsp.enable(servers)
+
+      -- Diagnostic表示設定
+      vim.diagnostic.config({
+        virtual_text = true,
+        signs = true,
+        underline = true,
+        update_in_insert = false,
+        float = {
+          border = "rounded",
+          source = true,
+        },
+      })
+
       require("mason-tool-installer").setup({
         ensure_installed = {
           "stylua",
