@@ -4,7 +4,11 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
   {
+    -- 安定版 master ブランチ + classic configs API。
+    -- (元の不具合は configs API を main ブランチ上で使っていた点。master では ensure_installed が
+    --  正しく機能し、:TSUpdate も導入済みパーサのみを更新する。)
     "nvim-treesitter/nvim-treesitter",
+    branch = "master",
     build = ":TSUpdate",
     main = "nvim-treesitter.configs",
     opts = {
@@ -20,18 +24,20 @@ return {
         "tsx",
         "go",
         "rust",
+        "json",
+        "yaml",
+        "toml",
+        "hcl",
+        "markdown",
+        "markdown_inline",
       },
       sync_install = false,
+      auto_install = true,
       highlight = { enable = true },
       indent = { enable = true },
     },
     config = function(_, opts)
-      local ok, configs = pcall(require, "nvim-treesitter.configs")
-      if ok then
-        configs.setup(opts)
-      else
-        require("nvim-treesitter").setup(opts)
-      end
+      require("nvim-treesitter.configs").setup(opts)
       vim.filetype.add({
         extension = {
           tofu = "terraform",

@@ -5,17 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# zplug
-export ZPLUG_HOME=$(brew --prefix zplug)
-source $ZPLUG_HOME/init.zsh
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo
-    zplug install
-  fi
+# sheldon (zplug から移行。プラグインは ~/.config/sheldon/plugins.toml で管理)
+# 初回/更新時は `sheldon lock --update` を実行。
+if command -v sheldon >/dev/null 2>&1; then
+  eval "$(sheldon source)"
 fi
 
 # custom source_file function
@@ -72,6 +65,20 @@ source_file ~/.zsh/secret.zshrc
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# p10k instant prompt と clear-screen の相性問題を回避するカスタムウィジェット
+function _clear_screen_widget() {
+  clear
+  zle reset-prompt
+}
+zle -N _clear_screen_widget
+bindkey "^L" _clear_screen_widget
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/kurage/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# tmux 自動起動 (prezto tmux:auto-start モジュールの代替)
+# 対話シェルかつ tmux/エディタ外のときに main セッションへ attach、無ければ新規作成。
+if [[ -o interactive && -z "$TMUX" && -z "$INSIDE_EMACS" && -z "$VIMRUNTIME" ]] && command -v tmux >/dev/null 2>&1; then
+  tmux attach -t main 2>/dev/null || tmux new -s main
+fi

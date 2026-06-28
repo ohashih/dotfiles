@@ -2,15 +2,16 @@
 
 export FZF_COMPLETION_TRIGGER="," # default: '**'
 
+# catppuccin mocha (nvim/tmux/kitty と統一)
 export FZF_DEFAULT_OPTS='
   --height 100%
   --reverse
   --border
   --inline-info
-  --color=fg:#c5cdd9,bg:#262729,hl:#6cb6eb
-  --color=fg+:#c5cdd9,bg+:#262729,hl+:#5dbbc1
-  --color=info:#88909f,prompt:#ec7279,pointer:#d38aea
-  --color=marker:#a0c980,spinner:#ec7279,header:#5dbbc1
+  --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
+  --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
+  --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
+  --color=selected-bg:#45475a,border:#6c7086,label:#cdd6f4
 '
 export FZF_CTRL_T_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
