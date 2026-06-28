@@ -29,11 +29,8 @@ keymap("", "<Space>", "<Nop>", opts)
 --   command_mode = 'c',
 
 -- Normal --
--- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- Window navigation は vim-tmux-navigator (lua/plugins/ide.lua) が <C-h/j/k/l> を
+-- nvim split と tmux pane の双方でシームレスに扱うため、ここでは定義しない。
 
 -- New tab
 keymap("n", "te", ":tabedit", opts)
@@ -147,6 +144,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader><space>", function()
       require("conform").format({ async = true, lsp_fallback = true })
     end, ex_opts("Format", ev.buf))
+
+    -- Inlay hints (Neovim 0.11 ネイティブ): 型/引数名をインライン表示
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client and client.supports_method("textDocument/inlayHint") then
+      vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+    end
+    vim.keymap.set("n", "<leader>ih", function()
+      vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = ev.buf }), { bufnr = ev.buf })
+    end, ex_opts("Toggle inlay hints", ev.buf))
 
     -- Diagnostic mappings
     vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, ex_opts("Open diagnostic float", ev.buf))

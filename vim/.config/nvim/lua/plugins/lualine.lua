@@ -7,7 +7,8 @@ return {
     opts = {
       options = {
         icons_enabled = true,
-        theme = "iceberg_dark",
+        -- "auto" は現在のカラースキーム (catppuccin-mocha) から自動でテーマを選ぶ
+        theme = "auto",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {

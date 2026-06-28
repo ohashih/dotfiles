@@ -8,17 +8,7 @@ return {
     "3rd/image.nvim",
   },
   init = function()
-    -- diagnostic signsの設定（Neo-treeとは別）
-    vim.diagnostic.config({
-      signs = {
-        text = {
-          [vim.diagnostic.severity.ERROR] = " ",
-          [vim.diagnostic.severity.WARN] = " ",
-          [vim.diagnostic.severity.INFO] = " ",
-          [vim.diagnostic.severity.HINT] = "󰌵",
-        },
-      },
-    })
+    -- diagnostic signs は lspconfig.lua の vim.diagnostic.config に集約
     -- Neo-treeのmigration警告を抑制
     vim.g.neo_tree_remove_legacy_commands = 1
   end,
