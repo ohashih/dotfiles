@@ -1,0 +1,15 @@
+---
+services:
+  linter:
+    image: "ghcr.io/super-linter/super-linter:latest"
+    platform: linux/amd64
+    environment:
+      - RUN_LOCAL=true
+      - LINTER_RULES_PATH=../rules
+      - FILTER_REGEX_EXCLUDE="(.*\.j2$|.*\.zsh$)"
+    env_file:
+      - .github/super-linter.env
+    volumes:
+      - ${PWD}:/tmp/lint
+      - ${PWD}:/tmp/logs
+      - ${PWD}:/tmp/rules
