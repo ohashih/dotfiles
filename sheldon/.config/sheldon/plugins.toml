@@ -1,0 +1,25 @@
+# sheldon — zsh プラグインマネージャ (zplug から移行)
+# 反映: `sheldon lock --update` 後、新シェルで有効化。
+# .zshrc 側で `eval "$(sheldon source)"` を呼ぶ。
+shell = "zsh"
+
+# プロンプト (p10k を継続。instant prompt と併用)
+[plugins.powerlevel10k]
+github = "romkatv/powerlevel10k"
+use = ["powerlevel10k.zsh-theme"]
+
+# 追加補完定義 (compinit より前に fpath へ追加される)
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
+# 入力補助 (履歴ベースのサジェスト)
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+# 履歴の部分一致検索 (↑/↓ に割り当て: bindkey.zshrc 参照)
+[plugins.zsh-history-substring-search]
+github = "zsh-users/zsh-history-substring-search"
+
+# シンタックスハイライト (必ず最後に読み込む)
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"

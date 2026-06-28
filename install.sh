@@ -65,10 +65,9 @@ setup_stow() {
   local home_packages=(
     "zsh"
     "tmux"
-    "p10k"
     "vim"
     "mise"
-    "starship"
+    "sheldon"
   )
 
   for pkg in "${home_packages[@]}"; do
@@ -85,13 +84,13 @@ setup_stow() {
   stow_package "kitty" "$HOME/.config/kitty"
 }
 
-# Install Prezto
-setup_prezto() {
-  if [[ ! -d "$HOME/.zprezto" ]]; then
-    info "Installing Prezto..."
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto"
+# Install zsh plugins via sheldon (prezto/zplug から移行)
+setup_sheldon() {
+  if command -v sheldon &>/dev/null; then
+    info "Locking zsh plugins with sheldon..."
+    sheldon lock --update || warn "sheldon lock failed"
   else
-    info "Prezto is already installed"
+    warn "sheldon not found; run 'brew bundle' first"
   fi
 }
 
@@ -133,7 +132,7 @@ main() {
   install_brew_packages
 
   setup_stow
-  setup_prezto
+  setup_sheldon
   setup_tpm
   setup_fonts
 

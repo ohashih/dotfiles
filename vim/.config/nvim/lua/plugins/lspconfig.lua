@@ -27,9 +27,12 @@ return {
           "yamlls",
           "taplo",
         },
+        -- サーバは下の vim.lsp.enable(servers) で明示的に有効化するため、
+        -- mason 導入物 (stylua --lsp 等の非 LSP も含む) の自動有効化を無効にする。
+        automatic_enable = false,
       })
 
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
 
       local servers = {
         "lua_ls",
@@ -54,12 +57,20 @@ return {
 
       vim.lsp.enable(servers)
 
-      -- Diagnostic表示設定
+      -- Diagnostic表示設定 (signs アイコンもここへ集約。neo-tree 側の重複定義は削除済み)
       vim.diagnostic.config({
-        virtual_text = true,
-        signs = true,
+        virtual_text = { spacing = 2, prefix = "●" },
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = " ",
+            [vim.diagnostic.severity.WARN] = " ",
+            [vim.diagnostic.severity.INFO] = " ",
+            [vim.diagnostic.severity.HINT] = "󰌵",
+          },
+        },
         underline = true,
         update_in_insert = false,
+        severity_sort = true,
         float = {
           border = "rounded",
           source = true,
