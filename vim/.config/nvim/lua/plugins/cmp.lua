@@ -10,20 +10,20 @@ return {
         version = "v2.*",
         build = "make install_jsregexp",
       },
-      -- Copilot 補完を blink のソースとして取り込む
       "fang2hou/blink-copilot",
       "zbirenbaum/copilot.lua",
     },
     opts = {
       snippets = { preset = "luasnip" },
 
-      -- 旧 nvim-cmp のキーマップを踏襲
       keymap = {
         preset = "none",
         ["<Tab>"] = { "select_next", "fallback" },
         ["<S-Tab>"] = { "select_prev", "fallback" },
         ["<C-n>"] = { "show", "select_next", "fallback" },
         ["<C-p>"] = { "select_prev", "fallback" },
+        ["<C-j>"] = { "select_next", "fallback" },
+        ["<C-k>"] = { "select_prev", "fallback" },
         ["<C-f>"] = { "hide", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
         ["<C-b>"] = { "scroll_documentation_up", "fallback" },
@@ -35,7 +35,6 @@ return {
       },
 
       completion = {
-        -- 入力では自動表示せず、<C-n> で手動表示する
         menu = {
           auto_show = false,
           border = "rounded",
