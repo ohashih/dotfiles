@@ -44,44 +44,8 @@ return {
     },
   },
 
-  -- 括弧の自動補完 (blink.cmp と連携)
-  {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    opts = { check_ts = true },
-  },
-
-  -- サラウンド操作 (ys / ds / cs)
-  {
-    "kylechui/nvim-surround",
-    version = "*",
-    event = "VeryLazy",
-    opts = {},
-  },
-
-  -- 高速モーション (s で起動)
-  {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    opts = {},
-    keys = {
-      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-      { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-      { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-    },
-  },
-
-  -- セッション復元 (前回の状態を開く)
-  {
-    "folke/persistence.nvim",
-    event = "BufReadPre",
-    opts = {},
-    keys = {
-      { "<leader>qs", function() require("persistence").load() end, desc = "Restore session (cwd)" },
-      { "<leader>ql", function() require("persistence").load({ last = true }) end, desc = "Restore last session" },
-      { "<leader>qd", function() require("persistence").stop() end, desc = "Don't save session" },
-    },
-  },
+  -- 編集系 (autopairs/surround/flash) は plugins/editing.lua、
+  -- セッション復元は plugins/productivity.lua に集約。
 
   -- nvim split と tmux pane をシームレスに移動 (tmux 側設定と対)
   {

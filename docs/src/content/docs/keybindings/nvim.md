@@ -103,6 +103,17 @@ sidebar:
 
 ---
 
+## Spectre (検索 / 置換)
+
+| キー | モード | 動作 |
+|------|--------|------|
+| `leader S` | Normal | プロジェクト全体で検索/置換 |
+| `leader sw` | Normal | カーソル位置の単語を検索 |
+| `leader sw` | Visual | 選択範囲を検索 |
+| `leader sf` | Normal | 現在のファイル内で検索 |
+
+---
+
 ## Trouble (Problems パネル)
 
 | キー | 動作 |
@@ -113,6 +124,7 @@ sidebar:
 | `leader xr` | LSP 参照 |
 | `leader xl` | Location list |
 | `leader xq` | Quickfix list |
+| `leader xt` | TODO 一覧 (todo-comments) |
 
 ---
 
@@ -165,17 +177,24 @@ sidebar:
 |------|------|
 | `leader ;` | Dropbar: パンくず選択 |
 | `leader cs` | Aerial: シンボルアウトライン |
-| `s` | Flash: ジャンプ |
-| `S` | Flash: Treesitter ジャンプ |
-| `C-s` (Command mode) | Flash: 検索トグル |
+
+### Flash (高速ジャンプ)
+
+| キー | モード | 動作 |
+|------|--------|------|
+| `s` | Normal / Visual / Operator | ジャンプ |
+| `S` | Normal / Operator | Treesitter ジャンプ |
+| `r` | Operator | リモート Flash |
+| `R` | Operator / Visual | Treesitter 検索 |
+| `C-s` | Command | 検索トグル |
 
 ### セッション (persistence.nvim)
 
 | キー | 動作 |
 |------|------|
-| `leader qs` | カレントディレクトリのセッション復元 |
-| `leader ql` | 最後のセッション復元 |
-| `leader qd` | セッション保存を停止 |
+| `leader Ss` | カレントディレクトリのセッション復元 |
+| `leader Sl` | 最後のセッション復元 |
+| `leader Sd` | セッション保存を停止 |
 
 ### nvim-surround
 
@@ -184,6 +203,56 @@ sidebar:
 | `ys{motion}{char}` | サラウンド追加 |
 | `ds{char}` | サラウンド削除 |
 | `cs{old}{new}` | サラウンド変更 |
+
+### Treesitter textobjects
+
+| キー | モード | 動作 |
+|------|--------|------|
+| `af` / `if` | Visual / Operator | 関数 (外側 / 内側) を選択 |
+| `ac` / `ic` | Visual / Operator | クラス (外側 / 内側) を選択 |
+| `aa` / `ia` | Visual / Operator | 引数 (外側 / 内側) を選択 |
+| `]f` / `[f` | Normal | 次 / 前の関数へ移動 |
+| `]c` / `[c` | Normal | 次 / 前のクラスへ移動 |
+
+### refactoring.nvim
+
+| キー | モード | 動作 |
+|------|--------|------|
+| `leader Re` | Visual | 関数を抽出 |
+| `leader Rv` | Visual | 変数を抽出 |
+| `leader Ri` | Normal / Visual | 変数をインライン化 |
+| `leader Rb` | Normal | ブロックを抽出 |
+
+---
+
+## テスト (neotest)
+
+| キー | 動作 |
+|------|------|
+| `leader tt` | カーソル位置のテスト実行 |
+| `leader tf` | ファイル内のテスト実行 |
+| `leader td` | カーソル位置のテストをデバッグ実行 |
+| `leader ts` | テストサマリ トグル |
+| `leader to` | テスト出力を表示 |
+| `leader tp` | テスト出力パネル トグル |
+
+---
+
+## TODO コメント (todo-comments)
+
+| キー | 動作 |
+|------|------|
+| `leader st` | TODO 検索 (Telescope) |
+| `leader xt` | TODO 一覧 (Trouble) |
+| `]t` / `[t` | 次 / 前の TODO コメントへ |
+
+---
+
+## ファイラ (oil.nvim)
+
+| キー | 動作 |
+|------|------|
+| `-` | 親ディレクトリをバッファとして開く |
 
 ---
 
@@ -218,10 +287,17 @@ sidebar:
 
 ## blink.cmp (補完)
 
+入力中に候補は自動表示されません。`C-n` で手動表示します。
+候補移動中はバッファへ仮挿入されず、`Enter` で確定したときのみ挿入されます。
+
 | キー | 動作 |
 |------|------|
-| `Tab` | 候補選択 / 次へ |
+| `C-n` | 補完候補を表示 / 次の候補へ |
+| `C-p` | 前の候補へ |
+| `C-j` | 次の候補へ |
+| `C-k` | 前の候補へ |
+| `Tab` | 次の候補へ |
 | `S-Tab` | 前の候補へ |
-| `C-n` | 補完候補を表示 |
-| `C-f` / `Enter` | 候補を確定 |
-| `C-e` | 補完を閉じる |
+| `Enter` | 候補を確定 |
+| `C-f` | 補完を閉じる |
+| `C-b` / `C-d` | ドキュメントをスクロール (上 / 下) |
