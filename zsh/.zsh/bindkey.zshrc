@@ -23,3 +23,6 @@ bindkey '^K' cdup
 
 bindkey "^R" fzf-history-widget
 bindkey "^L" clear-screen
+
+# Shift+Tab で補完候補を逆順に選択する
+bindkey "^[[Z" reverse-menu-complete

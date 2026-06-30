@@ -1,6 +1,3 @@
--- 補完エンジン: blink.cmp (nvim-cmp から移行)
--- Rust製の fuzzy matcher を備えた高速な補完エンジン。
--- kind icon / signature / cmdline 補完を内蔵し、cmp-* 系ソースや lspkind を不要化する。
 return {
   {
     "saghen/blink.cmp",
@@ -27,8 +24,7 @@ return {
         ["<S-Tab>"] = { "select_prev", "fallback" },
         ["<C-n>"] = { "show", "select_next", "fallback" },
         ["<C-p>"] = { "select_prev", "fallback" },
-        ["<C-e>"] = { "hide", "fallback" },
-        ["<C-f>"] = { "accept", "fallback" },
+        ["<C-f>"] = { "hide", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
         ["<C-b>"] = { "scroll_documentation_up", "fallback" },
         ["<C-d>"] = { "scroll_documentation_down", "fallback" },
@@ -39,8 +35,9 @@ return {
       },
 
       completion = {
-        -- VSCode 同様、入力に応じて自動でメニューを表示
+        -- 入力では自動表示せず、<C-n> で手動表示する
         menu = {
+          auto_show = false,
           border = "rounded",
           winblend = 0,
           draw = {
@@ -58,7 +55,7 @@ return {
           window = { border = "rounded" },
         },
         list = {
-          selection = { preselect = false, auto_insert = true },
+          selection = { preselect = false, auto_insert = false },
         },
         ghost_text = { enabled = false },
       },

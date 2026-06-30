@@ -1,6 +1,14 @@
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+# Tab で補完候補を矢印キー等で選択できるメニューモードにする
+zstyle ':completion:*' menu select
+
+# cd 補完では cdpath (git/kurage 等) の中身を常に出さない。
+# ローカル/ディレクトリスタックにマッチが無いときだけ cdpath を候補に出す。
+# (リポ名だけで飛べる機能は cdpath 自体で維持される)
+zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
+
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 
@@ -28,8 +36,8 @@ setopt no_tify
 # 直前と同じコマンドをヒストリに追加しない
 setopt hist_ignore_dups
 
-# タブによるファイルの順番切り替えをしない
-unsetopt auto_menu
+# Tab で補完候補を循環選択する
+setopt auto_menu
 
 # cd -[tab]で過去のディレクトリにひとっ飛びできるようにする
 setopt auto_pushd
