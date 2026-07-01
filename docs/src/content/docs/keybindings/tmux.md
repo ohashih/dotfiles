@@ -13,20 +13,37 @@ sidebar:
 
 ## セッション / ウィンドウ
 
-| キー | 動作 |
-|------|------|
-| `prefix r` | 設定リロード |
-| `prefix -` | ペイン 縦分割 |
-| `prefix \|` | ペイン 横分割 |
-| `prefix e` | ペイン同期トグル |
+| キー        | 動作             |
+| ----------- | ---------------- |
+| `prefix r`  | 設定リロード     |
+| `prefix -`  | ペイン 縦分割    |
+| `prefix \|` | ペイン 横分割    |
+| `prefix e`  | ペイン同期トグル |
+
+---
+
+## ウィンドウ名の自動更新
+
+ウィンドウ名は `カレントディレクトリ:実行中コマンド` の形式で常に自動更新されます
+(`automatic-rename on`)。ステータスバーの `#I:#W` にそのまま反映されます。
+
+| 状態                                   | ウィンドウ名の例 |
+| -------------------------------------- | ---------------- |
+| `~/git/kurage/dotfiles` でシェル       | `dotfiles:zsh`   |
+| `~/git/kurage/dotfiles` で nvim 編集中 | `dotfiles:nvim`  |
+| `~/git/aibs` で claude 実行中          | `aibs:claude`    |
+
+:::note
+`prefix ,` (rename-window) で手動命名すると、そのウィンドウだけ自動更新が停止します (tmux の標準挙動)。
+:::
 
 ---
 
 ## ペイン移動
 
-| キー | 動作 |
-|------|------|
-| `C-o` | ペイン順次移動 |
+| キー  | 動作                                             |
+| ----- | ------------------------------------------------ |
+| `C-o` | ペイン順次移動                                   |
 | `C-h` | 左ペイン / nvim 左 split へ (vim-tmux-navigator) |
 | `C-j` | 下ペイン / nvim 下 split へ (vim-tmux-navigator) |
 | `C-k` | 上ペイン / nvim 上 split へ (vim-tmux-navigator) |
@@ -44,8 +61,8 @@ sidebar:
 
 ## ペインリサイズ
 
-| キー | 動作 |
-|------|------|
+| キー  | 動作     |
+| ----- | -------- |
 | `M-→` | 右に拡大 |
 | `M-←` | 左に拡大 |
 | `M-↑` | 上に拡大 |
@@ -55,13 +72,13 @@ sidebar:
 
 ## コピーモード (vi キーバインド)
 
-| キー | 動作 |
-|------|------|
-| `prefix [` | コピーモード開始 |
-| `v` | 選択開始 |
-| `y` | コピー & コピーモード終了 (pbcopy へ) |
-| `Enter` | コピー & コピーモード終了 |
-| `q` | コピーモード終了 |
+| キー       | 動作                                  |
+| ---------- | ------------------------------------- |
+| `prefix [` | コピーモード開始                      |
+| `v`        | 選択開始                              |
+| `y`        | コピー & コピーモード終了 (pbcopy へ) |
+| `Enter`    | コピー & コピーモード終了             |
+| `q`        | コピーモード終了                      |
 
 ---
 
@@ -73,22 +90,22 @@ sidebar:
 
 ## プラグイン
 
-| プラグイン | 機能 |
-|------------|------|
-| `tmux-plugins/tpm` | プラグインマネージャ |
-| `tmux-plugins/tmux-sensible` | 基本設定の最適化 |
-| `tmux-plugins/tmux-resurrect` | セッション保存・復元 |
-| `tmux-plugins/tmux-continuum` | セッション自動保存 (15分ごと) / 起動時自動復元 |
-| `tmux-plugins/tmux-open` | ファイル / URL を開く |
-| `tmux-plugins/tmux-cpu` | CPU 使用率をステータスバーに表示 |
-| `tmux-plugins/tmux-battery` | バッテリー残量をステータスバーに表示 |
-| `christoomey/vim-tmux-navigator` | nvim split と tmux pane をシームレスに移動 |
-| `catppuccin/tmux` | catppuccin mocha テーマ |
+| プラグイン                       | 機能                                           |
+| -------------------------------- | ---------------------------------------------- |
+| `tmux-plugins/tpm`               | プラグインマネージャ                           |
+| `tmux-plugins/tmux-sensible`     | 基本設定の最適化                               |
+| `tmux-plugins/tmux-resurrect`    | セッション保存・復元                           |
+| `tmux-plugins/tmux-continuum`    | セッション自動保存 (15分ごと) / 起動時自動復元 |
+| `tmux-plugins/tmux-open`         | ファイル / URL を開く                          |
+| `tmux-plugins/tmux-cpu`          | CPU 使用率をステータスバーに表示               |
+| `tmux-plugins/tmux-battery`      | バッテリー残量をステータスバーに表示           |
+| `christoomey/vim-tmux-navigator` | nvim split と tmux pane をシームレスに移動     |
+| `catppuccin/tmux`                | catppuccin mocha テーマ                        |
 
 ### TPM 操作
 
-| キー | 動作 |
-|------|------|
-| `prefix I` | プラグインインストール |
-| `prefix U` | プラグインアップデート |
+| キー           | 動作                   |
+| -------------- | ---------------------- |
+| `prefix I`     | プラグインインストール |
+| `prefix U`     | プラグインアップデート |
 | `prefix alt-u` | 不要なプラグインを削除 |
