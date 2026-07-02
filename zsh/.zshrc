@@ -59,6 +59,9 @@ source_file ~/.zsh/cdpath.zshrc
 
 source_file ~/.zsh/function.zshrc
 
+# Setting pane title (tmux #T)
+source_file ~/.zsh/title.zshrc
+
 # Setting secret
 source_file ~/.zsh/secret.zshrc
 

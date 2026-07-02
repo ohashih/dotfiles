@@ -37,6 +37,13 @@ sidebar:
 `prefix ,` (rename-window) で手動命名すると、そのウィンドウだけ自動更新が停止します (tmux の標準挙動)。
 :::
 
+### ペインタイトル (`#T`)
+
+素の zsh ペインの `pane_title` (`#T`) は、tmux の標準ではホスト名 (`Mac.toshima.ne.jp` 等) に
+なります。これを避けるため zsh の `precmd` / `preexec` フックで OSC 2 を送り、カレントディレクトリ名
+(`%1~`) に書き換えています (`zsh/.zsh/title.zshrc`)。nvim や claude を動かしているペインは、そのプログラムが
+`#T` を書き換えるため従来どおりそのタイトルが出ます。
+
 ---
 
 ## ペイン移動
