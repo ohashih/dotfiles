@@ -23,7 +23,10 @@ return {
   {
     "folke/flash.nvim",
     event = "VeryLazy",
-    opts = {},
+    -- char mode は f/F/t/T を乗っ取るため無効化 (t=タブ作成などの独自マップを守る)
+    opts = {
+      modes = { char = { enabled = false } },
+    },
     keys = {
       { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
       -- S はビジュアルモードでは nvim-surround に譲る (n/o のみ)

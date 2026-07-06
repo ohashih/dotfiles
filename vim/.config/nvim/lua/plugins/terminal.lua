@@ -10,7 +10,7 @@ return {
           border = "curved",
           winblend = 3
         },
-        open_mapping = [[<c-\>]],
+        open_mapping = [[<c-t>]],
         start_in_insert = true,
         insert_mappings = true,
         terminal_mappings = true,
