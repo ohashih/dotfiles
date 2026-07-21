@@ -55,6 +55,13 @@ return {
         })
       end
 
+      -- nvim-lspconfig 同梱の terraformls 設定は on_attach で
+      -- vim.lsp.codelens.enable() を呼ぶが、この API は Neovim 0.11 には
+      -- 存在せず ON_ATTACH_ERROR となるため on_attach を無効化する。
+      vim.lsp.config("terraformls", {
+        on_attach = function() end,
+      })
+
       vim.lsp.enable(servers)
 
       -- Diagnostic表示設定 (signs アイコンもここへ集約。neo-tree 側の重複定義は削除済み)
