@@ -1,0 +1,172 @@
+#compdef orca
+
+autoload -U is-at-least
+
+_orca() {
+    typeset -A opt_args
+    typeset -a _arguments_options
+    local ret=1
+
+    if is-at-least 5.2; then
+        _arguments_options=(-s -S -C)
+    else
+        _arguments_options=(-s -C)
+    fi
+
+    local context curcontext="$curcontext" state line
+    _arguments "${_arguments_options[@]}" : \
+'--alert=[Alert level to display (Critical / High / Medium / Low). Defaults to the config value]:ALERT:_default' \
+'--csv[Save alert details to ~/orca/<date>/<accountName>.csv]' \
+'-h[Print help (see more with '\''--help'\'')]' \
+'--help[Print help (see more with '\''--help'\'')]' \
+'-V[Print version]' \
+'--version[Print version]' \
+":: :_orca_commands" \
+"*::: :->orca" \
+&& ret=0
+    case $state in
+    (orca)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:orca-command-$line[1]:"
+        case $line[1] in
+            (list)
+_arguments "${_arguments_options[@]}" : \
+'--plain[Print the account table instead of the interactive picker]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(configure)
+_arguments "${_arguments_options[@]}" : \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(auth)
+_arguments "${_arguments_options[@]}" : \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(completion)
+_arguments "${_arguments_options[@]}" : \
+'-h[Print help]' \
+'--help[Print help]' \
+':shell -- Target shell (bash / zsh / fish / powershell / elvish):(bash elvish fish powershell zsh)' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+":: :_orca__subcmd__help_commands" \
+"*::: :->help" \
+&& ret=0
+
+    case $state in
+    (help)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:orca-help-command-$line[1]:"
+        case $line[1] in
+            (list)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(configure)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(auth)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(completion)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+        esac
+    ;;
+esac
+}
+
+(( $+functions[_orca_commands] )) ||
+_orca_commands() {
+    local commands; commands=(
+'list:Pick a cloud account interactively and show its alerts' \
+'configure:Create the config file if missing, otherwise validate it' \
+'auth:Sign in and cache a verified API token' \
+'completion:Print a shell completion script' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'orca commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__auth_commands] )) ||
+_orca__subcmd__auth_commands() {
+    local commands; commands=()
+    _describe -t commands 'orca auth commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__completion_commands] )) ||
+_orca__subcmd__completion_commands() {
+    local commands; commands=()
+    _describe -t commands 'orca completion commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__configure_commands] )) ||
+_orca__subcmd__configure_commands() {
+    local commands; commands=()
+    _describe -t commands 'orca configure commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__help_commands] )) ||
+_orca__subcmd__help_commands() {
+    local commands; commands=(
+'list:Pick a cloud account interactively and show its alerts' \
+'configure:Create the config file if missing, otherwise validate it' \
+'auth:Sign in and cache a verified API token' \
+'completion:Print a shell completion script' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'orca help commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__help__subcmd__auth_commands] )) ||
+_orca__subcmd__help__subcmd__auth_commands() {
+    local commands; commands=()
+    _describe -t commands 'orca help auth commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__help__subcmd__completion_commands] )) ||
+_orca__subcmd__help__subcmd__completion_commands() {
+    local commands; commands=()
+    _describe -t commands 'orca help completion commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__help__subcmd__configure_commands] )) ||
+_orca__subcmd__help__subcmd__configure_commands() {
+    local commands; commands=()
+    _describe -t commands 'orca help configure commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__help__subcmd__help_commands] )) ||
+_orca__subcmd__help__subcmd__help_commands() {
+    local commands; commands=()
+    _describe -t commands 'orca help help commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__help__subcmd__list_commands] )) ||
+_orca__subcmd__help__subcmd__list_commands() {
+    local commands; commands=()
+    _describe -t commands 'orca help list commands' commands "$@"
+}
+(( $+functions[_orca__subcmd__list_commands] )) ||
+_orca__subcmd__list_commands() {
+    local commands; commands=()
+    _describe -t commands 'orca list commands' commands "$@"
+}
+
+if [ "$funcstack[1]" = "_orca" ]; then
+    _orca "$@"
+else
+    compdef _orca orca
+fi

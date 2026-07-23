@@ -1,0 +1,315 @@
+#compdef memo
+
+autoload -U is-at-least
+
+_memo() {
+    typeset -A opt_args
+    typeset -a _arguments_options
+    local ret=1
+
+    if is-at-least 5.2; then
+        _arguments_options=(-s -S -C)
+    else
+        _arguments_options=(-s -C)
+    fi
+
+    local context curcontext="$curcontext" state line
+    _arguments "${_arguments_options[@]}" : \
+'--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
+'--profile=[AWS profile to use]:NAME:_default' \
+'--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
+'--workspace=[Local workspace directory mirroring the S3 tree]:DIR:_files' \
+'--editor=[Editor command to open files with (falls back to \$EDITOR/\$VISUAL)]:CMD:_default' \
+'-h[Print help]' \
+'--help[Print help]' \
+'-V[Print version]' \
+'--version[Print version]' \
+":: :_memo_commands" \
+"*::: :->memo" \
+&& ret=0
+    case $state in
+    (memo)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:memo-command-$line[1]:"
+        case $line[1] in
+            (list)
+_arguments "${_arguments_options[@]}" : \
+'--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
+'--profile=[AWS profile to use]:NAME:_default' \
+'--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
+'--workspace=[Local workspace directory mirroring the S3 tree]:DIR:_files' \
+'--editor=[Editor command to open files with (falls back to \$EDITOR/\$VISUAL)]:CMD:_default' \
+'-h[Print help]' \
+'--help[Print help]' \
+'::prefix -- Only list keys under this sub-path of the S3 tree, e.g. static/project:_default' \
+&& ret=0
+;;
+(view)
+_arguments "${_arguments_options[@]}" : \
+'--port=[Port for the preview server (0 = pick a free port)]:PORT:_default' \
+'--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
+'--profile=[AWS profile to use]:NAME:_default' \
+'--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
+'--workspace=[Local workspace directory mirroring the S3 tree]:DIR:_files' \
+'--editor=[Editor command to open files with (falls back to \$EDITOR/\$VISUAL)]:CMD:_default' \
+'--no-open[Do not open a browser automatically]' \
+'-h[Print help]' \
+'--help[Print help]' \
+':path -- Relative path within the workspace/S3 tree, e.g. static/project/a.md:_default' \
+&& ret=0
+;;
+(edit)
+_arguments "${_arguments_options[@]}" : \
+'--port=[Port for the preview server (0 = pick a free port)]:PORT:_default' \
+'--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
+'--profile=[AWS profile to use]:NAME:_default' \
+'--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
+'--workspace=[Local workspace directory mirroring the S3 tree]:DIR:_files' \
+'--editor=[Editor command to open files with (falls back to \$EDITOR/\$VISUAL)]:CMD:_default' \
+'--no-open[Do not open a browser automatically]' \
+'-h[Print help]' \
+'--help[Print help]' \
+':path -- Relative path within the workspace/S3 tree, e.g. static/project/a.md:_default' \
+&& ret=0
+;;
+(save)
+_arguments "${_arguments_options[@]}" : \
+'--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
+'--profile=[AWS profile to use]:NAME:_default' \
+'--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
+'--workspace=[Local workspace directory mirroring the S3 tree]:DIR:_files' \
+'--editor=[Editor command to open files with (falls back to \$EDITOR/\$VISUAL)]:CMD:_default' \
+'--force[Overwrite S3 even if it changed since the last sync]' \
+'-h[Print help]' \
+'--help[Print help]' \
+'::path -- A single file to save. Omit to save every locally-changed file:_default' \
+&& ret=0
+;;
+(pull)
+_arguments "${_arguments_options[@]}" : \
+'--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
+'--profile=[AWS profile to use]:NAME:_default' \
+'--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
+'--workspace=[Local workspace directory mirroring the S3 tree]:DIR:_files' \
+'--editor=[Editor command to open files with (falls back to \$EDITOR/\$VISUAL)]:CMD:_default' \
+'-h[Print help]' \
+'--help[Print help]' \
+'::path -- A single file to pull. Omit to pull every remotely-changed file:_default' \
+&& ret=0
+;;
+(url)
+_arguments "${_arguments_options[@]}" : \
+'--expired=[Presigned URL lifetime in minutes (max 60)]:MINUTES:_default' \
+'--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
+'--profile=[AWS profile to use]:NAME:_default' \
+'--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
+'--workspace=[Local workspace directory mirroring the S3 tree]:DIR:_files' \
+'--editor=[Editor command to open files with (falls back to \$EDITOR/\$VISUAL)]:CMD:_default' \
+'-h[Print help]' \
+'--help[Print help]' \
+':path -- Relative path within the workspace/S3 tree, e.g. static/project/a.md:_default' \
+&& ret=0
+;;
+(configure)
+_arguments "${_arguments_options[@]}" : \
+'--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
+'--profile=[AWS profile to use]:NAME:_default' \
+'--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
+'--workspace=[Local workspace directory mirroring the S3 tree]:DIR:_files' \
+'--editor=[Editor command to open files with (falls back to \$EDITOR/\$VISUAL)]:CMD:_default' \
+'--force[Overwrite the existing config with defaults instead of validating it]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(completion)
+_arguments "${_arguments_options[@]}" : \
+'--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
+'--profile=[AWS profile to use]:NAME:_default' \
+'--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
+'--workspace=[Local workspace directory mirroring the S3 tree]:DIR:_files' \
+'--editor=[Editor command to open files with (falls back to \$EDITOR/\$VISUAL)]:CMD:_default' \
+'-h[Print help]' \
+'--help[Print help]' \
+':shell -- Shell to generate completions for:(bash elvish fish powershell zsh)' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+":: :_memo__subcmd__help_commands" \
+"*::: :->help" \
+&& ret=0
+
+    case $state in
+    (help)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:memo-help-command-$line[1]:"
+        case $line[1] in
+            (list)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(view)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(edit)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(save)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(pull)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(url)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(configure)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(completion)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+        esac
+    ;;
+esac
+}
+
+(( $+functions[_memo_commands] )) ||
+_memo_commands() {
+    local commands; commands=(
+'list:Fuzzy-search the S3 tree and act on the chosen file' \
+'view:Show a file'\''s Markdown/HTML in the live web preview' \
+'edit:Open a file in the editor with live preview (creates it if missing)' \
+'save:Upload edited files to S3 (all changed, or one PATH), with ETag check' \
+'pull:Download files from S3 (all changed, or one PATH)' \
+'url:Render a memo to HTML, upload it under HTML/, and print a presigned URL' \
+'configure:Create the config file with defaults, or validate an existing one' \
+'completion:Print a shell completion script (bash, zsh, fish, ...) to stdout' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'memo commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__completion_commands] )) ||
+_memo__subcmd__completion_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo completion commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__configure_commands] )) ||
+_memo__subcmd__configure_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo configure commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__edit_commands] )) ||
+_memo__subcmd__edit_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo edit commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help_commands] )) ||
+_memo__subcmd__help_commands() {
+    local commands; commands=(
+'list:Fuzzy-search the S3 tree and act on the chosen file' \
+'view:Show a file'\''s Markdown/HTML in the live web preview' \
+'edit:Open a file in the editor with live preview (creates it if missing)' \
+'save:Upload edited files to S3 (all changed, or one PATH), with ETag check' \
+'pull:Download files from S3 (all changed, or one PATH)' \
+'url:Render a memo to HTML, upload it under HTML/, and print a presigned URL' \
+'configure:Create the config file with defaults, or validate an existing one' \
+'completion:Print a shell completion script (bash, zsh, fish, ...) to stdout' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'memo help commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help__subcmd__completion_commands] )) ||
+_memo__subcmd__help__subcmd__completion_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo help completion commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help__subcmd__configure_commands] )) ||
+_memo__subcmd__help__subcmd__configure_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo help configure commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help__subcmd__edit_commands] )) ||
+_memo__subcmd__help__subcmd__edit_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo help edit commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help__subcmd__help_commands] )) ||
+_memo__subcmd__help__subcmd__help_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo help help commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help__subcmd__list_commands] )) ||
+_memo__subcmd__help__subcmd__list_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo help list commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help__subcmd__pull_commands] )) ||
+_memo__subcmd__help__subcmd__pull_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo help pull commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help__subcmd__save_commands] )) ||
+_memo__subcmd__help__subcmd__save_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo help save commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help__subcmd__url_commands] )) ||
+_memo__subcmd__help__subcmd__url_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo help url commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__help__subcmd__view_commands] )) ||
+_memo__subcmd__help__subcmd__view_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo help view commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__list_commands] )) ||
+_memo__subcmd__list_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo list commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__pull_commands] )) ||
+_memo__subcmd__pull_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo pull commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__save_commands] )) ||
+_memo__subcmd__save_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo save commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__url_commands] )) ||
+_memo__subcmd__url_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo url commands' commands "$@"
+}
+(( $+functions[_memo__subcmd__view_commands] )) ||
+_memo__subcmd__view_commands() {
+    local commands; commands=()
+    _describe -t commands 'memo view commands' commands "$@"
+}
+
+if [ "$funcstack[1]" = "_memo" ]; then
+    _memo "$@"
+else
+    compdef _memo memo
+fi
