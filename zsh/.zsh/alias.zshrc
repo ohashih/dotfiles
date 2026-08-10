@@ -80,7 +80,7 @@ alias mux='tmuxinator'
 
 # private
 
-alias memo="vi ~/admin/memo.md"
+#alias memo="vi ~/admin/memo.md"
 
 # AWS Git checkout
 
