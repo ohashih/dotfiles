@@ -100,7 +100,11 @@ _arguments "${_arguments_options[@]}" : \
 ;;
 (url)
 _arguments "${_arguments_options[@]}" : \
+<<<<<<< HEAD
 '--expired=[Presigned URL lifetime in minutes (max 60)]:MINUTES:_default' \
+=======
+'--expired=[How long the URL stays valid, e.g. 30m or 1h. Max 1 hour]:DURATION:_default' \
+>>>>>>> 3116d2581123397c4f4102dd06b13647d49cd4e0
 '--config=[Path to the config file (default\: ~/.config/memo/config.toml)]:PATH:_files' \
 '--profile=[AWS profile to use]:NAME:_default' \
 '--s3=[S3 bucket and optional prefix root, e.g. s3\://bucket/ or s3\://bucket/team/]:S3_URI:_default' \
@@ -200,7 +204,11 @@ _memo_commands() {
 'edit:Open a file in the editor with live preview (creates it if missing)' \
 'save:Upload edited files to S3 (all changed, or one PATH), with ETag check' \
 'pull:Download files from S3 (all changed, or one PATH)' \
+<<<<<<< HEAD
 'url:Render a memo to HTML, upload it under HTML/, and print a presigned URL' \
+=======
+'url:Print a temporary presigned download URL for a file (max 1 hour)' \
+>>>>>>> 3116d2581123397c4f4102dd06b13647d49cd4e0
 'configure:Create the config file with defaults, or validate an existing one' \
 'completion:Print a shell completion script (bash, zsh, fish, ...) to stdout' \
 'help:Print this message or the help of the given subcommand(s)' \
@@ -231,6 +239,7 @@ _memo__subcmd__help_commands() {
 'save:Upload edited files to S3 (all changed, or one PATH), with ETag check' \
 'pull:Download files from S3 (all changed, or one PATH)' \
 'url:Render a memo to HTML, upload it under HTML/, and print a presigned URL' \
+'url:Print a temporary presigned download URL for a file (max 1 hour)' \
 'configure:Create the config file with defaults, or validate an existing one' \
 'completion:Print a shell completion script (bash, zsh, fish, ...) to stdout' \
 'help:Print this message or the help of the given subcommand(s)' \
