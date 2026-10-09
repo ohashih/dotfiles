@@ -1,0 +1,161 @@
+tap "auth0/auth0-cli"
+tap "betterleaks/tap"
+tap "common-fate/granted"
+tap "jesseduffield/lazydocker"
+tap "kojix2/brew"
+tap "libsql/sqld"
+tap "oktadev/tap", "https://github.com/oktadev/homebrew-tap.git"
+tap "terraform-linters/tap"
+tap "tursodatabase/tap"
+# Build, manage and test your Auth0 integrations from the command-line
+brew "auth0"
+# Text processing scripting language
+brew "awk"
+# Simple command-line tool to read AWS CloudWatch logs
+brew "awslogs"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Secrets scanner built for configurability and speed
+brew "betterleaks"
+# Prevent cloud misconfigurations during build-time for IaC tools
+brew "checkov"
+# Color-highlighted diff(1) output
+brew "colordiff"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
+# Run common networking tests against your site
+brew "dstp"
+# Modern, maintained replacement for ls
+brew "eza"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# X11 implementation of the Remote Desktop Protocol (RDP)
+brew "freerdp"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU awk utility
+brew "gawk"
+# GitHub command-line tool
+brew "gh"
+# Remote repository management made easy
+brew "ghq"
+# Distributed revision control system
+brew "git"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
+# Audit git repos for secrets
+brew "gitleaks"
+# Open-source GitLab command-line tool
+brew "glab"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Perceptual JPEG encoder
+brew "guetzli"
+# Improved colored diff
+brew "icdiff"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
+# Utility to optimize JPEG files
+brew "jpegoptim"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Postgres C API library
+brew "libpq"
+# Powerful, lightweight programming language
+brew "lua"
+# Package manager for the Lua programming language
+brew "luarocks"
+# Minimalist GNU for Windows and GCC cross-compilers
+brew "mingw-w64"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Command-line interface for New Relic
+brew "newrelic-cli"
+# Port scanning utility for large networks
+brew "nmap"
+# SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
+brew "openvpn"
+# Pins GitHub Actions to full hashes and versions
+brew "pinact"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# PNG image optimizing utility
+brew "pngquant"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Fast, configurable, shell plugin manager
+brew "sheldon"
+# Editor of encrypted files
+brew "sops"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Tool to generate documentation from Terraform modules
+brew "terraform-docs"
+# Terminal multiplexer
+brew "tmux"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Internet file retriever
+brew "wget"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+# Next-generation plugin manager for zsh
+brew "zplug"
+# Secrets scanner built on the legacy of gitleaks
+cask "betterleaks/tap/betterleaks", trusted: true
+# Brings the power of Copilot coding agent directly to your terminal
+cask "copilot-cli"
+cask "font-cica"
+# GPU-based terminal emulator
+cask "kitty"
+# Visual diff and merge tool
+cask "meld"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+cask "okta"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
+# Plugin for AWS CLI to start and end sessions that connect to managed instances
+cask "session-manager-plugin"
+# Terminal-based web browser
+cask "terminal-browser"
+# Pluggable Terraform linter
+cask "terraform-linters/tap/tflint", trusted: true
+# Open-source version of the X.Org X Window System
+cask "xquartz"
+go "cmd/go"
+go "cmd/gofmt"
+cargo "cargo-zigbuild"
+cargo "cross", source: "https://github.com/cross-rs/cross"
+cargo "ec2-search"
+cargo "memo"

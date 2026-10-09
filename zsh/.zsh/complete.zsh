@@ -1,5 +1,5 @@
 # custom (must be before compinit)
-fpath=(~/.zsh/completions $fpath)
+fpath=(~/.zsh/completions /opt/homebrew/share/zsh/site-functions $fpath)
 
 autoload -Uz compinit
 if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
