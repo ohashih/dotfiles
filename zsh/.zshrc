@@ -51,6 +51,10 @@ source_file ~/.zsh/fzf.zshrc
 # Setting complete
 source_file ~/.zsh/complete.zsh
 
+# compinit が ^Xa を上書きするため、補完初期化の後に割り当てる
+bindkey '^Xa' run-assume
+bindkey '^X3' run-c3e
+
 # Setting zsh cdpath
 
 source_file ~/.zsh/cdpath.zshrc
@@ -85,11 +89,3 @@ export PATH="/Users/kurage/.rd/bin:$PATH"
 if [[ -o interactive && -z "$TMUX" && -z "$INSIDE_EMACS" && -z "$VIMRUNTIME" ]] && command -v tmux >/dev/null 2>&1; then
   tmux attach -t main 2>/dev/null || tmux new -s main
 fi
-
-# pnpm
-export PNPM_HOME="/Users/ohashih/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
-# pnpm end

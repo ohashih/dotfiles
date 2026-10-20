@@ -24,5 +24,22 @@ bindkey '^K' cdup
 bindkey "^R" fzf-history-widget
 bindkey "^L" clear-screen
 
+# Ctrl+x → a で assume を実行
+function run-assume() {
+  BUFFER="assume"
+  zle accept-line
+}
+zle -N run-assume
+
+# Ctrl+x → 3 で c3e を実行 (c は Ctrl+c と衝突するため不可)
+function run-c3e() {
+  BUFFER="c3e"
+  zle accept-line
+}
+zle -N run-c3e
+
+# ^Xa は compinit が標準の補完ウィジェットで上書きするため、
+# 実際の bindkey は .zshrc で complete.zsh の後に行う
+
 # Shift+Tab で補完候補を逆順に選択する
 bindkey "^[[Z" reverse-menu-complete

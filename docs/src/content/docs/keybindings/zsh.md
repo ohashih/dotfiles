@@ -21,6 +21,8 @@ zsh プラグインは [sheldon](https://sheldon.cli.rs/) で管理していま�
 | `C-n` | 入力中の文字列で履歴検索 (次) |
 | `↑` / `↓` | history-substring-search (入力文字列で絞り込み) |
 | `C-k` | 一階層上へ移動 (`cd ..`) |
+| `C-x` → `a` | `assume` を実行 |
+| `C-x` → `3` | `c3e` を実行 |
 | `C-h` | Insert: 左 *(vim-tmux-navigator が奪うため tmux 外のみ)* |
 
 ---
