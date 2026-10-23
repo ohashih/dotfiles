@@ -2,9 +2,9 @@
 nodejs = '26.12.1'
 python = '3.15.1'
 awscli = '2.38.4'
-go = "1.26.5"
+go = "1.27.3"
 terraform = '1.17.0'
-rust="1.97.1"
+rust="1.99.1"
 direnv="2.37.1"
 usage = "4.1.0"
 aws-sam-cli="1.164.0"
