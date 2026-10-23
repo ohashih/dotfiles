@@ -1,15 +1,15 @@
 [tools]
-nodejs = '26.11.1'
-python = '3.14.8'
-awscli = '2.37.11'
+nodejs = '26.12.1'
+python = '3.15.1'
+awscli = '2.38.4'
 go = "1.26.5"
-terraform = '1.16.5'
+terraform = '1.17.0'
 rust="1.97.1"
 direnv="2.37.1"
 usage = "4.1.0"
 aws-sam-cli="1.164.0"
 lazydocker="latest"
-pnpm = "12.10.1"
+pnpm = "12.15.0"
 opentofu = "1.12.5"
 jq = "latest"
 yq = "latest"
