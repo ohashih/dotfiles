@@ -48,7 +48,6 @@ return {
   -- セッション復元は plugins/productivity.lua に集約。
 
   -- nvim split と tmux pane をシームレスに移動 (tmux 側設定と対)
-  -- 右移動 (<C-\>) は ToggleTerm 起動に譲るため割り当てない。
   {
     "christoomey/vim-tmux-navigator",
     cmd = {
