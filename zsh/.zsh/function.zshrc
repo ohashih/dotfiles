@@ -162,3 +162,26 @@ ghstar() {
     fi
   fi
 }
+
+# git: Prune no exist branch on remote
+gprune() {
+  local dry_run=0
+  [[ $1 == -n || $1 == --dry-run ]] && dry_run=1
+
+  git fetch --prune || return
+
+  local branches
+  branches=$(git for-each-ref --format='%(refname:short) %(upstream:track)' refs/heads | awk '$2=="[gone]"{print $1}')
+
+  if [[ -z $branches ]]; then
+    echo "No gone branches."
+    return
+  fi
+
+  if (( dry_run )); then
+    echo "Would delete:"
+    echo "$branches"
+  else
+    echo "$branches" | xargs git branch -D
+  fi
+}
