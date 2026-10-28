@@ -86,6 +86,6 @@ export PATH="/Users/kurage/.rd/bin:$PATH"
 
 # tmux 自動起動 (prezto tmux:auto-start モジュールの代替)
 # 対話シェルかつ tmux/エディタ外のときに main セッションへ attach、無ければ新規作成。
-if [[ -o interactive && -z "$TMUX" && -z "$INSIDE_EMACS" && -z "$VIMRUNTIME" ]] && command -v tmux >/dev/null 2>&1; then
+if [[ -o interactive && -z "$TMUX" && -z "$INSIDE_EMACS" && -z "$VIMRUNTIME" && -z "$NVIM" ]] && command -v tmux >/dev/null 2>&1; then
   tmux attach -t main 2>/dev/null || tmux new -s main
 fi
