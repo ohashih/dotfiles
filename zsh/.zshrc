@@ -81,7 +81,7 @@ zle -N _clear_screen_widget
 bindkey "^L" _clear_screen_widget
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/kurage/.rd/bin:$PATH"
+export PATH="$HOME/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # tmux 自動起動 (prezto tmux:auto-start モジュールの代替)

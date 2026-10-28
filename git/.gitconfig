@@ -1,0 +1,49 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	quotepath = false
+	symlinks = true
+	editor = nvim -c \"set fenc=utf-8\"
+	autocrlf = false
+#	pager = git-split-diffs --color | less -+LFX
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = kurage
+	email = ohashih@ns.aucnet.co.jp
+	signingkey = FE63CB1206599A626BB8425C9D733D9F4F3D5D31
+[commit]
+	template = ~/.stCommitMsg
+	gpgsign = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[alias]
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[diff]
+	tool = vimdiff
+[difftool]
+  prompt = false
+[alias]
+	lg = log --graph --decorate --abbrev-commit --format=format:'%C(blue)%h%C(reset) - %C(green)(%ar)%C(reset)%C(yellow)%d%C(reset)%n  %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	current-hash = show --format='%h' --no-patch
+	current-hash-long = show --format='%H' --no-patch
+[ghq]
+	root = ~/git/aucnet
+	root = ~/git/a-ibs
+	root = ~/git/kurage
+[split-diffs]
+	theme-name = github-dark-dim
+	wrap-lines = false
+	highlight-line-changes = false
+	syntax-highlighting-theme = github-dark

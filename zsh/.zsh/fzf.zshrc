@@ -1,4 +1,4 @@
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)
 
 export FZF_COMPLETION_TRIGGER="," # default: '**'
 
